@@ -1,0 +1,11 @@
+C:\Users\Admin\source\repos\Criptografia\Criptografia\bin\Debug\Criptografia.exe.config
+C:\Users\Admin\source\repos\Criptografia\Criptografia\bin\Debug\Criptografia.exe
+C:\Users\Admin\source\repos\Criptografia\Criptografia\bin\Debug\Criptografia.pdb
+C:\Users\Admin\source\repos\Criptografia\Criptografia\obj\Debug\Criptografia.Properties.Resources.resources
+C:\Users\Admin\source\repos\Criptografia\Criptografia\obj\Debug\Criptografia.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\Criptografia\Criptografia\obj\Debug\Criptografia.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Criptografia\Criptografia\obj\Debug\Criptografia.exe
+C:\Users\Admin\source\repos\Criptografia\Criptografia\obj\Debug\Criptografia.pdb
+C:\Users\Admin\source\repos\Criptografia\Criptografia\obj\Debug\Criptografia.csproj.CopyComplete
+C:\Users\Admin\source\repos\Criptografia\Criptografia\obj\Debug\Criptografia.frmValidacio.resources
+C:\Users\Admin\source\repos\Criptografia\Criptografia\obj\Debug\Criptografia.csproj.AssemblyReference.cache

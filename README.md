@@ -1,2 +1,2 @@
-# noname_pacs
-Group NoName, project PACS.
+# NoName ~ Project PACS
+Crear programes criptografics amb TCP/IP.

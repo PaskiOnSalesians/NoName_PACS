@@ -1,0 +1,29 @@
+C:\Users\Paski\Documents\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\bin\Debug\AccesDades.dll
+C:\Users\Paski\Documents\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\bin\Debug\AccesDades.pdb
+C:\Users\Paski\Documents\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
+C:\Users\Paski\Documents\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.dll
+C:\Users\Paski\Documents\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.pdb
+C:\Users\oriol\Desktop\Github\Utinni-Projectes\SecureCoreFinal\AccesDades\bin\Debug\AccesDades.dll
+C:\Users\oriol\Desktop\Github\Utinni-Projectes\SecureCoreFinal\AccesDades\bin\Debug\AccesDades.pdb
+C:\Users\oriol\Desktop\Github\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
+C:\Users\oriol\Desktop\Github\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.dll
+C:\Users\oriol\Desktop\Github\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.pdb
+C:\Users\oriol\Desktop\Github\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.csproj.AssemblyReference.cache
+C:\Users\ribes\Documents\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\bin\Debug\AccesDades.dll
+C:\Users\ribes\Documents\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\bin\Debug\AccesDades.pdb
+C:\Users\ribes\Documents\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
+C:\Users\ribes\Documents\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.dll
+C:\Users\ribes\Documents\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.pdb
+C:\Users\carsh\OneDrive - INSPECTORIA SALESIANA MARIA AUXILIADORA\Documentos\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\bin\Debug\AccesDades.dll
+C:\Users\carsh\OneDrive - INSPECTORIA SALESIANA MARIA AUXILIADORA\Documentos\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\bin\Debug\AccesDades.pdb
+C:\Users\carsh\OneDrive - INSPECTORIA SALESIANA MARIA AUXILIADORA\Documentos\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
+C:\Users\carsh\OneDrive - INSPECTORIA SALESIANA MARIA AUXILIADORA\Documentos\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.dll
+C:\Users\carsh\OneDrive - INSPECTORIA SALESIANA MARIA AUXILIADORA\Documentos\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.pdb
+C:\Users\ribes\Documents\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.csproj.AssemblyReference.cache
+C:\Users\Paski\Documents\GitHub\Utinni-Projectes\SecureCoreFinal\AccesDades\obj\Debug\AccesDades.csproj.AssemblyReference.cache
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\AccesDades\bin\Debug\AccesDades.dll
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\AccesDades\bin\Debug\AccesDades.pdb
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\AccesDades\obj\Debug\AccesDades.csproj.AssemblyReference.cache
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\AccesDades\obj\Debug\AccesDades.dll
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\AccesDades\obj\Debug\AccesDades.pdb

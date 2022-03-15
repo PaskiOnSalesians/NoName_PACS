@@ -1,0 +1,31 @@
+C:\Users\oriol\source\repos\PACSProject\PACSProject\bin\Debug\PACSProject.exe.config
+C:\Users\oriol\source\repos\PACSProject\PACSProject\bin\Debug\PACSProject.exe
+C:\Users\oriol\source\repos\PACSProject\PACSProject\bin\Debug\PACSProject.pdb
+C:\Users\oriol\source\repos\PACSProject\PACSProject\bin\Debug\CircularProgressBar.dll
+C:\Users\oriol\source\repos\PACSProject\PACSProject\bin\Debug\WinFormAnimation.dll
+C:\Users\oriol\source\repos\PACSProject\PACSProject\bin\Debug\CircularProgressBar.xml
+C:\Users\oriol\source\repos\PACSProject\PACSProject\obj\Debug\PACSProject.csproj.AssemblyReference.cache
+C:\Users\oriol\source\repos\PACSProject\PACSProject\obj\Debug\PACSProject.frmSplash.resources
+C:\Users\oriol\source\repos\PACSProject\PACSProject\obj\Debug\PACSProject.Properties.Resources.resources
+C:\Users\oriol\source\repos\PACSProject\PACSProject\obj\Debug\PACSProject.csproj.GenerateResource.cache
+C:\Users\oriol\source\repos\PACSProject\PACSProject\obj\Debug\PACSProject.csproj.CoreCompileInputs.cache
+C:\Users\oriol\source\repos\PACSProject\PACSProject\obj\Debug\PACSProject.csproj.CopyComplete
+C:\Users\oriol\source\repos\PACSProject\PACSProject\obj\Debug\PACSProject.exe
+C:\Users\oriol\source\repos\PACSProject\PACSProject\obj\Debug\PACSProject.pdb
+C:\Users\oriol\source\repos\PACSProject\PACSProject\obj\Debug\PACSProject.SecondForm.resources
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\bin\Debug\PACSProject.exe.config
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\bin\Debug\PACSProject.exe
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\bin\Debug\PACSProject.pdb
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\bin\Debug\CircularProgressBar.dll
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\bin\Debug\WinFormAnimation.dll
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\bin\Debug\CircularProgressBar.xml
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\obj\Debug\PACSProject.Properties.Resources.resources
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\obj\Debug\PACSProject.csproj.GenerateResource.cache
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\obj\Debug\PACSProject.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\obj\Debug\PACSProject.csproj.CopyComplete
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\obj\Debug\PACSProject.exe
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\obj\Debug\PACSProject.pdb
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\obj\Debug\PACSProject.csproj.AssemblyReference.cache
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\bin\Debug\AccesDades.dll
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\bin\Debug\AccesDades.pdb
+\\Mac\Home\Desktop\Github Windows\PACS\PACSProject\PACSProject\obj\Debug\PACSProject.frmPlanet.resources

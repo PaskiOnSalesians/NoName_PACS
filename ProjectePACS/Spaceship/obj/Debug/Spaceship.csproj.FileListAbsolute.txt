@@ -1,0 +1,13 @@
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\bin\Debug\Spaceship.exe.config
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\bin\Debug\Spaceship.exe
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\bin\Debug\Spaceship.pdb
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\obj\Debug\Spaceship.Spaceship.resources
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\obj\Debug\Spaceship.Properties.Resources.resources
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\obj\Debug\Spaceship.csproj.GenerateResource.cache
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\obj\Debug\Spaceship.csproj.CoreCompileInputs.cache
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\obj\Debug\Spaceship.exe
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\obj\Debug\Spaceship.pdb
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\obj\Debug\Spaceship.csproj.AssemblyReference.cache
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\bin\Debug\AccesDades.dll
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\bin\Debug\AccesDades.pdb
+C:\Users\Paski\Documents\GitHub\PACS\PACSProject\Spaceship\obj\Debug\Spaceship.csproj.CopyComplete

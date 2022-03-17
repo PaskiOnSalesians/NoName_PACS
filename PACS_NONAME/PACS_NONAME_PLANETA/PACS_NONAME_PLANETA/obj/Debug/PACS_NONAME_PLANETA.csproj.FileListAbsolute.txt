@@ -2,9 +2,12 @@ C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\bin\Debug\PACS_NONAME_PLANETA.exe
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\bin\Debug\PACS_NONAME_PLANETA.pdb
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.csproj.AssemblyReference.cache
-C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.planet_view.resources
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.Properties.Resources.resources
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.csproj.GenerateResource.cache
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.csproj.CoreCompileInputs.cache
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.exe
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.pdb
+C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.PlanetView.resources
+C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\bin\Debug\AccesDades.dll
+C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\bin\Debug\AccesDades.pdb
+C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.csproj.CopyComplete

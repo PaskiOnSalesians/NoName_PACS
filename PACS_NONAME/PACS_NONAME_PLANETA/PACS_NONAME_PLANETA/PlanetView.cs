@@ -24,6 +24,8 @@ namespace PACS_NONAME_PLANETA
         Point startPoint = new Point(0, 0); // Posicio inicial de la finestra
         #endregion
 
+        int MaximitzarPantalla = 0;
+
         public PlanetView()
         {
             InitializeComponent();
@@ -75,7 +77,7 @@ namespace PACS_NONAME_PLANETA
             string query, taula;
 
             taula = "Planets";
-            query = "Select DescPlanet from " + taula + " order by DescPlanet ASC";
+            query = "Select DescPlanet, PlanetPicture from " + taula + " order by DescPlanet ASC";
 
             _Dades.ConnectDB();
 
@@ -83,6 +85,27 @@ namespace PACS_NONAME_PLANETA
 
             for (int i = 0; i < dts.Tables[0].Rows.Count; i++)
                 lstvPlanets.Items.Add(dts.Tables[0].Rows[i]["DescPlanet"].ToString());
+        }
+
+        private void btn_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_maximize_Click(object sender, EventArgs e)
+        {
+            if(MaximitzarPantalla == 0)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                MaximitzarPantalla++;
+
+            } else if(MaximitzarPantalla == 1)
+            {
+                //this.WindowState = FormWindowState.Minimized;
+                this.WindowState = FormWindowState.Normal;
+                //this.Form.Size = new Size(1264, 681);
+                MaximitzarPantalla--;
+            }
         }
     }
 }

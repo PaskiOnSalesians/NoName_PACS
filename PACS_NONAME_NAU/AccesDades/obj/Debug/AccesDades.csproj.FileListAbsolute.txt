@@ -1,0 +1,6 @@
+C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\dll\AccesDades.dll
+C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\dll\AccesDades.pdb
+C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
+C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\AccesDades\obj\Debug\AccesDades.dll
+C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\AccesDades\obj\Debug\AccesDades.pdb
+C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\AccesDades\obj\Debug\AccesDades.csproj.AssemblyReference.cache

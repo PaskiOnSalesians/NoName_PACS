@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\dll\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlanetView.cs">
+    <Compile Include="frmPlanetView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlanetView.Designer.cs">
-      <DependentUpon>PlanetView.cs</DependentUpon>
+    <Compile Include="frmPlanetView.Designer.cs">
+      <DependentUpon>frmPlanetView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PlanetView.resx">
-      <DependentUpon>PlanetView.cs</DependentUpon>
+    <EmbeddedResource Include="frmPlanetView.resx">
+      <DependentUpon>frmPlanetView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

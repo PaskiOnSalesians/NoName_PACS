@@ -1,7 +1,7 @@
 ﻿
 namespace PACS_NONAME_PLANETA
 {
-    partial class PlanetView
+    partial class frmPlanetView
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@ namespace PACS_NONAME_PLANETA
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlanetView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlanetView));
             this.pnl_topbar = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -73,6 +73,7 @@ namespace PACS_NONAME_PLANETA
             this.pnl_topbar.Name = "pnl_topbar";
             this.pnl_topbar.Size = new System.Drawing.Size(1264, 77);
             this.pnl_topbar.TabIndex = 0;
+            this.pnl_topbar.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pnl_topbar_MouseDoubleClick);
             this.pnl_topbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_topbar_MouseDown);
             this.pnl_topbar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_topbar_MouseMove);
             this.pnl_topbar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnl_topbar_MouseUp);
@@ -158,6 +159,7 @@ namespace PACS_NONAME_PLANETA
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
@@ -287,7 +289,7 @@ namespace PACS_NONAME_PLANETA
             this.lstvPlanets.UseCompatibleStateImageBehavior = false;
             this.lstvPlanets.View = System.Windows.Forms.View.Tile;
             // 
-            // PlanetView
+            // frmPlanetView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -303,7 +305,7 @@ namespace PACS_NONAME_PLANETA
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1264, 681);
-            this.Name = "PlanetView";
+            this.Name = "frmPlanetView";
             this.Text = "PACS - NONAME";
             this.Load += new System.EventHandler(this.PlanetView_Load);
             this.pnl_topbar.ResumeLayout(false);

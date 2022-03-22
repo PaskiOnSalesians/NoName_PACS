@@ -16,7 +16,7 @@ namespace PACS_NONAME_PLANETA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PlanetView());
+            Application.Run(new frmPlanetView());
         }
     }
 }

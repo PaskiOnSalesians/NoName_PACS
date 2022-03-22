@@ -59,15 +59,5 @@ namespace PACS_NONAME_PLANETA.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap gold_noname {
-            get {
-                object obj = ResourceManager.GetObject("gold_noname", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

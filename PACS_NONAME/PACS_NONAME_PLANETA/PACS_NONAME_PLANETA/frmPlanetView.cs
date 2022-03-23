@@ -24,7 +24,7 @@ namespace PACS_NONAME_PLANETA
 
         #region Variables de customització de programa
         // Variables de tamany pantalla
-        int MaximitzarPantalla = 0, MaximitzarPantallaTab = 0;
+        int MaximitzarPantalla = 0;
 
         // Dragging Variables
         bool dragging = false; // Per a comprovar si podem moure la finestra
@@ -101,16 +101,16 @@ namespace PACS_NONAME_PLANETA
         // Maximitzar/Normal amb la barra superior
         private void pnl_topbar_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (MaximitzarPantallaTab == 0)
+            if (MaximitzarPantalla == 0)
             {
                 this.WindowState = FormWindowState.Maximized;
-                MaximitzarPantallaTab++;
+                MaximitzarPantalla++;
 
             }
-            else if (MaximitzarPantallaTab == 1)
+            else if (MaximitzarPantalla == 1)
             {
                 this.WindowState = FormWindowState.Normal;
-                MaximitzarPantallaTab--;
+                MaximitzarPantalla--;
             }
         }
         #endregion
@@ -124,11 +124,16 @@ namespace PACS_NONAME_PLANETA
 
             dts = new DataSet();
             string query, taula;
-            string imageRoute = Application.StartupPath + "..\\resources\\Planets\\"; // Ruta a les imatges
+            string imageRoute = Application.StartupPath + "\\..\\resources\\Planets\\"; // Ruta a les imatges
+            
+            ImageList imagePlanetList = new ImageList();
+            imagePlanetList.ImageSize = new Size(128, 128);
+
+            #region Carregar Planetes
 
             try
             {
-                #region Carregar Planetes
+                
 
                 taula = "Planets";
                 query = "Select DescPlanet, PlanetPicture from " + taula + " order by DescPlanet ASC";
@@ -137,19 +142,21 @@ namespace PACS_NONAME_PLANETA
 
                 dts = _Dades.PortarPerConsulta(query, taula);
 
+                // dts.Tables[0].Rows[i]["DescPlanet"].ToString(), )
+
                 for (int i = 0; i < dts.Tables[0].Rows.Count; i++)
                 {
-                    lstvPlanets.Items.Add(dts.Tables[0].Rows[i]["DescPlanet"].ToString());
-                    Console.WriteLine(dts.Tables[0].Rows[i]["PlanetPicture"].ToString());
-                    lstvPlanets.LargeImageList.Images.Add(Image.FromFile(imageRoute + dts.Tables[0].Rows[i]["PlanetPicture"].ToString()));
+                    imagePlanetList.Images.Add(Image.FromFile(@imageRoute + dts.Tables[0].Rows[i]["PlanetPicture"].ToString()));
+                    lstvPlanets.LargeImageList = imagePlanetList;
+                    lstvPlanets.Items.Add(dts.Tables[0].Rows[i]["DescPlanet"].ToString(), i);
                 }
-
-                #endregion
             }
             catch
             {
                 MessageBox.Show("Algo ha fallado");
             }
+            
+            #endregion
         }
         #endregion
     }

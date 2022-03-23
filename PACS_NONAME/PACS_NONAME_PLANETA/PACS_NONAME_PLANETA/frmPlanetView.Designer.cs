@@ -50,11 +50,19 @@ namespace PACS_NONAME_PLANETA
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
             this.lstvPlanets = new System.Windows.Forms.ListView();
             this.pnl_topbar.SuspendLayout();
             this.pnlBottomBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_topbar
@@ -262,12 +270,70 @@ namespace PACS_NONAME_PLANETA
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.lstvPlanets);
+            this.panel8.Controls.Add(this.panel13);
+            this.panel8.Controls.Add(this.panel12);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(19, 98);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1226, 513);
             this.panel8.TabIndex = 7;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(38, 513);
+            this.panel12.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.panel17);
+            this.panel13.Controls.Add(this.panel16);
+            this.panel13.Controls.Add(this.panel15);
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(38, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1188, 513);
+            this.panel13.TabIndex = 1;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(1188, 33);
+            this.panel14.TabIndex = 0;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel15.Location = new System.Drawing.Point(0, 480);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(1188, 33);
+            this.panel15.TabIndex = 1;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel16.Location = new System.Drawing.Point(1148, 33);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(40, 447);
+            this.panel16.TabIndex = 2;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.lstvPlanets);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.Location = new System.Drawing.Point(0, 33);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(1148, 447);
+            this.panel17.TabIndex = 3;
             // 
             // lstvPlanets
             // 
@@ -282,12 +348,11 @@ namespace PACS_NONAME_PLANETA
             this.lstvPlanets.Location = new System.Drawing.Point(0, 0);
             this.lstvPlanets.MultiSelect = false;
             this.lstvPlanets.Name = "lstvPlanets";
-            this.lstvPlanets.Size = new System.Drawing.Size(1226, 513);
+            this.lstvPlanets.Size = new System.Drawing.Size(1148, 447);
             this.lstvPlanets.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.lstvPlanets.TabIndex = 3;
-            this.lstvPlanets.TileSize = new System.Drawing.Size(245, 100);
+            this.lstvPlanets.TabIndex = 5;
+            this.lstvPlanets.TileSize = new System.Drawing.Size(500, 100);
             this.lstvPlanets.UseCompatibleStateImageBehavior = false;
-            this.lstvPlanets.View = System.Windows.Forms.View.Tile;
             // 
             // frmPlanetView
             // 
@@ -314,6 +379,8 @@ namespace PACS_NONAME_PLANETA
             this.pnlBottomBar.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -337,10 +404,16 @@ namespace PACS_NONAME_PLANETA
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.ListView lstvPlanets;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.ListView lstvPlanets;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel14;
     }
 }
 

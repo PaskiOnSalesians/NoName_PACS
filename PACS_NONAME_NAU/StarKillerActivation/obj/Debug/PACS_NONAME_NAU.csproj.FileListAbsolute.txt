@@ -11,3 +11,15 @@ C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKil
 C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKillerActivation\bin\Debug\AccesDades.dll
 C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKillerActivation\bin\Debug\AccesDades.pdb
 C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKillerActivation\obj\Debug\PACS_NONAME_NAU.csproj.CopyComplete
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS_NONAME_NAU\StarKillerActivation\bin\Debug\StarKillerActivation.exe.config
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS_NONAME_NAU\StarKillerActivation\bin\Debug\StarKillerActivation.exe
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS_NONAME_NAU\StarKillerActivation\bin\Debug\StarKillerActivation.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS_NONAME_NAU\StarKillerActivation\bin\Debug\AccesDades.dll
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS_NONAME_NAU\StarKillerActivation\bin\Debug\AccesDades.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS_NONAME_NAU\StarKillerActivation\obj\Debug\PACS_NONAME_NAU.csproj.AssemblyReference.cache
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS_NONAME_NAU\StarKillerActivation\obj\Debug\StarKillerActivation.frmShipView.resources
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS_NONAME_NAU\StarKillerActivation\obj\Debug\StarKillerActivation.Properties.Resources.resources
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS_NONAME_NAU\StarKillerActivation\obj\Debug\PACS_NONAME_NAU.csproj.GenerateResource.cache
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS_NONAME_NAU\StarKillerActivation\obj\Debug\PACS_NONAME_NAU.csproj.CoreCompileInputs.cache
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS_NONAME_NAU\StarKillerActivation\obj\Debug\StarKillerActivation.exe
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS_NONAME_NAU\StarKillerActivation\obj\Debug\StarKillerActivation.pdb

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A2084004-1081-4097-8463-37F218E6DE29}</ProjectGuid>
+    <ProjectGuid>{F1AA1D95-7881-413E-B401-B3F405C99D8C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PACS_NONAME_PLANETA</RootNamespace>
-    <AssemblyName>PACS_NONAME_PLANETA</AssemblyName>
+    <RootNamespace>FormBase</RootNamespace>
+    <AssemblyName>FormBase</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\dll\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmPlanetView.cs">
+    <Compile Include="frmBaseMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPlanetView.Designer.cs">
-      <DependentUpon>frmPlanetView.cs</DependentUpon>
+    <Compile Include="frmBaseMain.Designer.cs">
+      <DependentUpon>frmBaseMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmPlanetView.resx">
-      <DependentUpon>frmPlanetView.cs</DependentUpon>
+    <EmbeddedResource Include="frmBaseMain.resx">
+      <DependentUpon>frmBaseMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,7 +65,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -79,16 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AccesDades\AccesDades.csproj">
-      <Project>{b34a4254-fb07-4f32-88d0-f15f88c046d8}</Project>
-      <Name>AccesDades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FormBase\FormBase.csproj">
-      <Project>{f1aa1d95-7881-413e-b401-b3f405c99d8c}</Project>
-      <Name>FormBase</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

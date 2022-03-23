@@ -1,4 +1,5 @@
 ﻿using AccesDades;
+using FormBase;
 
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace PACS_NONAME_PLANETA
 {
-    public partial class frmPlanetView : Form
+    public partial class frmPlanetView : frmBaseMain
     {
         #region Variables
 
@@ -43,83 +44,6 @@ namespace PACS_NONAME_PLANETA
         {
             InitializeComponent();
         }
-
-        #region Dragging window
-        private void pnl_topbar_MouseDown(object sender, MouseEventArgs e)
-        {
-            dragging = true;
-            startPoint = new Point(e.X, e.Y);
-        }
-
-        private void pnl_topbar_MouseUp(object sender, MouseEventArgs e)
-        {
-            dragging = false;
-        }
-
-        private void pnl_topbar_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (dragging)
-            {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
-            }
-        }
-
-        #endregion
-
-        #region Minimize - Maximize - Exit
-
-        // Botó Sortir
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            MessageBoxButtons msgbuttons = MessageBoxButtons.YesNo;
-
-            DialogResult result = MessageBox.Show("Segur que vols sortir?", "PACS - NONAME", msgbuttons);
-
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        // Botó Minimitzar
-        private void btn_minimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        // Botó Maximitzar
-        private void btn_maximize_Click(object sender, EventArgs e)
-        {
-            if (MaximitzarPantalla == 0)
-            {
-                this.WindowState = FormWindowState.Maximized;
-                MaximitzarPantalla++;
-
-            }
-            else if (MaximitzarPantalla == 1)
-            {
-                this.WindowState = FormWindowState.Normal;
-                MaximitzarPantalla--;
-            }
-        }
-
-        // Maximitzar/Normal amb la barra superior
-        private void pnl_topbar_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MaximitzarPantalla == 0)
-            {
-                this.WindowState = FormWindowState.Maximized;
-                MaximitzarPantalla++;
-
-            }
-            else if (MaximitzarPantalla == 1)
-            {
-                this.WindowState = FormWindowState.Normal;
-                MaximitzarPantalla--;
-            }
-        }
-        #endregion
 
         #region Events Formulari
 

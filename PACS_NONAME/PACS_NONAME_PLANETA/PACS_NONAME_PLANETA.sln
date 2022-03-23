@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PACS_NONAME_PLANETA", "PACS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesDades", "AccesDades\AccesDades.csproj", "{B34A4254-FB07-4F32-88D0-F15F88C046D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormBase", "FormBase\FormBase.csproj", "{F1AA1D95-7881-413E-B401-B3F405C99D8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B34A4254-FB07-4F32-88D0-F15F88C046D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B34A4254-FB07-4F32-88D0-F15F88C046D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B34A4254-FB07-4F32-88D0-F15F88C046D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1AA1D95-7881-413E-B401-B3F405C99D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1AA1D95-7881-413E-B401-B3F405C99D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1AA1D95-7881-413E-B401-B3F405C99D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1AA1D95-7881-413E-B401-B3F405C99D8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

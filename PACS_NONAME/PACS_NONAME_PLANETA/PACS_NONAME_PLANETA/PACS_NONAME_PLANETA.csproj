@@ -81,8 +81,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AccesDades\AccesDades.csproj">
-      <Project>{B34A4254-FB07-4F32-88D0-F15F88C046D8}</Project>
+    <ProjectReference Include="..\AccesDades\AccesDades.csproj">
+      <Project>{b34a4254-fb07-4f32-88d0-f15f88c046d8}</Project>
       <Name>AccesDades</Name>
     </ProjectReference>
   </ItemGroup>

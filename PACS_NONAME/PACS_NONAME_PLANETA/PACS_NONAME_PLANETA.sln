@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PACS_NONAME_PLANETA", "PACS_NONAME_PLANETA\PACS_NONAME_PLANETA.csproj", "{A2084004-1081-4097-8463-37F218E6DE29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesDades", "..\AccesDades\AccesDades.csproj", "{B34A4254-FB07-4F32-88D0-F15F88C046D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesDades", "AccesDades\AccesDades.csproj", "{B34A4254-FB07-4F32-88D0-F15F88C046D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -19,12 +19,6 @@ namespace FormBase
 
         #region Variables
 
-        #region Variables Generals
-
-        public string nomPlaneta;
-
-        #endregion
-
         #region Variables de customització de programa
         // Variables de tamany pantalla
         int MaximitzarPantalla = 0;

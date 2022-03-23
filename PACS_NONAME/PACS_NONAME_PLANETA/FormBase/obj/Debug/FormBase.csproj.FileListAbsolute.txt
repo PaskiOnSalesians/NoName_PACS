@@ -7,3 +7,4 @@ C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\Form
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\FormBase\obj\Debug\FormBase.csproj.CoreCompileInputs.cache
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\FormBase\obj\Debug\FormBase.exe
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\FormBase\obj\Debug\FormBase.pdb
+C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\FormBase\obj\Debug\FormBase.csproj.AssemblyReference.cache

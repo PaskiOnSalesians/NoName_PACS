@@ -83,6 +83,7 @@ namespace FormBase
             // btn_maximize
             // 
             this.btn_maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_maximize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_maximize.FlatAppearance.BorderSize = 0;
             this.btn_maximize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(75)))), ((int)(((byte)(90)))));
             this.btn_maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -99,6 +100,7 @@ namespace FormBase
             // btn_minimize
             // 
             this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_minimize.FlatAppearance.BorderSize = 0;
             this.btn_minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(75)))), ((int)(((byte)(90)))));
             this.btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -106,7 +108,7 @@ namespace FormBase
             this.btn_minimize.ForeColor = System.Drawing.Color.White;
             this.btn_minimize.Location = new System.Drawing.Point(1073, -2);
             this.btn_minimize.Name = "btn_minimize";
-            this.btn_minimize.Size = new System.Drawing.Size(49, 46);
+            this.btn_minimize.Size = new System.Drawing.Size(49, 51);
             this.btn_minimize.TabIndex = 4;
             this.btn_minimize.Text = "-";
             this.btn_minimize.UseVisualStyleBackColor = true;
@@ -124,6 +126,7 @@ namespace FormBase
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -293,7 +296,6 @@ namespace FormBase
         private System.Windows.Forms.Button btn_minimize;
         private System.Windows.Forms.Panel pnlLine;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Panel pnl_topbar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Panel panel4;
@@ -305,6 +307,7 @@ namespace FormBase
         private System.Windows.Forms.Label lblDevs;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnl_topbar;
     }
 }
 

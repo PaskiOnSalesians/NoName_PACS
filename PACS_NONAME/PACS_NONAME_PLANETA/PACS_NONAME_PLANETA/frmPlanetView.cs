@@ -18,7 +18,7 @@ namespace PACS_NONAME_PLANETA
 
         #region Variables Generals
 
-        string nomPlaneta;
+        public string nomPlaneta;
 
         #endregion
 
@@ -167,9 +167,18 @@ namespace PACS_NONAME_PLANETA
         }
         #endregion
 
+        #region Guardar Planeta en una variable
         private void lstvPlanets_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ListView.SelectedListViewItemCollection selectedPlanet = this.lstvPlanets.SelectedItems;
+
+            foreach (ListViewItem item in selectedPlanet)
+            {
+                nomPlaneta = item.SubItems[0].Text;
+            }
+
             Console.WriteLine(nomPlaneta);
         }
+        #endregion
     }
 }

@@ -16,6 +16,12 @@ namespace PACS_NONAME_PLANETA
     {
         #region Variables
 
+        #region Variables Generals
+
+        string nomPlaneta;
+
+        #endregion
+
         #region Variables de Dades
         // Casteig Acces Dades
         Dades _Dades = new Dades();
@@ -124,16 +130,17 @@ namespace PACS_NONAME_PLANETA
 
             dts = new DataSet();
             string query, taula;
-            string imageRoute = Application.StartupPath + "\\..\\resources\\Planets\\"; // Ruta a les imatges
             
+            // Variables Imatges de la ListView
             ImageList imagePlanetList = new ImageList();
             imagePlanetList.ImageSize = new Size(128, 128);
+
+            string imageRoute = Application.StartupPath + "\\..\\resources\\Planets\\"; // Ruta a les imatges
 
             #region Carregar Planetes
 
             try
             {
-                
 
                 taula = "Planets";
                 query = "Select DescPlanet, PlanetPicture from " + taula + " order by DescPlanet ASC";
@@ -159,5 +166,10 @@ namespace PACS_NONAME_PLANETA
             #endregion
         }
         #endregion
+
+        private void lstvPlanets_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine(nomPlaneta);
+        }
     }
 }

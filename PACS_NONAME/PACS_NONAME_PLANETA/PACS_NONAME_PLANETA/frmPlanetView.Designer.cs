@@ -343,7 +343,6 @@ namespace PACS_NONAME_PLANETA
             this.lstvPlanets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstvPlanets.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstvPlanets.ForeColor = System.Drawing.Color.White;
-            this.lstvPlanets.FullRowSelect = true;
             this.lstvPlanets.HideSelection = false;
             this.lstvPlanets.Location = new System.Drawing.Point(0, 0);
             this.lstvPlanets.MultiSelect = false;
@@ -353,6 +352,7 @@ namespace PACS_NONAME_PLANETA
             this.lstvPlanets.TabIndex = 5;
             this.lstvPlanets.TileSize = new System.Drawing.Size(500, 100);
             this.lstvPlanets.UseCompatibleStateImageBehavior = false;
+            this.lstvPlanets.SelectedIndexChanged += new System.EventHandler(this.lstvPlanets_SelectedIndexChanged);
             // 
             // frmPlanetView
             // 

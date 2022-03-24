@@ -14,3 +14,4 @@ C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\dll\PACS_NONAME_PLANETA.exe.config
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\dll\PACS_NONAME_PLANETA.exe
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\dll\PACS_NONAME_PLANETA.pdb
+C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.frmPlanetCrypto.resources

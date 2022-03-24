@@ -19,6 +19,7 @@ namespace PACS_NONAME_PLANETA
 
         #region Variables Generals
 
+        bool exit = true;
         public string nomPlaneta;
 
         #endregion
@@ -96,13 +97,37 @@ namespace PACS_NONAME_PLANETA
         {
             ListView.SelectedListViewItemCollection selectedPlanet = this.lstvPlanets.SelectedItems;
 
+            System.Drawing.Color Highlight = Color.Red;
+
             foreach (ListViewItem item in selectedPlanet)
             {
                 nomPlaneta = item.SubItems[0].Text;
+                item.BackColor = Color.Red;
             }
 
             Console.WriteLine(nomPlaneta);
         }
         #endregion
+
+        private void lstvPlanets_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            generateTCPForm();
+        }
+
+        private void lstvPlanets_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                generateTCPForm();
+            }
+        }
+
+        private void generateTCPForm()
+        {
+            frmPlanetCrypto nextFrm = new frmPlanetCrypto();
+            this.Visible = false;
+            nextFrm.ShowDialog();
+            this.Close();
+        }
     }
 }

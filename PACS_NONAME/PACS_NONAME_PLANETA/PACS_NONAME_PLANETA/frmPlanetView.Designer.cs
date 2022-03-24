@@ -30,10 +30,10 @@ namespace PACS_NONAME_PLANETA
         private void InitializeComponent()
         {
             this.panel15 = new System.Windows.Forms.Panel();
+            this.lstvPlanets = new System.Windows.Forms.ListView();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.lstvPlanets = new System.Windows.Forms.ListView();
             this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,13 +49,32 @@ namespace PACS_NONAME_PLANETA
             this.panel15.Size = new System.Drawing.Size(1226, 513);
             this.panel15.TabIndex = 15;
             // 
+            // lstvPlanets
+            // 
+            this.lstvPlanets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.lstvPlanets.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstvPlanets.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstvPlanets.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstvPlanets.ForeColor = System.Drawing.Color.White;
+            this.lstvPlanets.HideSelection = false;
+            this.lstvPlanets.Location = new System.Drawing.Point(27, 27);
+            this.lstvPlanets.Margin = new System.Windows.Forms.Padding(50);
+            this.lstvPlanets.MultiSelect = false;
+            this.lstvPlanets.Name = "lstvPlanets";
+            this.lstvPlanets.Size = new System.Drawing.Size(1199, 459);
+            this.lstvPlanets.TabIndex = 19;
+            this.lstvPlanets.UseCompatibleStateImageBehavior = false;
+            this.lstvPlanets.SelectedIndexChanged += new System.EventHandler(this.lstvPlanets_SelectedIndexChanged);
+            this.lstvPlanets.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lstvPlanets_KeyPress);
+            this.lstvPlanets.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstvPlanets_MouseDoubleClick);
+            // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
             this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel14.Location = new System.Drawing.Point(27, 489);
+            this.panel14.Location = new System.Drawing.Point(27, 486);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1199, 24);
+            this.panel14.Size = new System.Drawing.Size(1199, 27);
             this.panel14.TabIndex = 18;
             // 
             // panel13
@@ -64,7 +83,7 @@ namespace PACS_NONAME_PLANETA
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(27, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1199, 26);
+            this.panel13.Size = new System.Drawing.Size(1199, 27);
             this.panel13.TabIndex = 17;
             // 
             // panel8
@@ -75,22 +94,6 @@ namespace PACS_NONAME_PLANETA
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(27, 513);
             this.panel8.TabIndex = 15;
-            // 
-            // lstvPlanets
-            // 
-            this.lstvPlanets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.lstvPlanets.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstvPlanets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstvPlanets.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstvPlanets.ForeColor = System.Drawing.Color.White;
-            this.lstvPlanets.HideSelection = false;
-            this.lstvPlanets.Location = new System.Drawing.Point(27, 26);
-            this.lstvPlanets.Margin = new System.Windows.Forms.Padding(50);
-            this.lstvPlanets.MultiSelect = false;
-            this.lstvPlanets.Name = "lstvPlanets";
-            this.lstvPlanets.Size = new System.Drawing.Size(1199, 463);
-            this.lstvPlanets.TabIndex = 19;
-            this.lstvPlanets.UseCompatibleStateImageBehavior = false;
             // 
             // frmPlanetView
             // 

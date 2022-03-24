@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmPlanetCrypto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlanetCrypto.Designer.cs">
+      <DependentUpon>frmPlanetCrypto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPlanetView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmPlanetCrypto.resx">
+      <DependentUpon>frmPlanetCrypto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPlanetView.resx">
       <DependentUpon>frmPlanetView.cs</DependentUpon>
     </EmbeddedResource>

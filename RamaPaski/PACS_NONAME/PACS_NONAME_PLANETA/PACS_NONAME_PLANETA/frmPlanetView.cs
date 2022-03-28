@@ -60,7 +60,7 @@ namespace PACS_NONAME_PLANETA
             ImageList imagePlanetList = new ImageList();
             imagePlanetList.ImageSize = new Size(128, 128);
 
-            string imageRoute = Application.StartupPath + "\\..\\resources\\Planets\\"; // Ruta a les imatges
+            string imageRoute = Application.StartupPath + "\\..\\resources\\images\\Planets\\"; // Ruta a les imatges
 
             #region Carregar Planetes
 
@@ -124,7 +124,7 @@ namespace PACS_NONAME_PLANETA
 
         private void generateTCPForm()
         {
-            frmPlanetCrypto nextFrm = new frmPlanetCrypto();
+            frmPlanetCrypto nextFrm = new frmPlanetCrypto(nomPlaneta);
             this.Visible = false;
             nextFrm.ShowDialog();
             this.Close();

@@ -98,6 +98,10 @@
       <Project>{f1aa1d95-7881-413e-b401-b3f405c99d8c}</Project>
       <Name>FormBase</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TCP\TCP.csproj">
+      <Project>{849087c6-4aef-4398-af7b-535c79f3facd}</Project>
+      <Name>TCP</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

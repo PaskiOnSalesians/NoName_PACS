@@ -15,3 +15,15 @@ C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\dll\
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\dll\PACS_NONAME_PLANETA.exe
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\dll\PACS_NONAME_PLANETA.pdb
 C:\Users\Paski\Documents\GitHub\noname_pacs\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.frmPlanetCrypto.resources
+C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\dll\PACS_NONAME_PLANETA.exe.config
+C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\dll\PACS_NONAME_PLANETA.exe
+C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\dll\PACS_NONAME_PLANETA.pdb
+C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.csproj.AssemblyReference.cache
+C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.frmPlanetCrypto.resources
+C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.frmPlanetView.resources
+C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.Properties.Resources.resources
+C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.csproj.GenerateResource.cache
+C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.csproj.CoreCompileInputs.cache
+C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.csproj.CopyComplete
+C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.exe
+C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.pdb

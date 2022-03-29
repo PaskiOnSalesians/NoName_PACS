@@ -10,3 +10,8 @@ C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PL
 C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\TCP\obj\Debug\TCP.csproj.CoreCompileInputs.cache
 C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\TCP\obj\Debug\TCP.dll
 C:\Users\Paski\Documents\GitHub\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\TCP\obj\Debug\TCP.pdb
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\dll\TCP.dll
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\dll\TCP.pdb
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\TCP\obj\Debug\TCP.csproj.CoreCompileInputs.cache
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\TCP\obj\Debug\TCP.dll
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\TCP\obj\Debug\TCP.pdb

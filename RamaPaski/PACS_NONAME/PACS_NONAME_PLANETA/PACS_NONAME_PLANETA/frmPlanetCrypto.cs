@@ -57,7 +57,7 @@ namespace PACS_NONAME_PLANETA
 
         private void ServerListen()
         {
-            serverTCP.ListenClient(getIPAddress(), getPort());
+            //serverTCP.ListenClient(getIPAddress(), getPort());
         }
 
         private string getIPAddress()

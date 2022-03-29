@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PACS_NONAME_NAU;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +16,9 @@ namespace PACS_NONAME_PLANETA
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPlanetView());
+            Application.Run(new frmSplash());
         }
     }
 }

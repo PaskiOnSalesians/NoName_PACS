@@ -43,6 +43,7 @@ namespace PACS_NONAME_PLANETA
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.lblIP_Port = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
             this.pnlPlanet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxPlanet)).BeginInit();
@@ -61,6 +62,7 @@ namespace PACS_NONAME_PLANETA
             // 
             // pnlPlanet
             // 
+            this.pnlPlanet.Controls.Add(this.lblIP_Port);
             this.pnlPlanet.Controls.Add(this.lblPlanetName);
             this.pnlPlanet.Controls.Add(this.pboxPlanet);
             this.pnlPlanet.Location = new System.Drawing.Point(17, 10);
@@ -73,7 +75,7 @@ namespace PACS_NONAME_PLANETA
             this.lblPlanetName.AutoSize = true;
             this.lblPlanetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlanetName.ForeColor = System.Drawing.Color.White;
-            this.lblPlanetName.Location = new System.Drawing.Point(186, 66);
+            this.lblPlanetName.Location = new System.Drawing.Point(186, 39);
             this.lblPlanetName.Name = "lblPlanetName";
             this.lblPlanetName.Size = new System.Drawing.Size(70, 25);
             this.lblPlanetName.TabIndex = 3;
@@ -190,6 +192,17 @@ namespace PACS_NONAME_PLANETA
             this.panel13.Size = new System.Drawing.Size(404, 10);
             this.panel13.TabIndex = 0;
             // 
+            // lblIP_Port
+            // 
+            this.lblIP_Port.AutoSize = true;
+            this.lblIP_Port.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIP_Port.ForeColor = System.Drawing.Color.White;
+            this.lblIP_Port.Location = new System.Drawing.Point(186, 76);
+            this.lblIP_Port.Name = "lblIP_Port";
+            this.lblIP_Port.Size = new System.Drawing.Size(70, 25);
+            this.lblIP_Port.TabIndex = 4;
+            this.lblIP_Port.Text = "label1";
+            // 
             // frmPlanetCrypto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,5 +238,6 @@ namespace PACS_NONAME_PLANETA
         private System.Windows.Forms.PictureBox pboxPlanet;
         private System.Windows.Forms.Panel pnlPlanet;
         private System.Windows.Forms.Label lblPlanetName;
+        private System.Windows.Forms.Label lblIP_Port;
     }
 }

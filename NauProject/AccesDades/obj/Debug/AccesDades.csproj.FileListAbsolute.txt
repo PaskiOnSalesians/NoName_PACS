@@ -1,0 +1,6 @@
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\dll\AccesDades.dll
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\dll\AccesDades.pdb
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\AccesDades\obj\Debug\AccesDades.dll
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\AccesDades\obj\Debug\AccesDades.pdb
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\AccesDades\obj\Debug\AccesDades.csproj.AssemblyReference.cache

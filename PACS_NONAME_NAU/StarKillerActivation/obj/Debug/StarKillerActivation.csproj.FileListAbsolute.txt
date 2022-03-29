@@ -1,9 +1,0 @@
-C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKillerActivation\obj\Debug\StarKillerActivation.Properties.Resources.resources
-C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKillerActivation\obj\Debug\StarKillerActivation.csproj.GenerateResource.cache
-C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKillerActivation\obj\Debug\StarKillerActivation.csproj.CoreCompileInputs.cache
-C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKillerActivation\bin\Debug\StarKillerActivation.exe.config
-C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKillerActivation\bin\Debug\StarKillerActivation.exe
-C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKillerActivation\bin\Debug\StarKillerActivation.pdb
-C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKillerActivation\obj\Debug\StarKillerActivation.frmAuthentication.resources
-C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKillerActivation\obj\Debug\StarKillerActivation.exe
-C:\Users\Marc\Documents\GitHub\StarKillerActivation\StarKillerActivation\StarKillerActivation\obj\Debug\StarKillerActivation.pdb

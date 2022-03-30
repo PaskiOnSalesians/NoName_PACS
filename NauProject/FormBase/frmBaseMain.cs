@@ -19,6 +19,8 @@ namespace FormBase
 
         #region Variables
 
+        //Variables base de dades
+
         #region Variables de customització de programa
         // Variables de tamany pantalla
         int MaximitzarPantalla = 0;
@@ -50,6 +52,8 @@ namespace FormBase
                 Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
             }
         }
+
+
 
         #endregion
 
@@ -106,5 +110,9 @@ namespace FormBase
             }
         }
         #endregion
+     
+       
+
+       
     }
 }

@@ -82,6 +82,7 @@ namespace PACS_NONAME_NAU
             // timerProgressBar
             // 
             this.timerProgressBar.Enabled = true;
+            this.timerProgressBar.Interval = 20;
             this.timerProgressBar.Tick += new System.EventHandler(this.timerProgressBar_Tick);
             // 
             // frmSplash

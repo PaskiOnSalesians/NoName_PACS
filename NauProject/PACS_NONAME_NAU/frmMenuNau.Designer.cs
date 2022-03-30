@@ -1,7 +1,7 @@
 ﻿
 namespace PACS_NONAME_NAU
 {
-    partial class frmShipView
+    partial class frmMenuNau
     {
         /// <summary>
         /// Required designer variable.
@@ -29,38 +29,19 @@ namespace PACS_NONAME_NAU
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstvShips = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // lstvShips
-            // 
-            this.lstvShips.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.lstvShips.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstvShips.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstvShips.HideSelection = false;
-            this.lstvShips.Location = new System.Drawing.Point(25, 148);
-            this.lstvShips.Name = "lstvShips";
-            this.lstvShips.Size = new System.Drawing.Size(1214, 432);
-            this.lstvShips.TabIndex = 11;
-            this.lstvShips.UseCompatibleStateImageBehavior = false;
-            this.lstvShips.SelectedIndexChanged += new System.EventHandler(this.lstvShips_SelectedIndexChanged);
-            // 
-            // frmShipView
+            // frmMenuNau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.lstvShips);
-            this.Name = "frmShipView";
-            this.Text = "frmShipView";
-            this.Load += new System.EventHandler(this.frmShipView_Load);
-            this.Controls.SetChildIndex(this.lstvShips, 0);
+            this.Name = "frmMenuNau";
+            this.Text = "frmMenuNau";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView lstvShips;
     }
 }

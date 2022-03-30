@@ -40,18 +40,22 @@ namespace FormBase
             this.pnl_topbar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.pnlBottomBar = new System.Windows.Forms.Panel();
             this.lblCopy = new System.Windows.Forms.Label();
             this.lblDevs = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.tbUserSteps = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnNau = new System.Windows.Forms.Button();
+            this.btnPlaneta = new System.Windows.Forms.Button();
+            this.btnCriptografia = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.pnl_topbar.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.pnlBottomBar.SuspendLayout();
+            this.tbUserSteps.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -188,46 +192,6 @@ namespace FormBase
             this.lblName.TabIndex = 2;
             this.lblName.Text = "PACS - SpaceShip Interface";
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel11);
-            this.panel4.Controls.Add(this.panel10);
-            this.panel4.Controls.Add(this.panel9);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 594);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1264, 41);
-            this.panel4.TabIndex = 8;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(25, 29);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1214, 12);
-            this.panel11.TabIndex = 4;
-            // 
-            // panel10
-            // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(1239, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(25, 41);
-            this.panel10.TabIndex = 4;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(25, 41);
-            this.panel9.TabIndex = 4;
-            // 
             // pnlBottomBar
             // 
             this.pnlBottomBar.Controls.Add(this.lblCopy);
@@ -267,7 +231,7 @@ namespace FormBase
             this.panel7.Location = new System.Drawing.Point(1239, 121);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(25, 473);
+            this.panel7.Size = new System.Drawing.Size(25, 514);
             this.panel7.TabIndex = 10;
             // 
             // panel6
@@ -276,8 +240,124 @@ namespace FormBase
             this.panel6.Location = new System.Drawing.Point(0, 121);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(25, 473);
+            this.panel6.Size = new System.Drawing.Size(25, 514);
             this.panel6.TabIndex = 9;
+            // 
+            // tbUserSteps
+            // 
+            this.tbUserSteps.ColumnCount = 6;
+            this.tbUserSteps.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.67027F));
+            this.tbUserSteps.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66595F));
+            this.tbUserSteps.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66595F));
+            this.tbUserSteps.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66595F));
+            this.tbUserSteps.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66595F));
+            this.tbUserSteps.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66595F));
+            this.tbUserSteps.Controls.Add(this.button5, 5, 0);
+            this.tbUserSteps.Controls.Add(this.button4, 4, 0);
+            this.tbUserSteps.Controls.Add(this.button3, 3, 0);
+            this.tbUserSteps.Controls.Add(this.btnCriptografia, 2, 0);
+            this.tbUserSteps.Controls.Add(this.btnPlaneta, 1, 0);
+            this.tbUserSteps.Controls.Add(this.btnNau, 0, 0);
+            this.tbUserSteps.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tbUserSteps.Location = new System.Drawing.Point(25, 580);
+            this.tbUserSteps.Name = "tbUserSteps";
+            this.tbUserSteps.RowCount = 1;
+            this.tbUserSteps.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbUserSteps.Size = new System.Drawing.Size(1214, 55);
+            this.tbUserSteps.TabIndex = 11;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(25, 121);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1214, 27);
+            this.panel4.TabIndex = 12;
+            // 
+            // btnNau
+            // 
+            this.btnNau.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnNau.FlatAppearance.BorderSize = 4;
+            this.btnNau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNau.ForeColor = System.Drawing.Color.White;
+            this.btnNau.Location = new System.Drawing.Point(3, 3);
+            this.btnNau.Name = "btnNau";
+            this.btnNau.Size = new System.Drawing.Size(184, 49);
+            this.btnNau.TabIndex = 0;
+            this.btnNau.Text = "Escollir Nau";
+            this.btnNau.UseVisualStyleBackColor = true;
+            // 
+            // btnPlaneta
+            // 
+            this.btnPlaneta.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPlaneta.FlatAppearance.BorderSize = 4;
+            this.btnPlaneta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlaneta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaneta.ForeColor = System.Drawing.Color.White;
+            this.btnPlaneta.Location = new System.Drawing.Point(205, 3);
+            this.btnPlaneta.Name = "btnPlaneta";
+            this.btnPlaneta.Size = new System.Drawing.Size(184, 49);
+            this.btnPlaneta.TabIndex = 1;
+            this.btnPlaneta.Text = "Escollir Planeta";
+            this.btnPlaneta.UseVisualStyleBackColor = true;
+            // 
+            // btnCriptografia
+            // 
+            this.btnCriptografia.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCriptografia.FlatAppearance.BorderSize = 4;
+            this.btnCriptografia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCriptografia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriptografia.ForeColor = System.Drawing.Color.White;
+            this.btnCriptografia.Location = new System.Drawing.Point(407, 3);
+            this.btnCriptografia.Name = "btnCriptografia";
+            this.btnCriptografia.Size = new System.Drawing.Size(184, 49);
+            this.btnCriptografia.TabIndex = 2;
+            this.btnCriptografia.Text = "Criptografia";
+            this.btnCriptografia.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 4;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(609, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(184, 49);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Processat de fitxers";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 4;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(811, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(184, 49);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Resposta Planeta";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 4;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(1013, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(184, 49);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "FI";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // frmBaseMain
             // 
@@ -285,9 +365,10 @@ namespace FormBase
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.tbUserSteps);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnlBottomBar);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pnl_topbar);
@@ -297,9 +378,9 @@ namespace FormBase
             this.Text = "Form1";
             this.pnl_topbar.ResumeLayout(false);
             this.pnl_topbar.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.pnlBottomBar.ResumeLayout(false);
             this.pnlBottomBar.PerformLayout();
+            this.tbUserSteps.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -316,15 +397,19 @@ namespace FormBase
         private System.Windows.Forms.Panel pnl_topbar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel pnlBottomBar;
         private System.Windows.Forms.Label lblCopy;
         private System.Windows.Forms.Label lblDevs;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TableLayoutPanel tbUserSteps;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCriptografia;
+        private System.Windows.Forms.Button btnPlaneta;
+        private System.Windows.Forms.Button btnNau;
     }
 }
 

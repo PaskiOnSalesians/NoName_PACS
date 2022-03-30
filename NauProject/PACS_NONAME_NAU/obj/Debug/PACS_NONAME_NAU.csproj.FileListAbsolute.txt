@@ -19,3 +19,4 @@ C:\Users\Marc\source\repos\PACS_NONAME_NAU\PACS_NONAME_NAU\obj\Debug\PACS_NONAME
 C:\Users\Marc\source\repos\PACS_NONAME_NAU\dll\PACS_NONAME_NAU.exe.config
 C:\Users\Marc\source\repos\PACS_NONAME_NAU\dll\PACS_NONAME_NAU.exe
 C:\Users\Marc\source\repos\PACS_NONAME_NAU\dll\PACS_NONAME_NAU.pdb
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\PACS_NONAME_NAU\obj\Debug\PACS_NONAME_NAU.frmMenuNau.resources

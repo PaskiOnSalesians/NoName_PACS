@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmMenuNau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuNau.Designer.cs">
+      <DependentUpon>frmMenuNau.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmShipView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMenuNau.resx">
+      <DependentUpon>frmMenuNau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmShipView.resx">
       <DependentUpon>frmShipView.cs</DependentUpon>
     </EmbeddedResource>

@@ -38,10 +38,20 @@ namespace PACS_NONAME_PLANETA
         private void frmPlanetCrypto_Load(object sender, EventArgs e)
         {
             _Dades.ConnectDB();
-            
+
+            string ipAddr, port;
+            DataSet dts = new DataSet();
+
             lblPlanetName.Text = planet;
 
-            if(planet.Contains(' '))
+            dts = _Dades.PortarPerConsulta("select IPPlanet, PortPlanet from Planets where DescPlanet = '" + planet + "'");
+
+            ipAddr = dts.Tables[0].Rows[0]["IPPlanet"].ToString();
+            port = dts.Tables[0].Rows[0]["PortPlanet"].ToString();
+
+            lblIP_Port.Text = ipAddr + ":" + port;
+
+            if (planet.Contains(' '))
             {
                 namePlanetImage = planet.Replace(' ', '_');
                 pboxPlanet.Image = Image.FromFile(Application.StartupPath + "\\..\\resources\\images\\Planets\\" + namePlanetImage + ".png");

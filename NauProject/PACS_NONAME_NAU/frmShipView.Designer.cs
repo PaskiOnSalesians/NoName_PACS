@@ -44,6 +44,8 @@ namespace PACS_NONAME_NAU
             this.lstvShips.TabIndex = 11;
             this.lstvShips.UseCompatibleStateImageBehavior = false;
             this.lstvShips.SelectedIndexChanged += new System.EventHandler(this.lstvShips_SelectedIndexChanged);
+            this.lstvShips.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lstvShips_KeyPress);
+            this.lstvShips.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstvShips_MouseDoubleClick);
             // 
             // frmShipView
             // 

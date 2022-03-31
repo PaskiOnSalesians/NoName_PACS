@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using VariablesGlobals;
 using AccesDades;
 using FormBase;
 
@@ -22,23 +22,20 @@ namespace PACS_NONAME_NAU
             InitializeComponent();
         }
 
-        DadesDB db = new DadesDB("SecureCoreServer");
+        DadesDB db = new DadesDB("SecureCoreG2");
         DataSet dts;
-        public string nomNau;
 
-
+    
         private void lstvShips_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListView.SelectedListViewItemCollection selectedShip = this.lstvShips.SelectedItems;
+            ListView.SelectedListViewItemCollection selectedPlanet = this.lstvShips.SelectedItems;
 
-
-            foreach (ListViewItem item in selectedShip)
+            foreach (ListViewItem item in selectedPlanet)
             {
-                nomNau = item.SubItems[0].Text;
-
+                RefVariables.ShipId = (int)item.Tag;
             }
 
-            Console.WriteLine(nomNau);
+            LoadVariables(RefVariables.ShipId);
         }
 
         private void frmShipView_Load(object sender, EventArgs e)
@@ -58,7 +55,7 @@ namespace PACS_NONAME_NAU
             {
 
                 taula = "SpaceShips";
-                query = "Select CodeSpaceShip, SpaceshipImage from " + taula + " where SpaceshipImage is not null order by CodeSpaceShip";
+                query = "Select * from " + taula + " where SpaceshipImage is not null order by CodeSpaceShip";
 
                 db.Connectar();
 
@@ -69,12 +66,52 @@ namespace PACS_NONAME_NAU
                     imageShipList.Images.Add(Image.FromFile(@imageRoute + dts.Tables[0].Rows[i]["SpaceshipImage"].ToString()));
                     lstvShips.LargeImageList = imageShipList;
                     lstvShips.Items.Add(dts.Tables[0].Rows[i]["CodeSpaceShip"].ToString(), i);
+                    lstvShips.Items[i].Tag = dts.Tables[0].Rows[i]["idSpaceShip"];
                 }
+                
             }
             catch (Exception ext)
             {
                 MessageBox.Show(ext.ToString());
             }
+        }
+
+        private void LoadVariables(int id)
+        {
+            dts = new DataSet();
+            //Cambiar select
+            dts = db.PortarPerConsulta("SELECT * FROM SpaceShips WHERE SpaceshipImage IS NOT NULL AND '" + id + "' ORDER BY CodeSpaceShip", "SpaceShips");
+
+
+            RefVariables.ShipId = int.Parse(dts.Tables[0].Rows[0]["idSpaceShip"].ToString());
+            RefVariables.ShipName = dts.Tables[0].Rows[0]["CodeSpaceShip"].ToString();
+            RefVariables.ShipIp = dts.Tables[0].Rows[0]["IPSpaceShip"].ToString();
+            RefVariables.ShipFilePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip"].ToString());
+            RefVariables.ShipMessagePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip1"].ToString());
+            RefVariables.ShipImage = dts.Tables[0].Rows[0]["SpaceShipImage"].ToString();
+        }
+
+        private void generateTCPForm()
+        {
+            frmMenuNau nextFrm = new frmMenuNau();
+            this.Visible = false;
+            nextFrm.ShowDialog();
+            this.Close();
+        }
+
+        private void lstvShips_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                generateTCPForm();
+            }
+
+        }
+
+        private void lstvShips_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            generateTCPForm();
         }
     }
 }

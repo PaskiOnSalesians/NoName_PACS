@@ -1,0 +1,5 @@
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\VariablesGlobals\bin\Debug\VariablesGlobals.dll
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\VariablesGlobals\bin\Debug\VariablesGlobals.pdb
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\VariablesGlobals\obj\Debug\VariablesGlobals.csproj.CoreCompileInputs.cache
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\VariablesGlobals\obj\Debug\VariablesGlobals.dll
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\VariablesGlobals\obj\Debug\VariablesGlobals.pdb

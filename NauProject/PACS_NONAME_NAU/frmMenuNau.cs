@@ -16,6 +16,14 @@ namespace PACS_NONAME_NAU
         public frmMenuNau()
         {
             InitializeComponent();
+            label1.Text = VariablesGlobals.RefVariables.ShipName;
+            label2.Text = VariablesGlobals.RefVariables.ShipId.ToString();
+            label3.Text = VariablesGlobals.RefVariables.ShipFilePort.ToString();
+            label4.Text = VariablesGlobals.RefVariables.ShipMessagePort.ToString();
+            pictureBox1.Image = Image.FromFile(VariablesGlobals.RefVariables.ShipImage);
+
         }
+
+        
     }
 }

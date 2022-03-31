@@ -53,6 +53,12 @@
     <Compile Include="frmMenuNau.Designer.cs">
       <DependentUpon>frmMenuNau.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPlanetView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlanetView.Designer.cs">
+      <DependentUpon>frmPlanetView.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmShipView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMenuNau.resx">
       <DependentUpon>frmMenuNau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlanetView.resx">
+      <DependentUpon>frmPlanetView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShipView.resx">
       <DependentUpon>frmShipView.cs</DependentUpon>
@@ -110,6 +119,10 @@
     <ProjectReference Include="..\TCP\TCP.csproj">
       <Project>{849087c6-4aef-4398-af7b-535c79f3facd}</Project>
       <Name>TCP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VariablesGlobals\VariablesGlobals.csproj">
+      <Project>{ba7f9556-502b-4cff-837d-7369a5b8b86a}</Project>
+      <Name>VariablesGlobals</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

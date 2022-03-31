@@ -38,7 +38,7 @@ namespace AccesDades
         private string CadenaConnexio()
         {
             string cadena = "";
-            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["SecureCoreServer"];
+            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["SecureCoreG2"];
             
             if(settings != null)
             {

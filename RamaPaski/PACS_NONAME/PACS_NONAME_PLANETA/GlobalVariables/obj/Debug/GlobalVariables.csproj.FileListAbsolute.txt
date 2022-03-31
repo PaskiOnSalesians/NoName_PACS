@@ -1,0 +1,6 @@
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\GlobalVariables\bin\Debug\GlobalVariables.dll
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\GlobalVariables\bin\Debug\GlobalVariables.pdb
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\GlobalVariables\obj\Debug\GlobalVariables.csproj.AssemblyReference.cache
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\GlobalVariables\obj\Debug\GlobalVariables.dll
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\GlobalVariables\obj\Debug\GlobalVariables.pdb

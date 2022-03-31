@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using FormBase;
 using TCP;
 using AccesDades;
+using GlobalVariables;
 
 namespace PACS_NONAME_PLANETA
 {
@@ -24,10 +25,10 @@ namespace PACS_NONAME_PLANETA
         bool receivedMessage;
         int stage = 0;
 
-        public frmPlanetCrypto(string planetName)
+        public frmPlanetCrypto()
         {
             InitializeComponent();
-            planet = planetName;
+            planet = RefVariables.PlanetName;
         }
 
         private void rtxtInfo_TextChanged(object sender, EventArgs e)
@@ -39,27 +40,13 @@ namespace PACS_NONAME_PLANETA
         {
             _Dades.ConnectDB();
 
-            string ipAddr, port;
             DataSet dts = new DataSet();
 
-            lblPlanetName.Text = planet;
+            lblPlanetName.Text = RefVariables.PlanetName;
 
-            dts = _Dades.PortarPerConsulta("select IPPlanet, PortPlanet from Planets where DescPlanet = '" + planet + "'");
+            lblIP_Port.Text = RefVariables.PlanetIp + ":" + RefVariables.PlanetMessagePort;
 
-            ipAddr = dts.Tables[0].Rows[0]["IPPlanet"].ToString();
-            port = dts.Tables[0].Rows[0]["PortPlanet"].ToString();
-
-            lblIP_Port.Text = ipAddr + ":" + port;
-
-            if (planet.Contains(' '))
-            {
-                namePlanetImage = planet.Replace(' ', '_');
-                pboxPlanet.Image = Image.FromFile(Application.StartupPath + "\\..\\resources\\images\\Planets\\" + namePlanetImage + ".png");
-            }
-            else
-            {
-                pboxPlanet.Image = Image.FromFile(Application.StartupPath + "\\..\\resources\\images\\Planets\\" + planet + ".png");
-            }
+            pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
 
             Thread server = new Thread(ServerListen);
             server.Start();
@@ -68,38 +55,6 @@ namespace PACS_NONAME_PLANETA
         private void ServerListen()
         {
             //serverTCP.ListenClient(getIPAddress(), getPort());
-        }
-
-        private string getIPAddress()
-        {
-            DataSet dts = new DataSet();
-            string nomTaula = "Planets";
-            string query = "select IPPlanet from " + nomTaula + " where DescPlanet = '" + planet + "'";
-
-            string IP;
-
-            dts = _Dades.PortarPerConsulta(query, nomTaula);
-
-            IP = dts.Tables[0].Rows[0]["IPPlanet"].ToString();
-
-            Console.WriteLine("\n\n\n" + IP + "\n\n\n");
-            return IP;
-        }
-
-        private int getPort()
-        {
-            DataSet dts = new DataSet();
-            string nomTaula = "Planets";
-            string query = "select PortPlanet from " + nomTaula + " where DescPlanet = '" + planet + "'";
-
-            int port;
-
-            dts = _Dades.PortarPerConsulta(query, nomTaula);
-
-            port = int.Parse(dts.Tables[0].Rows[0]["PortPlanet"].ToString());
-
-            Console.WriteLine("\n\n\n" + port + "\n\n\n");
-            return port;
         }
     }
 }

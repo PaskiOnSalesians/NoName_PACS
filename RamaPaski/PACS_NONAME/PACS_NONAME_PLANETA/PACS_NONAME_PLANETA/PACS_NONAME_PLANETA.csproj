@@ -107,6 +107,14 @@
       <Project>{f1aa1d95-7881-413e-b401-b3f405c99d8c}</Project>
       <Name>FormBase</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GlobalVariables\GlobalVariables.csproj">
+      <Project>{52a7518a-bb97-4e9e-bca8-921cd1dbc990}</Project>
+      <Name>GlobalVariables</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PACS_Cryptography\PACS_Cryptography.csproj">
+      <Project>{76db3dc2-a491-489f-8aa1-8880e82bfc9b}</Project>
+      <Name>PACS_Cryptography</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TCP\TCP.csproj">
       <Project>{849087c6-4aef-4398-af7b-535c79f3facd}</Project>
       <Name>TCP</Name>

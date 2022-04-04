@@ -1,6 +1,5 @@
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_Cryptography\bin\Debug\PACS_Cryptography.dll
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_Cryptography\bin\Debug\PACS_Cryptography.pdb
-C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_Cryptography\obj\Debug\PACS_Cryptography.csproj.AssemblyReference.cache
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_Cryptography\obj\Debug\PACS_Cryptography.csproj.CoreCompileInputs.cache
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_Cryptography\obj\Debug\PACS_Cryptography.dll
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_Cryptography\obj\Debug\PACS_Cryptography.pdb

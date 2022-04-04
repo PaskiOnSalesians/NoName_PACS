@@ -42,12 +42,14 @@ namespace PACS_NONAME_PLANETA
             this.panel15.Controls.Add(this.lstvPlanets);
             this.panel15.Controls.Add(this.panel14);
             this.panel15.Controls.Add(this.panel13);
-            this.panel15.Controls.Add(this.panel8);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(19, 98);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1226, 513);
+            this.panel15.Size = new System.Drawing.Size(1226, 445);
             this.panel15.TabIndex = 15;
+            this.panel15.Controls.SetChildIndex(this.panel13, 0);
+            this.panel15.Controls.SetChildIndex(this.panel14, 0);
+            this.panel15.Controls.SetChildIndex(this.lstvPlanets, 0);
             // 
             // lstvPlanets
             // 
@@ -57,11 +59,11 @@ namespace PACS_NONAME_PLANETA
             this.lstvPlanets.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstvPlanets.ForeColor = System.Drawing.Color.White;
             this.lstvPlanets.HideSelection = false;
-            this.lstvPlanets.Location = new System.Drawing.Point(27, 27);
+            this.lstvPlanets.Location = new System.Drawing.Point(0, 27);
             this.lstvPlanets.Margin = new System.Windows.Forms.Padding(50);
             this.lstvPlanets.MultiSelect = false;
             this.lstvPlanets.Name = "lstvPlanets";
-            this.lstvPlanets.Size = new System.Drawing.Size(1199, 459);
+            this.lstvPlanets.Size = new System.Drawing.Size(1226, 391);
             this.lstvPlanets.TabIndex = 19;
             this.lstvPlanets.UseCompatibleStateImageBehavior = false;
             this.lstvPlanets.SelectedIndexChanged += new System.EventHandler(this.lstvPlanets_SelectedIndexChanged);
@@ -72,18 +74,18 @@ namespace PACS_NONAME_PLANETA
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
             this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel14.Location = new System.Drawing.Point(27, 486);
+            this.panel14.Location = new System.Drawing.Point(0, 418);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1199, 27);
+            this.panel14.Size = new System.Drawing.Size(1226, 27);
             this.panel14.TabIndex = 18;
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(27, 0);
+            this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1199, 27);
+            this.panel13.Size = new System.Drawing.Size(1226, 27);
             this.panel13.TabIndex = 17;
             // 
             // panel8
@@ -92,7 +94,7 @@ namespace PACS_NONAME_PLANETA
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(27, 513);
+            this.panel8.Size = new System.Drawing.Size(27, 445);
             this.panel8.TabIndex = 15;
             // 
             // frmPlanetView

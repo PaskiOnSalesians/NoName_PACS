@@ -15,6 +15,7 @@ namespace FormBase
         public frmBaseMain()
         {
             InitializeComponent();
+
         }
 
         #region Variables
@@ -50,8 +51,37 @@ namespace FormBase
                 Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
             }
         }
-
         #endregion
+
+        private void btnAccio_1_Click(object sender, EventArgs e)
+        {
+            //frmPlanetView frm = new frmPlanetView();
+        }
+
+        private void btnAccio_2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAccio_3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAccio_4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAccio_5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAccio_6_Click(object sender, EventArgs e)
+        {
+
+        }
 
         #region Minimize - Maximize - Exit
 
@@ -106,10 +136,5 @@ namespace FormBase
             }
         }
         #endregion
-
-        private void btnAccio_1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

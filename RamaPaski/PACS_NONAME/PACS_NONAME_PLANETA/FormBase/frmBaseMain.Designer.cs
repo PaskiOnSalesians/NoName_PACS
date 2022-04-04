@@ -55,6 +55,7 @@ namespace FormBase
             this.lblDevs = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.pnl_topbar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlBottomBar.SuspendLayout();
@@ -206,6 +207,7 @@ namespace FormBase
             // 
             // btnAccio_6
             // 
+            this.btnAccio_6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAccio_6.FlatAppearance.BorderSize = 4;
             this.btnAccio_6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.btnAccio_6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
@@ -218,9 +220,11 @@ namespace FormBase
             this.btnAccio_6.TabIndex = 10;
             this.btnAccio_6.Text = "Fi";
             this.btnAccio_6.UseVisualStyleBackColor = true;
+            this.btnAccio_6.Click += new System.EventHandler(this.btnAccio_6_Click);
             // 
             // btnAccio_5
             // 
+            this.btnAccio_5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAccio_5.FlatAppearance.BorderSize = 4;
             this.btnAccio_5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.btnAccio_5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
@@ -233,9 +237,11 @@ namespace FormBase
             this.btnAccio_5.TabIndex = 9;
             this.btnAccio_5.Text = "Resposta a la nau";
             this.btnAccio_5.UseVisualStyleBackColor = true;
+            this.btnAccio_5.Click += new System.EventHandler(this.btnAccio_5_Click);
             // 
             // btnAccio_4
             // 
+            this.btnAccio_4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAccio_4.FlatAppearance.BorderSize = 4;
             this.btnAccio_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.btnAccio_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
@@ -248,9 +254,11 @@ namespace FormBase
             this.btnAccio_4.TabIndex = 8;
             this.btnAccio_4.Text = "Processat de fitxers";
             this.btnAccio_4.UseVisualStyleBackColor = true;
+            this.btnAccio_4.Click += new System.EventHandler(this.btnAccio_4_Click);
             // 
             // btnAccio_3
             // 
+            this.btnAccio_3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAccio_3.FlatAppearance.BorderSize = 4;
             this.btnAccio_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.btnAccio_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
@@ -263,9 +271,11 @@ namespace FormBase
             this.btnAccio_3.TabIndex = 7;
             this.btnAccio_3.Text = "Criptografia";
             this.btnAccio_3.UseVisualStyleBackColor = true;
+            this.btnAccio_3.Click += new System.EventHandler(this.btnAccio_3_Click);
             // 
             // btnAccio_2
             // 
+            this.btnAccio_2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAccio_2.FlatAppearance.BorderSize = 4;
             this.btnAccio_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.btnAccio_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
@@ -278,9 +288,11 @@ namespace FormBase
             this.btnAccio_2.TabIndex = 6;
             this.btnAccio_2.Text = "Connexió amb la nau";
             this.btnAccio_2.UseVisualStyleBackColor = true;
+            this.btnAccio_2.Click += new System.EventHandler(this.btnAccio_2_Click);
             // 
             // btnAccio_1
             // 
+            this.btnAccio_1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAccio_1.FlatAppearance.BorderSize = 4;
             this.btnAccio_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.btnAccio_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
@@ -366,12 +378,21 @@ namespace FormBase
             this.panel6.Size = new System.Drawing.Size(19, 445);
             this.panel6.TabIndex = 9;
             // 
+            // panel8
+            // 
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(19, 98);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1226, 445);
+            this.panel8.TabIndex = 11;
+            // 
             // frmBaseMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
@@ -417,6 +438,7 @@ namespace FormBase
         private System.Windows.Forms.Button btnAccio_3;
         private System.Windows.Forms.Button btnAccio_2;
         private System.Windows.Forms.Button btnAccio_1;
+        private System.Windows.Forms.Panel panel8;
     }
 }
 

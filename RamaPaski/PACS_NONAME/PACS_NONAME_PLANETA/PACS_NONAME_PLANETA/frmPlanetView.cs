@@ -107,7 +107,7 @@ namespace PACS_NONAME_PLANETA
         private void LoadVariables(int idPlanetSelect)
         {
             dts = new DataSet();
-            dts = _Dades.PortarPerConsulta("select * from Planets where idPlanet = '" + idPlanetSelect + "'");
+            dts = _Dades.PortarPerConsulta("select * from Planets where idPlanet = " + idPlanetSelect);
 
             RefVariables.PlanetCode = dts.Tables[0].Rows[0]["CodePlanet"].ToString();
             RefVariables.PlanetName = dts.Tables[0].Rows[0]["DescPlanet"].ToString();
@@ -135,7 +135,7 @@ namespace PACS_NONAME_PLANETA
 
         private void generateTCPForm()
         {
-            frmPlanetCrypto nextFrm = new frmPlanetCrypto();
+            frmPlanetConnection nextFrm = new frmPlanetConnection();
             this.Visible = false;
             nextFrm.ShowDialog();
             this.Close();

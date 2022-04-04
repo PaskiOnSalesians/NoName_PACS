@@ -16,7 +16,7 @@ using GlobalVariables;
 
 namespace PACS_NONAME_PLANETA
 {
-    public partial class frmPlanetCrypto : frmBaseMain
+    public partial class frmPlanetConnection : frmBaseMain
     {
         PacsTcpServer serverTCP = new  PacsTcpServer();
         Dades _Dades = new Dades();
@@ -25,7 +25,7 @@ namespace PACS_NONAME_PLANETA
         bool receivedMessage;
         int stage = 0;
 
-        public frmPlanetCrypto()
+        public frmPlanetConnection()
         {
             InitializeComponent();
             planet = RefVariables.PlanetName;
@@ -42,9 +42,11 @@ namespace PACS_NONAME_PLANETA
 
             DataSet dts = new DataSet();
 
-            lblPlanetName.Text = RefVariables.PlanetName;
+            lblPlanetName.Text = planet;
 
-            lblIP_Port.Text = RefVariables.PlanetIp + ":" + RefVariables.PlanetMessagePort;
+            lblPlanetIP.Text = RefVariables.PlanetIp;
+
+            lblPlanetPort.Text = RefVariables.PlanetMessagePort.ToString();
 
             pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
 

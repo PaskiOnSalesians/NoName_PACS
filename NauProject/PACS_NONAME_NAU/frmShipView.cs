@@ -24,13 +24,14 @@ namespace PACS_NONAME_NAU
 
         DadesDB db = new DadesDB("SecureCoreG2");
         DataSet dts;
+        string imageRoute = Application.StartupPath + "\\..\\resources\\images\\Ships\\"; // Ruta a les imatges
 
-    
+
         private void lstvShips_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListView.SelectedListViewItemCollection selectedPlanet = this.lstvShips.SelectedItems;
+            ListView.SelectedListViewItemCollection selectedShip = this.lstvShips.SelectedItems;
 
-            foreach (ListViewItem item in selectedPlanet)
+            foreach (ListViewItem item in selectedShip)
             {
                 RefVariables.ShipId = (int)item.Tag;
             }
@@ -49,7 +50,6 @@ namespace PACS_NONAME_NAU
             ImageList imageShipList = new ImageList();
             imageShipList.ImageSize = new Size(144, 144);
 
-            string imageRoute = Application.StartupPath + "\\..\\resources\\images\\Ships\\"; // Ruta a les imatges
 
             try
             {
@@ -80,7 +80,7 @@ namespace PACS_NONAME_NAU
         {
             dts = new DataSet();
             //Cambiar select
-            dts = db.PortarPerConsulta("SELECT * FROM SpaceShips WHERE SpaceshipImage IS NOT NULL AND '" + id + "' ORDER BY CodeSpaceShip", "SpaceShips");
+            dts = db.PortarPerConsulta("SELECT * FROM SpaceShips WHERE SpaceshipImage IS NOT NULL AND idSpaceShip =" + id);
 
 
             RefVariables.ShipId = int.Parse(dts.Tables[0].Rows[0]["idSpaceShip"].ToString());
@@ -88,12 +88,12 @@ namespace PACS_NONAME_NAU
             RefVariables.ShipIp = dts.Tables[0].Rows[0]["IPSpaceShip"].ToString();
             RefVariables.ShipFilePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip"].ToString());
             RefVariables.ShipMessagePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip1"].ToString());
-            RefVariables.ShipImage = dts.Tables[0].Rows[0]["SpaceShipImage"].ToString();
+            RefVariables.ShipImage = imageRoute + (dts.Tables[0].Rows[0]["SpaceShipImage"].ToString());
         }
 
         private void generateTCPForm()
         {
-            frmMenuNau nextFrm = new frmMenuNau();
+            frmPlanetView nextFrm = new frmPlanetView();
             this.Visible = false;
             nextFrm.ShowDialog();
             this.Close();

@@ -29,6 +29,17 @@ namespace TCP
             return this.clientMessages;
         }
 
+        public void StartServer(string ipAddress, int port)
+        {
+            
+        }
+
+       
+
+        public void SendMessage()
+        {
+
+        }
 
         public void ListenClient(string ipAddress, int port)
         {

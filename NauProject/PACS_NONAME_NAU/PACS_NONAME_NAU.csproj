@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmMenuNau.cs">
+    <Compile Include="frmConnectionShip.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenuNau.Designer.cs">
-      <DependentUpon>frmMenuNau.cs</DependentUpon>
+    <Compile Include="frmConnectionShip.Designer.cs">
+      <DependentUpon>frmConnectionShip.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPlanetView.cs">
       <SubType>Form</SubType>
@@ -73,8 +73,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmMenuNau.resx">
-      <DependentUpon>frmMenuNau.cs</DependentUpon>
+    <EmbeddedResource Include="frmConnectionShip.resx">
+      <DependentUpon>frmConnectionShip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlanetView.resx">
       <DependentUpon>frmPlanetView.cs</DependentUpon>

@@ -37,6 +37,7 @@ namespace PACS_NONAME_NAU
             this.lstvShips.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
             this.lstvShips.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstvShips.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstvShips.ForeColor = System.Drawing.Color.White;
             this.lstvShips.HideSelection = false;
             this.lstvShips.Location = new System.Drawing.Point(25, 148);
             this.lstvShips.Name = "lstvShips";
@@ -55,6 +56,7 @@ namespace PACS_NONAME_NAU
             this.Controls.Add(this.lstvShips);
             this.Name = "frmShipView";
             this.Text = "frmShipView";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmShipView_Load);
             this.Controls.SetChildIndex(this.lstvShips, 0);
             this.ResumeLayout(false);

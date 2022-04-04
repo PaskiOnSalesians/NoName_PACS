@@ -25,6 +25,7 @@ namespace AccesDades
             this.nomConnexio = nomConnexio;
         }
 
+
         public void Connectar()
         {
             ConnectionStringSettings conf = ConfigurationManager.ConnectionStrings[nomConnexio];

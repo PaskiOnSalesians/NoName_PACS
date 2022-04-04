@@ -47,9 +47,6 @@ namespace PACS_NONAME_PLANETA
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(1226, 445);
             this.panel15.TabIndex = 15;
-            this.panel15.Controls.SetChildIndex(this.panel13, 0);
-            this.panel15.Controls.SetChildIndex(this.panel14, 0);
-            this.panel15.Controls.SetChildIndex(this.lstvPlanets, 0);
             // 
             // lstvPlanets
             // 
@@ -108,6 +105,7 @@ namespace PACS_NONAME_PLANETA
             this.MinimumSize = new System.Drawing.Size(1264, 681);
             this.Name = "frmPlanetView";
             this.Text = "PACS - NONAME";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PlanetView_Load);
             this.Controls.SetChildIndex(this.panel15, 0);
             this.panel15.ResumeLayout(false);

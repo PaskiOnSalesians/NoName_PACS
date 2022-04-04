@@ -47,3 +47,4 @@ C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_P
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\obj\Debug\AccesDades.dll
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\obj\Debug\AccesDades.pdb
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\obj\Debug\AccesDades.csproj.AssemblyReference.cache

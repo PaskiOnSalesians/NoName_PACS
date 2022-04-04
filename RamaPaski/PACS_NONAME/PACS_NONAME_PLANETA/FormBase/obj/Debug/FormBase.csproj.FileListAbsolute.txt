@@ -30,3 +30,4 @@ C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_P
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\FormBase\obj\Debug\FormBase.csproj.CoreCompileInputs.cache
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\FormBase\obj\Debug\FormBase.dll
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\FormBase\obj\Debug\FormBase.pdb
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\FormBase\obj\Debug\FormBase.csproj.AssemblyReference.cache

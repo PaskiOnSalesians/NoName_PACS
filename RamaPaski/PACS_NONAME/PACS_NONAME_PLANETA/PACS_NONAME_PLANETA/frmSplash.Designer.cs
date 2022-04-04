@@ -44,7 +44,7 @@ namespace PACS_NONAME_NAU
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(170, 44);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(279, 158);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -54,10 +54,10 @@ namespace PACS_NONAME_NAU
             // pbTieFighter
             // 
             this.pbTieFighter.Image = ((System.Drawing.Image)(resources.GetObject("pbTieFighter.Image")));
-            this.pbTieFighter.Location = new System.Drawing.Point(111, 211);
-            this.pbTieFighter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbTieFighter.Location = new System.Drawing.Point(111, 206);
+            this.pbTieFighter.Margin = new System.Windows.Forms.Padding(2);
             this.pbTieFighter.Name = "pbTieFighter";
-            this.pbTieFighter.Size = new System.Drawing.Size(82, 69);
+            this.pbTieFighter.Size = new System.Drawing.Size(82, 82);
             this.pbTieFighter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTieFighter.TabIndex = 6;
             this.pbTieFighter.TabStop = false;
@@ -65,7 +65,7 @@ namespace PACS_NONAME_NAU
             // prbBarra
             // 
             this.prbBarra.Location = new System.Drawing.Point(111, 240);
-            this.prbBarra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.prbBarra.Margin = new System.Windows.Forms.Padding(2);
             this.prbBarra.Maximum = 101;
             this.prbBarra.Name = "prbBarra";
             this.prbBarra.Size = new System.Drawing.Size(378, 19);
@@ -100,7 +100,7 @@ namespace PACS_NONAME_NAU
             this.Controls.Add(this.prbBarra);
             this.Controls.Add(this.lblCarga);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmSplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

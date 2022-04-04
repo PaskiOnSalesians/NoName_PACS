@@ -21,14 +21,13 @@ namespace PACS_NONAME_PLANETA
         PacsTcpServer serverTCP = new  PacsTcpServer();
         Dades _Dades = new Dades();
 
-        string planet, namePlanetImage;
-        bool receivedMessage;
-        int stage = 0;
+        string planet;
 
         public frmPlanetConnection()
         {
             InitializeComponent();
             planet = RefVariables.PlanetName;
+            Control.CheckForIllegalCrossThreadCalls = false;
         }
 
         private void rtxtInfo_TextChanged(object sender, EventArgs e)
@@ -43,20 +42,36 @@ namespace PACS_NONAME_PLANETA
             DataSet dts = new DataSet();
 
             lblPlanetName.Text = planet;
-
             lblPlanetIP.Text = RefVariables.PlanetIp;
-
             lblPlanetPort.Text = RefVariables.PlanetMessagePort.ToString();
 
+            lblShipName.Text = "???";
+            lblShipIp.Text = "???";
+            lblShipPort.Text = "???";
+
             pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
+            pboxNau.Image = Image.FromFile(Application.StartupPath + "\\..\\resources\\images\\Ships\\shipUnknown.png");
+
+            Timer_Arrow.Start();
 
             Thread server = new Thread(ServerListen);
             server.Start();
         }
 
+        private void Timer_Arrow_Tick(object sender, EventArgs e)
+        {
+            pnlConnect1.BackColor = Color.Yellow;
+            pnlConnect1.BackColor = Color.White;
+
+        }
+
         private void ServerListen()
         {
-            //serverTCP.ListenClient(getIPAddress(), getPort());
+            
+            serverTCP.StartServer(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
+            rtxtInfo.Text += serverTCP.ReceivePing();
+            rtxtInfo.Text = "\n";
+            rtxtInfo.Text += serverTCP.GetClientMessages();
         }
     }
 }

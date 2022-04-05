@@ -315,7 +315,7 @@ namespace FormBase
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(184, 49);
             this.button5.TabIndex = 5;
-            this.button5.Text = "FI";
+            this.button5.Text = "End";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -330,7 +330,7 @@ namespace FormBase
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(184, 49);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Resposta Planeta";
+            this.button4.Text = "File Processing";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -345,7 +345,7 @@ namespace FormBase
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(184, 49);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Processat de fitxers";
+            this.button3.Text = "Encrypt Codes";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // btnCriptografia
@@ -360,7 +360,7 @@ namespace FormBase
             this.btnCriptografia.Name = "btnCriptografia";
             this.btnCriptografia.Size = new System.Drawing.Size(184, 49);
             this.btnCriptografia.TabIndex = 2;
-            this.btnCriptografia.Text = "Criptografia";
+            this.btnCriptografia.Text = "Connect Planet";
             this.btnCriptografia.UseVisualStyleBackColor = true;
             // 
             // btnPlaneta
@@ -375,7 +375,7 @@ namespace FormBase
             this.btnPlaneta.Name = "btnPlaneta";
             this.btnPlaneta.Size = new System.Drawing.Size(184, 49);
             this.btnPlaneta.TabIndex = 1;
-            this.btnPlaneta.Text = "Escollir Planeta";
+            this.btnPlaneta.Text = "Select Planet";
             this.btnPlaneta.UseVisualStyleBackColor = true;
             // 
             // btnNau
@@ -390,7 +390,7 @@ namespace FormBase
             this.btnNau.Name = "btnNau";
             this.btnNau.Size = new System.Drawing.Size(184, 49);
             this.btnNau.TabIndex = 0;
-            this.btnNau.Text = "Escollir Nau";
+            this.btnNau.Text = "Select SpaceShip";
             this.btnNau.UseVisualStyleBackColor = true;
             // 
             // panel10

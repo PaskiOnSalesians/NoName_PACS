@@ -31,16 +31,39 @@ namespace TCP
 
         public void StartServer(string ipAddress, int port)
         {
-            
+            listener = new TcpListener(IPAddress.Parse(ipAddress), port);
+            listener.Start();
         }
 
-       
-
-        public void SendMessage()
+        public string ReceivePing()
         {
+            string data;
+            byte[] buffer = new byte[1024];
 
+            isConnected = true;
+
+            clientMessages.Clear();
+            while (isConnected)
+            {
+                if (listener.Pending())
+                {
+                    client = listener.AcceptTcpClient();
+                    stream = client.GetStream();
+
+                    int num = stream.Read(buffer, 0, buffer.Length);
+                    data = Encoding.ASCII.GetString(buffer, 0, num);
+
+                    IPEndPoint remoteIpEndPoint = client.Client.RemoteEndPoint as IPEndPoint;
+                    clientMessages.Add("The response from planet " + remoteIpEndPoint.Address + "was: " + data);
+
+                    Console.WriteLine(remoteIpEndPoint);
+
+                    return remoteIpEndPoint.ToString();
+                }
+            }
+
+            return null;
         }
-
         public void ListenClient(string ipAddress, int port)
         {
             string data;

@@ -50,8 +50,9 @@ namespace PACS_NONAME_NAU
             this.lblPlanetIP = new System.Windows.Forms.Label();
             this.lblFilePortPlanet = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtxData = new System.Windows.Forms.RichTextBox();
             this.btnConnect = new System.Windows.Forms.Button();
+            this.panStatus = new System.Windows.Forms.Panel();
             this.tblpnlPlanetInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxShip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPlanet)).BeginInit();
@@ -348,33 +349,44 @@ namespace PACS_NONAME_NAU
             this.label12.TabIndex = 6;
             this.label12.Text = "File port";
             // 
-            // richTextBox1
+            // rtxData
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.richTextBox1.Location = new System.Drawing.Point(1256, 121);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(407, 580);
-            this.richTextBox1.TabIndex = 32;
-            this.richTextBox1.Text = "";
+            this.rtxData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.rtxData.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rtxData.Location = new System.Drawing.Point(1162, 121);
+            this.rtxData.Name = "rtxData";
+            this.rtxData.ReadOnly = true;
+            this.rtxData.Size = new System.Drawing.Size(501, 580);
+            this.rtxData.TabIndex = 32;
+            this.rtxData.Text = "";
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(822, 178);
+            this.btnConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.btnConnect.ForeColor = System.Drawing.Color.White;
+            this.btnConnect.Location = new System.Drawing.Point(803, 162);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(139, 49);
+            this.btnConnect.Size = new System.Drawing.Size(190, 80);
             this.btnConnect.TabIndex = 33;
             this.btnConnect.Text = "Establish connection";
-            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
+            // panStatus
+            // 
+            this.panStatus.Location = new System.Drawing.Point(1044, 147);
+            this.panStatus.Name = "panStatus";
+            this.panStatus.Size = new System.Drawing.Size(112, 100);
+            this.panStatus.TabIndex = 34;
             // 
             // frmConnectionShip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1688, 880);
+            this.Controls.Add(this.panStatus);
             this.Controls.Add(this.btnConnect);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtxData);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.picBoxPlanet);
             this.Controls.Add(this.picBoxShip);
@@ -387,8 +399,9 @@ namespace PACS_NONAME_NAU
             this.Controls.SetChildIndex(this.picBoxShip, 0);
             this.Controls.SetChildIndex(this.picBoxPlanet, 0);
             this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
-            this.Controls.SetChildIndex(this.richTextBox1, 0);
+            this.Controls.SetChildIndex(this.rtxData, 0);
             this.Controls.SetChildIndex(this.btnConnect, 0);
+            this.Controls.SetChildIndex(this.panStatus, 0);
             this.tblpnlPlanetInfo.ResumeLayout(false);
             this.tblpnlPlanetInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxShip)).EndInit();
@@ -421,7 +434,8 @@ namespace PACS_NONAME_NAU
         private System.Windows.Forms.Label lblPlanetIP;
         private System.Windows.Forms.Label lblFilePortPlanet;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtxData;
         private System.Windows.Forms.Button btnConnect;
+        private System.Windows.Forms.Panel panStatus;
     }
 }

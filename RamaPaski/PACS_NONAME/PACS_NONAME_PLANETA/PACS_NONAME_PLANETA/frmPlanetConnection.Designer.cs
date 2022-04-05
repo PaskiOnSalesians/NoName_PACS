@@ -31,8 +31,23 @@ namespace PACS_NONAME_PLANETA
         {
             this.components = new System.ComponentModel.Container();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.pnlTable = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnCheckChat = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.pnlPlanetaNau = new System.Windows.Forms.Panel();
             this.pnlNau = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblShipName = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblShipIp = new System.Windows.Forms.Label();
+            this.lblShipPort = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel30 = new System.Windows.Forms.Panel();
             this.pboxNau = new System.Windows.Forms.PictureBox();
             this.panel27 = new System.Windows.Forms.Panel();
@@ -51,10 +66,6 @@ namespace PACS_NONAME_PLANETA
             this.label1 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.pboxPlanet = new System.Windows.Forms.PictureBox();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.rtxtInfo = new System.Windows.Forms.RichTextBox();
@@ -74,16 +85,15 @@ namespace PACS_NONAME_PLANETA
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblShipName = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lblShipIp = new System.Windows.Forms.Label();
-            this.lblShipPort = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.pnlTable.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.pnlPlanetaNau.SuspendLayout();
             this.pnlNau.SuspendLayout();
             this.panel29.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxNau)).BeginInit();
             this.panel27.SuspendLayout();
             this.pnlPlanet.SuspendLayout();
@@ -91,18 +101,11 @@ namespace PACS_NONAME_PLANETA
             this.tblpnlPlanetInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxPlanet)).BeginInit();
             this.panel12.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.pnlNau);
-            this.panel8.Controls.Add(this.panel27);
-            this.panel8.Controls.Add(this.pnlPlanet);
-            this.panel8.Controls.Add(this.panel21);
-            this.panel8.Controls.Add(this.panel15);
-            this.panel8.Controls.Add(this.panel14);
-            this.panel8.Controls.Add(this.panel13);
+            this.panel8.Controls.Add(this.panel11);
             this.panel8.Controls.Add(this.panel12);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(19, 98);
@@ -110,14 +113,107 @@ namespace PACS_NONAME_PLANETA
             this.panel8.Size = new System.Drawing.Size(1226, 439);
             this.panel8.TabIndex = 11;
             // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.panel13);
+            this.panel11.Controls.Add(this.pnlPlanetaNau);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(822, 439);
+            this.panel11.TabIndex = 22;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.pnlTable);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(575, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(247, 439);
+            this.panel13.TabIndex = 21;
+            // 
+            // pnlTable
+            // 
+            this.pnlTable.Controls.Add(this.tableLayoutPanel3);
+            this.pnlTable.Controls.Add(this.panel14);
+            this.pnlTable.Controls.Add(this.panel15);
+            this.pnlTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTable.Location = new System.Drawing.Point(0, 0);
+            this.pnlTable.Name = "pnlTable";
+            this.pnlTable.Size = new System.Drawing.Size(247, 439);
+            this.pnlTable.TabIndex = 21;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.btnCheckChat, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(10, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 4;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(227, 439);
+            this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // btnCheckChat
+            // 
+            this.btnCheckChat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCheckChat.FlatAppearance.BorderSize = 4;
+            this.btnCheckChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckChat.ForeColor = System.Drawing.Color.White;
+            this.btnCheckChat.Location = new System.Drawing.Point(3, 3);
+            this.btnCheckChat.Name = "btnCheckChat";
+            this.btnCheckChat.Size = new System.Drawing.Size(221, 103);
+            this.btnCheckChat.TabIndex = 1;
+            this.btnCheckChat.Text = "Check Data";
+            this.btnCheckChat.UseVisualStyleBackColor = true;
+            this.btnCheckChat.Click += new System.EventHandler(this.btnCheckChat_Click);
+            // 
+            // panel14
+            // 
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel14.Location = new System.Drawing.Point(237, 0);
+            this.panel14.MaximumSize = new System.Drawing.Size(100, 1080);
+            this.panel14.MinimumSize = new System.Drawing.Size(10, 439);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(10, 439);
+            this.panel14.TabIndex = 1;
+            // 
+            // panel15
+            // 
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel15.Location = new System.Drawing.Point(0, 0);
+            this.panel15.MaximumSize = new System.Drawing.Size(100, 1080);
+            this.panel15.MinimumSize = new System.Drawing.Size(10, 439);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(10, 439);
+            this.panel15.TabIndex = 0;
+            // 
+            // pnlPlanetaNau
+            // 
+            this.pnlPlanetaNau.Controls.Add(this.pnlNau);
+            this.pnlPlanetaNau.Controls.Add(this.panel27);
+            this.pnlPlanetaNau.Controls.Add(this.pnlPlanet);
+            this.pnlPlanetaNau.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlPlanetaNau.Location = new System.Drawing.Point(0, 0);
+            this.pnlPlanetaNau.MinimumSize = new System.Drawing.Size(575, 439);
+            this.pnlPlanetaNau.Name = "pnlPlanetaNau";
+            this.pnlPlanetaNau.Size = new System.Drawing.Size(575, 439);
+            this.pnlPlanetaNau.TabIndex = 20;
+            // 
             // pnlNau
             // 
             this.pnlNau.Controls.Add(this.panel29);
             this.pnlNau.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlNau.Location = new System.Drawing.Point(34, 283);
+            this.pnlNau.Location = new System.Drawing.Point(0, 283);
             this.pnlNau.Name = "pnlNau";
-            this.pnlNau.Size = new System.Drawing.Size(573, 150);
-            this.pnlNau.TabIndex = 27;
+            this.pnlNau.Size = new System.Drawing.Size(575, 150);
+            this.pnlNau.TabIndex = 28;
             // 
             // panel29
             // 
@@ -129,6 +225,102 @@ namespace PACS_NONAME_PLANETA
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(565, 150);
             this.panel29.TabIndex = 3;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.24242F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.75758F));
+            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblShipName, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblShipIp, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblShipPort, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label17, 0, 2);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.ForeColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(189, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(376, 150);
+            this.tableLayoutPanel2.TabIndex = 27;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(6, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(193, 25);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Ship Name";
+            // 
+            // lblShipName
+            // 
+            this.lblShipName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblShipName.AutoSize = true;
+            this.lblShipName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShipName.ForeColor = System.Drawing.Color.White;
+            this.lblShipName.Location = new System.Drawing.Point(208, 13);
+            this.lblShipName.Name = "lblShipName";
+            this.lblShipName.Size = new System.Drawing.Size(162, 25);
+            this.lblShipName.TabIndex = 5;
+            this.lblShipName.Text = "PlanetName";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(6, 62);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(193, 25);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "IP Address";
+            // 
+            // lblShipIp
+            // 
+            this.lblShipIp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblShipIp.AutoSize = true;
+            this.lblShipIp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShipIp.ForeColor = System.Drawing.Color.White;
+            this.lblShipIp.Location = new System.Drawing.Point(208, 62);
+            this.lblShipIp.Name = "lblShipIp";
+            this.lblShipIp.Size = new System.Drawing.Size(162, 25);
+            this.lblShipIp.TabIndex = 3;
+            this.lblShipIp.Text = "IpPlanet";
+            // 
+            // lblShipPort
+            // 
+            this.lblShipPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblShipPort.AutoSize = true;
+            this.lblShipPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShipPort.ForeColor = System.Drawing.Color.White;
+            this.lblShipPort.Location = new System.Drawing.Point(208, 111);
+            this.lblShipPort.Name = "lblShipPort";
+            this.lblShipPort.Size = new System.Drawing.Size(162, 25);
+            this.lblShipPort.TabIndex = 4;
+            this.lblShipPort.Text = "PortPlanet";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(6, 111);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(193, 25);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "Port Message";
             // 
             // panel30
             // 
@@ -155,10 +347,10 @@ namespace PACS_NONAME_PLANETA
             this.panel27.Controls.Add(this.pnlConnect2);
             this.panel27.Controls.Add(this.pnlConnect1);
             this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel27.Location = new System.Drawing.Point(34, 150);
+            this.panel27.Location = new System.Drawing.Point(0, 150);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(573, 133);
-            this.panel27.TabIndex = 25;
+            this.panel27.Size = new System.Drawing.Size(575, 133);
+            this.panel27.TabIndex = 26;
             // 
             // pnlConnect4
             // 
@@ -196,10 +388,10 @@ namespace PACS_NONAME_PLANETA
             // 
             this.pnlPlanet.Controls.Add(this.panel25);
             this.pnlPlanet.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlPlanet.Location = new System.Drawing.Point(34, 0);
+            this.pnlPlanet.Location = new System.Drawing.Point(0, 0);
             this.pnlPlanet.Name = "pnlPlanet";
-            this.pnlPlanet.Size = new System.Drawing.Size(573, 150);
-            this.pnlPlanet.TabIndex = 24;
+            this.pnlPlanet.Size = new System.Drawing.Size(575, 150);
+            this.pnlPlanet.TabIndex = 25;
             // 
             // panel25
             // 
@@ -325,38 +517,6 @@ namespace PACS_NONAME_PLANETA
             this.pboxPlanet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxPlanet.TabIndex = 3;
             this.pboxPlanet.TabStop = false;
-            // 
-            // panel21
-            // 
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel21.Location = new System.Drawing.Point(607, 0);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(10, 439);
-            this.panel21.TabIndex = 21;
-            // 
-            // panel15
-            // 
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel15.Location = new System.Drawing.Point(617, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(195, 439);
-            this.panel15.TabIndex = 20;
-            // 
-            // panel14
-            // 
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel14.Location = new System.Drawing.Point(0, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(34, 439);
-            this.panel14.TabIndex = 19;
-            // 
-            // panel13
-            // 
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel13.Location = new System.Drawing.Point(812, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(10, 439);
-            this.panel13.TabIndex = 18;
             // 
             // panel12
             // 
@@ -560,102 +720,6 @@ namespace PACS_NONAME_PLANETA
             this.label12.TabIndex = 6;
             this.label12.Text = "Port Missatgeria";
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.24242F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.75758F));
-            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblShipName, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblShipIp, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblShipPort, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label17, 0, 2);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.ForeColor = System.Drawing.Color.White;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(189, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(376, 150);
-            this.tableLayoutPanel2.TabIndex = 27;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(6, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(193, 25);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Ship Name";
-            // 
-            // lblShipName
-            // 
-            this.lblShipName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblShipName.AutoSize = true;
-            this.lblShipName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShipName.ForeColor = System.Drawing.Color.White;
-            this.lblShipName.Location = new System.Drawing.Point(208, 13);
-            this.lblShipName.Name = "lblShipName";
-            this.lblShipName.Size = new System.Drawing.Size(162, 25);
-            this.lblShipName.TabIndex = 5;
-            this.lblShipName.Text = "PlanetName";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(6, 62);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(193, 25);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "IP Address";
-            // 
-            // lblShipIp
-            // 
-            this.lblShipIp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblShipIp.AutoSize = true;
-            this.lblShipIp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShipIp.ForeColor = System.Drawing.Color.White;
-            this.lblShipIp.Location = new System.Drawing.Point(208, 62);
-            this.lblShipIp.Name = "lblShipIp";
-            this.lblShipIp.Size = new System.Drawing.Size(162, 25);
-            this.lblShipIp.TabIndex = 3;
-            this.lblShipIp.Text = "IpPlanet";
-            // 
-            // lblShipPort
-            // 
-            this.lblShipPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblShipPort.AutoSize = true;
-            this.lblShipPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShipPort.ForeColor = System.Drawing.Color.White;
-            this.lblShipPort.Location = new System.Drawing.Point(208, 111);
-            this.lblShipPort.Name = "lblShipPort";
-            this.lblShipPort.Size = new System.Drawing.Size(162, 25);
-            this.lblShipPort.TabIndex = 4;
-            this.lblShipPort.Text = "PortPlanet";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(6, 111);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(193, 25);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "Port Message";
-            // 
             // frmPlanetConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,11 +729,19 @@ namespace PACS_NONAME_PLANETA
             this.Name = "frmPlanetConnection";
             this.Text = "frmPlanetCrypto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPlanetConnection_FormClosing);
             this.Load += new System.EventHandler(this.frmPlanetCrypto_Load);
             this.Controls.SetChildIndex(this.panel8, 0);
             this.panel8.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.pnlTable.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.pnlPlanetaNau.ResumeLayout(false);
             this.pnlNau.ResumeLayout(false);
             this.panel29.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxNau)).EndInit();
             this.panel27.ResumeLayout(false);
             this.pnlPlanet.ResumeLayout(false);
@@ -678,8 +750,6 @@ namespace PACS_NONAME_PLANETA
             this.tblpnlPlanetInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxPlanet)).EndInit();
             this.panel12.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -697,8 +767,33 @@ namespace PACS_NONAME_PLANETA
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Timer Timer_Arrow;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel pnlPlanetaNau;
+        private System.Windows.Forms.Panel pnlNau;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblShipName;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblShipIp;
+        private System.Windows.Forms.Label lblShipPort;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.PictureBox pboxNau;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel pnlConnect4;
+        private System.Windows.Forms.Panel pnlConnect3;
+        private System.Windows.Forms.Panel pnlConnect2;
+        private System.Windows.Forms.Panel pnlConnect1;
         private System.Windows.Forms.Panel pnlPlanet;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.TableLayoutPanel tblpnlPlanetInfo;
@@ -710,32 +805,11 @@ namespace PACS_NONAME_PLANETA
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.PictureBox pboxPlanet;
-        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel pnlTable;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button btnCheckChat;
+        private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Timer Timer_Arrow;
-        private System.Windows.Forms.Panel pnlConnect4;
-        private System.Windows.Forms.Panel pnlConnect3;
-        private System.Windows.Forms.Panel pnlConnect2;
-        private System.Windows.Forms.Panel pnlConnect1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel pnlNau;
-        private System.Windows.Forms.Panel panel29;
-        private System.Windows.Forms.Panel panel30;
-        private System.Windows.Forms.PictureBox pboxNau;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblShipName;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lblShipIp;
-        private System.Windows.Forms.Label lblShipPort;
-        private System.Windows.Forms.Label label17;
     }
 }

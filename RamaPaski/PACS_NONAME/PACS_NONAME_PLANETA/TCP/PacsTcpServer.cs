@@ -14,6 +14,8 @@ namespace TCP
         TcpClient client;
         TcpListener listener;
         List<string> clientMessages = new List<string>();
+
+        string remoteIP;
         bool isConnected;
 
         public void StopListening()
@@ -35,39 +37,8 @@ namespace TCP
             return final;
         }
 
-
-        //public void ListenClient(string ipAddress, int port)
-        //{
-        //    string data;
-        //    byte[] buffer = new byte[1024];
-
-        //    listener = new TcpListener(IPAddress.Parse(ipAddress), port);
-        //    listener.Start();
-
-        //    isConnected = true;
-
-        //    clientMessages.Clear();
-        //    while (isConnected)
-        //    {
-        //        if (listener.Pending())
-        //        {
-        //            client = listener.AcceptTcpClient();
-        //            stream = client.GetStream();
-
-        //            int num = stream.Read(buffer, 0, buffer.Length);
-        //            data = Encoding.ASCII.GetString(buffer, 0, num);
-
-        //            IPEndPoint remoteIpEndPoint = client.Client.RemoteEndPoint as IPEndPoint;
-        //            clientMessages.Add(remoteIpEndPoint.Address + ";" + data);
-        //        }
-        //    }
-        //}
-
         public void StartServer(string ipAddress, int port)
         {
-            string data;
-            byte[] buffer = new byte[1024];
-
             listener = new TcpListener(IPAddress.Parse(ipAddress), port);
             listener.Start();
         }
@@ -91,7 +62,7 @@ namespace TCP
                     data = Encoding.ASCII.GetString(buffer, 0, num);
 
                     IPEndPoint remoteIpEndPoint = client.Client.RemoteEndPoint as IPEndPoint;
-                    clientMessages.Add(remoteIpEndPoint.Address + " - " + data);
+                    clientMessages.Add(data);
 
                     Console.WriteLine(remoteIpEndPoint);
 

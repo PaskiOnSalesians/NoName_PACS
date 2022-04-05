@@ -18,25 +18,27 @@ namespace PACS_NONAME_PLANETA
 {
     public partial class frmPlanetConnection : frmBaseMain
     {
-        PacsTcpServer serverTCP = new  PacsTcpServer();
-        Dades _Dades = new Dades();
+        #region Variables
 
-        string planet;
+        PacsTcpServer serverTCP = new  PacsTcpServer();
+        Thread server;
+        Dades _Dades = new Dades();
+        DataSet dts;
+
+        string planet, remoteIP;
+
+        #endregion
 
         public frmPlanetConnection()
         {
             InitializeComponent();
             planet = RefVariables.PlanetName;
-            Control.CheckForIllegalCrossThreadCalls = false;
         }
 
-        private void rtxtInfo_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+        #region Start Server + Load Form + Close Form
         private void frmPlanetCrypto_Load(object sender, EventArgs e)
         {
+            Control.CheckForIllegalCrossThreadCalls = false;
             _Dades.ConnectDB();
 
             DataSet dts = new DataSet();
@@ -54,24 +56,108 @@ namespace PACS_NONAME_PLANETA
 
             Timer_Arrow.Start();
 
-            Thread server = new Thread(ServerListen);
+            //rtxtInfo.Text = "ERTIE/LNTIE/LN-CORU";
+
+
+            server = new Thread(ServerListen);
             server.Start();
-        }
-
-        private void Timer_Arrow_Tick(object sender, EventArgs e)
-        {
-            pnlConnect1.BackColor = Color.Yellow;
-            pnlConnect1.BackColor = Color.White;
-
         }
 
         private void ServerListen()
         {
-            
             serverTCP.StartServer(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
-            rtxtInfo.Text += serverTCP.ReceivePing();
+            remoteIP = serverTCP.ReceivePing();
             rtxtInfo.Text = "\n";
             rtxtInfo.Text += serverTCP.GetClientMessages();
+            LoadShipInfo(remoteIP);
+        }
+
+        private void frmPlanetConnection_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            server.Abort();
+        }
+
+        #endregion
+
+        #region Animations
+        private void Timer_Arrow_Tick(object sender, EventArgs e)
+        {
+            pnlConnect1.BackColor = Color.Yellow;
+            pnlConnect1.BackColor = Color.White;
+        }
+        #endregion
+
+        #region Load Ship Info + Defragment Code
+        private void LoadShipInfo(string ip)
+        {
+            int pos;
+            string cShip, delivery;
+            dts = new DataSet();
+
+            (cShip, delivery) = DefragmentCode();
+
+            RefVariables.ShipName = cShip;
+
+            pos = ip.IndexOf(":");
+            lblShipIp.Text = ip.Substring(0, pos);
+            lblShipName.Text = cShip;
+
+            // Coger puerto de la nave de la base de datos
+            dts = _Dades.PortarPerConsulta("select * from SpaceShips where SpaceshipImage is not null and CodeSpaceShip = '" + cShip + "'", "SpaceShips");
+            RefVariables.ShipMessagePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip"].ToString());
+            RefVariables.ShipImage = dts.Tables[0].Rows[0]["SpaceshipImage"].ToString();
+            RefVariables.ShipId = int.Parse(dts.Tables[0].Rows[0]["idSpaceShip"].ToString());
+            RefVariables.ShipFilePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip1"].ToString());
+
+            RefVariables.DeliveryCode = delivery;
+
+            lblShipPort.Text = RefVariables.ShipMessagePort.ToString();
+            pboxNau.Image = Image.FromFile(Application.StartupPath + "\\..\\resources\\images\\Ships\\" + RefVariables.ShipImage);
+        }
+
+        private (string, string) DefragmentCode()
+        {
+            string[] finalSplitted;
+            string codeShip = "", codeDelivery = "", text;
+
+            text = rtxtInfo.Text;
+
+            int notIndex = text.IndexOf("ER");
+            int firstindex = text.IndexOf("ER", notIndex + 1);
+            int secondindex = text.IndexOf("\n", firstindex);
+            string finalMessage = text.Substring(firstindex, secondindex - firstindex);
+
+            finalSplitted = finalMessage.Split('.');
+
+            codeShip = finalSplitted[1];
+            codeDelivery = finalSplitted[2];
+
+            return (codeShip, codeDelivery);
+        }
+        #endregion
+
+        private void btnCheckChat_Click(object sender, EventArgs e)
+        {
+            int stage = 1;
+            MessageBox.Show(CheckDeliveryData().ToString());
+        }
+
+        private bool CheckDeliveryData()
+        {
+            dts = new DataSet();
+
+            dts = _Dades.PortarPerConsulta("select * from DeliveryData where idPlanet =" + RefVariables.PlanetId +
+                " and idSpaceShip =" + RefVariables.ShipId +
+                " and CodeDelivery ='" + RefVariables.DeliveryCode +
+                "' and DeliveryDate = '2022-05-04'"
+                );
+
+            if( dts.Tables[0].Rows.Count == 1)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

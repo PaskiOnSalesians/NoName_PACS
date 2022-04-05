@@ -30,5 +30,11 @@ namespace GlobalVariables
         public static string ShipImage { get; set; }
 
         #endregion
+
+        #region Delivery Codes
+
+        public static string DeliveryCode { get; set; }
+
+        #endregion
     }
 }

@@ -18,9 +18,13 @@ namespace PACS_NONAME_NAU
 {
     public partial class frmConnectionShip : frmBaseMain
     {
-        PacsTcpClient tcp = new PacsTcpClient();
+        PacsTcpClient tcpClient = new PacsTcpClient();
+        PacsTcpServer tcpServer = new PacsTcpServer();
+        
         DadesDB db = new DadesDB("SecureCoreG2");
-        Thread EstablishConnection, ShowEstablishedConnectionShip;
+        Thread EstablishConnection, ShowEstablishedConnectionShip, WaitingVrMessage;
+
+        bool accepted = false;
 
         public frmConnectionShip()
         {
@@ -33,6 +37,7 @@ namespace PACS_NONAME_NAU
             LoadPlanetData();
             LoadShipData();
             Control.CheckForIllegalCrossThreadCalls = false;
+            
         }
 
         private void LoadShipData()
@@ -65,6 +70,18 @@ namespace PACS_NONAME_NAU
             ShowEstablishedConnectionShip = new Thread(ShowEstablishedConnection);
             ShowEstablishedConnectionShip.Start();
 
+            WaitingVrMessagePlanet();
+
+
+        }
+
+        private void WaitingVrMessagePlanet()
+        {
+            if (accepted)
+            {
+                WaitingVrMessage = new Thread(ServerListen);
+                WaitingVrMessage.Start();
+            }
         }
 
         private void ShowEstablishedConnection()
@@ -74,7 +91,10 @@ namespace PACS_NONAME_NAU
 
         private void SendErMessage()
         {
-           tcp.SendMessage(RefVariables.PlanetIp, RefVariables.PlanetMessagePort, EntryRequirementPlanet());
+           tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.PlanetMessagePort, EntryRequirementPlanet());
+           accepted = true;
+           TancarFil();
+
         }
 
         private string EntryRequirementPlanet()
@@ -165,20 +185,46 @@ namespace PACS_NONAME_NAU
             return message;
         }
 
-        //private void TancarFil()
-        //{
-        //    if (MakingPing != null)
-        //    {
-        //        MakingPing.Abort();
-        //    }
+        private void frmConnectionShip_Activated(object sender, EventArgs e)
+        {
+            WaitingVrMessagePlanet();
+        }
 
-        //    if (StartingServer != null)
-        //    {
-        //        StartingServer.Abort();
-        //    }
+        private void frmConnectionShip_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            TancarFilListener();
+          
+        }
+
+        private void ServerListen()
+        {
+           tcpServer.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);
+            tcpServer.ReceivePing();
+            rtxData.Text += tcpServer.GetClientMessages();
 
 
-        //}
+        }
+
+        private void TancarFil()
+        {
+            if (EstablishConnection != null)
+            {
+                EstablishConnection.Abort();
+            }
+
+            if (ShowEstablishedConnectionShip != null)
+            {
+                ShowEstablishedConnectionShip.Abort();
+            }
+        }
+
+       private void TancarFilListener()
+        {
+            if (WaitingVrMessage != null)
+            {
+                WaitingVrMessage.Abort();
+            }
+        }
 
     }
 }

@@ -394,6 +394,8 @@ namespace PACS_NONAME_NAU
             this.Name = "frmConnectionShip";
             this.Text = "frmMenuNau";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.frmConnectionShip_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmConnectionShip_FormClosing);
             this.Load += new System.EventHandler(this.frmConnectionShip_Load);
             this.Controls.SetChildIndex(this.tblpnlPlanetInfo, 0);
             this.Controls.SetChildIndex(this.picBoxShip, 0);

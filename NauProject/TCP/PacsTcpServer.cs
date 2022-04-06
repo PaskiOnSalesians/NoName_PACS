@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace TCP
 {
-    class PacsTcpServer
+    public class PacsTcpServer
     {
         NetworkStream stream;
         TcpClient client;
         TcpListener listener;
-        List<string> clientMessages = new List<string>();
+        List<string> clientMessages = new List<string>();        
         bool isConnected;
 
         public void StopListening()
@@ -24,16 +24,33 @@ namespace TCP
             listener.Stop();
         }
 
-        public List<string> GetClientMessages()
+        public string GetClientMessages()
         {
-            return this.clientMessages;
+            string final = "";
+            foreach (string item in clientMessages)
+            {
+                final += item + "\n";
+            }
+            return final;
+
+      
         }
 
         public void StartServer(string ipAddress, int port)
         {
-            listener = new TcpListener(IPAddress.Parse(ipAddress), port);
-            listener.Start();
+            try
+            {
+                listener = new TcpListener(IPAddress.Parse(ipAddress), port);
+                listener.Start();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("You can't Ping another time");
+            }
+            
         }
+
 
         public string ReceivePing()
         {
@@ -54,7 +71,7 @@ namespace TCP
                     data = Encoding.ASCII.GetString(buffer, 0, num);
 
                     IPEndPoint remoteIpEndPoint = client.Client.RemoteEndPoint as IPEndPoint;
-                    clientMessages.Add("The response from planet " + remoteIpEndPoint.Address + "was: " + data);
+                    clientMessages.Add("\nThe response from planet " + remoteIpEndPoint.Address + " was: " + data);
 
                     Console.WriteLine(remoteIpEndPoint);
 

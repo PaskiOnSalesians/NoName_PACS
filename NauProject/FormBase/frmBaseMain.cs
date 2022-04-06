@@ -110,5 +110,10 @@ namespace FormBase
             }
         }
         #endregion
+
+        private void btnNau_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

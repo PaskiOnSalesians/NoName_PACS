@@ -24,7 +24,7 @@ namespace GlobalVariables
 
         public static int ShipId { get; set; }
         public static string ShipName { get; set; }
-        public static int ShipIp { get; set; }
+        public static string ShipIp { get; set; }
         public static int ShipMessagePort { get; set; }
         public static int ShipFilePort { get; set; }
         public static string ShipImage { get; set; }

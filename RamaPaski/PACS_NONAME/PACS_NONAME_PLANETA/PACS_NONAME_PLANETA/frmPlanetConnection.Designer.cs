@@ -35,6 +35,7 @@ namespace PACS_NONAME_PLANETA
             this.panel13 = new System.Windows.Forms.Panel();
             this.pnlTable = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRunServer = new System.Windows.Forms.Button();
             this.btnCheckChat = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -110,7 +111,7 @@ namespace PACS_NONAME_PLANETA
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(19, 98);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1226, 439);
+            this.panel8.Size = new System.Drawing.Size(1226, 525);
             this.panel8.TabIndex = 11;
             // 
             // panel11
@@ -120,7 +121,7 @@ namespace PACS_NONAME_PLANETA
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(822, 439);
+            this.panel11.Size = new System.Drawing.Size(822, 525);
             this.panel11.TabIndex = 22;
             // 
             // panel13
@@ -129,26 +130,27 @@ namespace PACS_NONAME_PLANETA
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(575, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(247, 439);
+            this.panel13.Size = new System.Drawing.Size(247, 525);
             this.panel13.TabIndex = 21;
             // 
             // pnlTable
             // 
+            this.pnlTable.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlTable.Controls.Add(this.tableLayoutPanel3);
             this.pnlTable.Controls.Add(this.panel14);
             this.pnlTable.Controls.Add(this.panel15);
-            this.pnlTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTable.Location = new System.Drawing.Point(0, 0);
+            this.pnlTable.Location = new System.Drawing.Point(0, 43);
             this.pnlTable.Name = "pnlTable";
             this.pnlTable.Size = new System.Drawing.Size(247, 439);
             this.pnlTable.TabIndex = 21;
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.btnCheckChat, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Controls.Add(this.btnRunServer, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnCheckChat, 0, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(10, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
@@ -159,6 +161,24 @@ namespace PACS_NONAME_PLANETA
             this.tableLayoutPanel3.Size = new System.Drawing.Size(227, 439);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
+            // btnRunServer
+            // 
+            this.btnRunServer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRunServer.FlatAppearance.BorderSize = 4;
+            this.btnRunServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRunServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRunServer.ForeColor = System.Drawing.Color.White;
+            this.btnRunServer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRunServer.Location = new System.Drawing.Point(3, 3);
+            this.btnRunServer.MaximumSize = new System.Drawing.Size(600, 103);
+            this.btnRunServer.MinimumSize = new System.Drawing.Size(221, 103);
+            this.btnRunServer.Name = "btnRunServer";
+            this.btnRunServer.Size = new System.Drawing.Size(221, 103);
+            this.btnRunServer.TabIndex = 2;
+            this.btnRunServer.Text = "Run Server";
+            this.btnRunServer.UseVisualStyleBackColor = true;
+            this.btnRunServer.Click += new System.EventHandler(this.btnRunServer_Click);
+            // 
             // btnCheckChat
             // 
             this.btnCheckChat.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -166,7 +186,9 @@ namespace PACS_NONAME_PLANETA
             this.btnCheckChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckChat.ForeColor = System.Drawing.Color.White;
-            this.btnCheckChat.Location = new System.Drawing.Point(3, 3);
+            this.btnCheckChat.Location = new System.Drawing.Point(3, 112);
+            this.btnCheckChat.MaximumSize = new System.Drawing.Size(600, 103);
+            this.btnCheckChat.MinimumSize = new System.Drawing.Size(221, 103);
             this.btnCheckChat.Name = "btnCheckChat";
             this.btnCheckChat.Size = new System.Drawing.Size(221, 103);
             this.btnCheckChat.TabIndex = 1;
@@ -203,7 +225,7 @@ namespace PACS_NONAME_PLANETA
             this.pnlPlanetaNau.Location = new System.Drawing.Point(0, 0);
             this.pnlPlanetaNau.MinimumSize = new System.Drawing.Size(575, 439);
             this.pnlPlanetaNau.Name = "pnlPlanetaNau";
-            this.pnlPlanetaNau.Size = new System.Drawing.Size(575, 439);
+            this.pnlPlanetaNau.Size = new System.Drawing.Size(575, 525);
             this.pnlPlanetaNau.TabIndex = 20;
             // 
             // pnlNau
@@ -533,14 +555,14 @@ namespace PACS_NONAME_PLANETA
             this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel12.Location = new System.Drawing.Point(822, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(404, 439);
+            this.panel12.Size = new System.Drawing.Size(404, 525);
             this.panel12.TabIndex = 17;
             // 
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
             this.panel20.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel20.Location = new System.Drawing.Point(30, 409);
+            this.panel20.Location = new System.Drawing.Point(30, 495);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(344, 20);
             this.panel20.TabIndex = 7;
@@ -555,7 +577,7 @@ namespace PACS_NONAME_PLANETA
             this.rtxtInfo.Location = new System.Drawing.Point(30, 30);
             this.rtxtInfo.Name = "rtxtInfo";
             this.rtxtInfo.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.rtxtInfo.Size = new System.Drawing.Size(344, 399);
+            this.rtxtInfo.Size = new System.Drawing.Size(344, 485);
             this.rtxtInfo.TabIndex = 0;
             this.rtxtInfo.Text = "";
             // 
@@ -575,7 +597,7 @@ namespace PACS_NONAME_PLANETA
             this.panel18.ForeColor = System.Drawing.Color.Coral;
             this.panel18.Location = new System.Drawing.Point(374, 10);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(20, 419);
+            this.panel18.Size = new System.Drawing.Size(20, 505);
             this.panel18.TabIndex = 5;
             // 
             // panel17
@@ -584,7 +606,7 @@ namespace PACS_NONAME_PLANETA
             this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel17.Location = new System.Drawing.Point(10, 10);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(20, 419);
+            this.panel17.Size = new System.Drawing.Size(20, 505);
             this.panel17.TabIndex = 4;
             // 
             // panel16
@@ -592,7 +614,7 @@ namespace PACS_NONAME_PLANETA
             this.panel16.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel16.Location = new System.Drawing.Point(394, 10);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(10, 419);
+            this.panel16.Size = new System.Drawing.Size(10, 505);
             this.panel16.TabIndex = 3;
             // 
             // panel22
@@ -600,13 +622,13 @@ namespace PACS_NONAME_PLANETA
             this.panel22.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel22.Location = new System.Drawing.Point(0, 10);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(10, 419);
+            this.panel22.Size = new System.Drawing.Size(10, 505);
             this.panel22.TabIndex = 2;
             // 
             // panel23
             // 
             this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel23.Location = new System.Drawing.Point(0, 429);
+            this.panel23.Location = new System.Drawing.Point(0, 515);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(404, 10);
             this.panel23.TabIndex = 1;
@@ -811,5 +833,6 @@ namespace PACS_NONAME_PLANETA
         private System.Windows.Forms.Button btnCheckChat;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Button btnRunServer;
     }
 }

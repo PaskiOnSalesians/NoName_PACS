@@ -47,18 +47,10 @@ namespace FormBase
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAccio_6 = new System.Windows.Forms.Button();
-            this.btnAccio_1 = new System.Windows.Forms.Button();
-            this.btnAccio_2 = new System.Windows.Forms.Button();
-            this.btnAccio_4 = new System.Windows.Forms.Button();
-            this.btnAccio_3 = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pnl_topbar.SuspendLayout();
             this.pnlBottomBar.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -252,124 +244,12 @@ namespace FormBase
             this.panel8.Size = new System.Drawing.Size(1226, 10);
             this.panel8.TabIndex = 18;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Controls.Add(this.btnAccio_1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnAccio_2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnAccio_4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnAccio_3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnAccio_6, 4, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(19, 558);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1226, 65);
-            this.tableLayoutPanel1.TabIndex = 13;
-            // 
-            // btnAccio_6
-            // 
-            this.btnAccio_6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAccio_6.FlatAppearance.BorderSize = 4;
-            this.btnAccio_6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
-            this.btnAccio_6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
-            this.btnAccio_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccio_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccio_6.ForeColor = System.Drawing.Color.White;
-            this.btnAccio_6.Location = new System.Drawing.Point(1011, 10);
-            this.btnAccio_6.Name = "btnAccio_6";
-            this.btnAccio_6.Size = new System.Drawing.Size(184, 52);
-            this.btnAccio_6.TabIndex = 16;
-            this.btnAccio_6.Text = "End";
-            this.btnAccio_6.UseVisualStyleBackColor = true;
-            // 
-            // btnAccio_1
-            // 
-            this.btnAccio_1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAccio_1.FlatAppearance.BorderSize = 4;
-            this.btnAccio_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
-            this.btnAccio_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
-            this.btnAccio_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccio_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccio_1.ForeColor = System.Drawing.Color.White;
-            this.btnAccio_1.Location = new System.Drawing.Point(30, 10);
-            this.btnAccio_1.Name = "btnAccio_1";
-            this.btnAccio_1.Size = new System.Drawing.Size(184, 52);
-            this.btnAccio_1.TabIndex = 11;
-            this.btnAccio_1.Text = "Select Planet";
-            this.btnAccio_1.UseVisualStyleBackColor = true;
-            // 
-            // btnAccio_2
-            // 
-            this.btnAccio_2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAccio_2.FlatAppearance.BorderSize = 4;
-            this.btnAccio_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
-            this.btnAccio_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
-            this.btnAccio_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccio_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccio_2.ForeColor = System.Drawing.Color.White;
-            this.btnAccio_2.Location = new System.Drawing.Point(275, 10);
-            this.btnAccio_2.Name = "btnAccio_2";
-            this.btnAccio_2.Size = new System.Drawing.Size(184, 52);
-            this.btnAccio_2.TabIndex = 12;
-            this.btnAccio_2.Text = "Connect Spaceship";
-            this.btnAccio_2.UseVisualStyleBackColor = true;
-            // 
-            // btnAccio_4
-            // 
-            this.btnAccio_4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAccio_4.FlatAppearance.BorderSize = 4;
-            this.btnAccio_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
-            this.btnAccio_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
-            this.btnAccio_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccio_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccio_4.ForeColor = System.Drawing.Color.White;
-            this.btnAccio_4.Location = new System.Drawing.Point(765, 10);
-            this.btnAccio_4.Name = "btnAccio_4";
-            this.btnAccio_4.Size = new System.Drawing.Size(184, 52);
-            this.btnAccio_4.TabIndex = 14;
-            this.btnAccio_4.Text = "File Processing";
-            this.btnAccio_4.UseVisualStyleBackColor = true;
-            // 
-            // btnAccio_3
-            // 
-            this.btnAccio_3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAccio_3.FlatAppearance.BorderSize = 4;
-            this.btnAccio_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
-            this.btnAccio_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
-            this.btnAccio_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccio_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccio_3.ForeColor = System.Drawing.Color.White;
-            this.btnAccio_3.Location = new System.Drawing.Point(520, 10);
-            this.btnAccio_3.Name = "btnAccio_3";
-            this.btnAccio_3.Size = new System.Drawing.Size(184, 52);
-            this.btnAccio_3.TabIndex = 13;
-            this.btnAccio_3.Text = "Encrypt Codes";
-            this.btnAccio_3.UseVisualStyleBackColor = true;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(48)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(19, 537);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1226, 21);
-            this.panel9.TabIndex = 14;
-            // 
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(19, 98);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1226, 439);
+            this.panel10.Size = new System.Drawing.Size(1226, 525);
             this.panel10.TabIndex = 15;
             // 
             // frmBaseMain
@@ -379,8 +259,6 @@ namespace FormBase
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panel10);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -395,7 +273,6 @@ namespace FormBase
             this.pnlBottomBar.ResumeLayout(false);
             this.pnlBottomBar.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -419,13 +296,6 @@ namespace FormBase
         private System.Windows.Forms.Panel pnl_topbar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnAccio_6;
-        private System.Windows.Forms.Button btnAccio_1;
-        private System.Windows.Forms.Button btnAccio_2;
-        private System.Windows.Forms.Button btnAccio_4;
-        private System.Windows.Forms.Button btnAccio_3;
-        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
     }
 }

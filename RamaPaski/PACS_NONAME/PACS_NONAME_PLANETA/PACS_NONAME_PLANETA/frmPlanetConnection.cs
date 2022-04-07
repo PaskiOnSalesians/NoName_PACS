@@ -21,7 +21,6 @@ namespace PACS_NONAME_PLANETA
         #region Variables
 
         PacsTcpServer serverTCP = new  PacsTcpServer();
-        PacsTcpClient clientTCP = new PacsTcpClient();
         
         Thread server;
 
@@ -43,40 +42,37 @@ namespace PACS_NONAME_PLANETA
 
         #region Start Server + Load Form + Close Form
         private void frmPlanetCrypto_Load(object sender, EventArgs e)
-        {
-            btnRunServer.Enabled = false;
-            
+        {            
             Control.CheckForIllegalCrossThreadCalls = false;
             _Dades.ConnectDB();
 
             DataSet dts = new DataSet();
 
+            // Add initial info of the planet
             lblPlanetName.Text = planet;
             lblPlanetIP.Text = RefVariables.PlanetIp;
             lblPlanetPort.Text = RefVariables.PlanetMessagePort.ToString();
+            pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
 
+            // Add initial info of the ship
             lblShipName.Text = "???";
             lblShipIp.Text = "???";
             lblShipPort.Text = "???";
-
-            pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
             pboxNau.Image = Image.FromFile(Application.StartupPath + "\\..\\resources\\images\\Ships\\shipUnknown.png");
 
-            Timer_Arrow.Start();
+            //Timer_Arrow.Start();
 
             server = new Thread(ServerListen);
             server.Start();
-            CheckThreadStatus();
         }
 
         private void ServerListen()
         {
             serverTCP.StartServer(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
             remoteIP = serverTCP.ReceivePing();
-            //rtxtInfo.Text = "\n";
             rtxtInfo.Text += serverTCP.GetClientMessages();
             LoadShipInfo(remoteIP);
-            status = true;
+            serverTCP.StopListening();
         }
 
         private void CheckThreadStatus()
@@ -106,19 +102,15 @@ namespace PACS_NONAME_PLANETA
         private void LoadShipInfo(string ip)
         {
             int pos;
-            string cShip, delivery;
+            string cShip, delivery; // codeShip and Delivery
             dts = new DataSet();
 
             (cShip, delivery) = DefragmentCode();
 
-            RefVariables.ShipName = cShip;
-
-            pos = ip.IndexOf(":");
-            lblShipIp.Text = ip.Substring(0, pos);
-            lblShipName.Text = cShip;
-
-            // Coger puerto de la nave de la base de datos
+            // Get ship data from database and from received data
             dts = _Dades.PortarPerConsulta("select * from SpaceShips where SpaceshipImage is not null and CodeSpaceShip = '" + cShip + "'", "SpaceShips");
+
+            RefVariables.ShipName = cShip;
             RefVariables.ShipMessagePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip1"].ToString());
             RefVariables.ShipImage = dts.Tables[0].Rows[0]["SpaceshipImage"].ToString();
             RefVariables.ShipId = int.Parse(dts.Tables[0].Rows[0]["idSpaceShip"].ToString());
@@ -127,6 +119,11 @@ namespace PACS_NONAME_PLANETA
 
             RefVariables.DeliveryCode = delivery;
 
+            // Add ship info to labels
+            pos = ip.IndexOf(":");
+
+            lblShipIp.Text = ip.Substring(0, pos);
+            lblShipName.Text = cShip;
             lblShipPort.Text = RefVariables.ShipMessagePort.ToString();
             pboxNau.Image = Image.FromFile(Application.StartupPath + "\\..\\resources\\images\\Ships\\" + RefVariables.ShipImage);
         }
@@ -155,6 +152,12 @@ namespace PACS_NONAME_PLANETA
         #region CheckData + Send validation
         private void btnCheckChat_Click(object sender, EventArgs e)
         {
+            //server.Abort();
+            status = true;
+            CheckThreadStatus();
+
+            PacsTcpClient clientTCP = new PacsTcpClient();
+
             int stage = 1;
             string result;
 
@@ -169,19 +172,7 @@ namespace PACS_NONAME_PLANETA
 
             validationMessage = "VR" + stage.ToString() + RefVariables.ShipName + result;
 
-            StartClient();
-        }
-
-        private void StartClient()
-        {
-            clientTCP.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, validationMessage);
-        }
-
-        private void btnRunServer_Click(object sender, EventArgs e)
-        {
-            server = new Thread(ServerListen);
-            server.Start();
-            CheckThreadStatus();
+            string MessageReceived = clientTCP.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, validationMessage);
         }
 
         private bool CheckDeliveryData()

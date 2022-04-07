@@ -35,7 +35,6 @@ namespace PACS_NONAME_PLANETA
             this.panel13 = new System.Windows.Forms.Panel();
             this.pnlTable = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnRunServer = new System.Windows.Forms.Button();
             this.btnCheckChat = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -149,7 +148,6 @@ namespace PACS_NONAME_PLANETA
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.btnRunServer, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnCheckChat, 0, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(10, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -160,24 +158,6 @@ namespace PACS_NONAME_PLANETA
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(227, 439);
             this.tableLayoutPanel3.TabIndex = 2;
-            // 
-            // btnRunServer
-            // 
-            this.btnRunServer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRunServer.FlatAppearance.BorderSize = 4;
-            this.btnRunServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRunServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRunServer.ForeColor = System.Drawing.Color.White;
-            this.btnRunServer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunServer.Location = new System.Drawing.Point(3, 3);
-            this.btnRunServer.MaximumSize = new System.Drawing.Size(600, 103);
-            this.btnRunServer.MinimumSize = new System.Drawing.Size(221, 103);
-            this.btnRunServer.Name = "btnRunServer";
-            this.btnRunServer.Size = new System.Drawing.Size(221, 103);
-            this.btnRunServer.TabIndex = 2;
-            this.btnRunServer.Text = "Run Server";
-            this.btnRunServer.UseVisualStyleBackColor = true;
-            this.btnRunServer.Click += new System.EventHandler(this.btnRunServer_Click);
             // 
             // btnCheckChat
             // 
@@ -833,6 +813,5 @@ namespace PACS_NONAME_PLANETA
         private System.Windows.Forms.Button btnCheckChat;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Button btnRunServer;
     }
 }

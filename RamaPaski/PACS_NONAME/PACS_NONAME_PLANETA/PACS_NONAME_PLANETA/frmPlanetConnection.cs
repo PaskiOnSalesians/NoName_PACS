@@ -60,8 +60,6 @@ namespace PACS_NONAME_PLANETA
             lblShipPort.Text = "???";
             pboxNau.Image = Image.FromFile(Application.StartupPath + "\\..\\resources\\images\\Ships\\shipUnknown.png");
 
-            //Timer_Arrow.Start();
-
             server = new Thread(ServerListen);
             server.Start();
         }
@@ -115,7 +113,6 @@ namespace PACS_NONAME_PLANETA
             RefVariables.ShipImage = dts.Tables[0].Rows[0]["SpaceshipImage"].ToString();
             RefVariables.ShipId = int.Parse(dts.Tables[0].Rows[0]["idSpaceShip"].ToString());
             RefVariables.ShipFilePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip"].ToString());
-            RefVariables.ShipIp = lblShipIp.Text;
 
             RefVariables.DeliveryCode = delivery;
 
@@ -123,6 +120,9 @@ namespace PACS_NONAME_PLANETA
             pos = ip.IndexOf(":");
 
             lblShipIp.Text = ip.Substring(0, pos);
+
+            RefVariables.ShipIp = lblShipIp.Text;
+
             lblShipName.Text = cShip;
             lblShipPort.Text = RefVariables.ShipMessagePort.ToString();
             pboxNau.Image = Image.FromFile(Application.StartupPath + "\\..\\resources\\images\\Ships\\" + RefVariables.ShipImage);
@@ -136,7 +136,7 @@ namespace PACS_NONAME_PLANETA
             text = rtxtInfo.Text;
 
             int notIndex = text.IndexOf("ER");
-            int firstindex = text.IndexOf("ER", notIndex + 15);
+            int firstindex = text.IndexOf("ER", notIndex + 1);
             int secondindex = text.IndexOf("\n", firstindex);
             string finalMessage = text.Substring(firstindex, secondindex - firstindex);
 
@@ -152,11 +152,10 @@ namespace PACS_NONAME_PLANETA
         #region CheckData + Send validation
         private void btnCheckChat_Click(object sender, EventArgs e)
         {
-            //server.Abort();
+            PacsTcpClient clientTCP = new PacsTcpClient();
+
             status = true;
             CheckThreadStatus();
-
-            PacsTcpClient clientTCP = new PacsTcpClient();
 
             int stage = 1;
             string result;
@@ -171,8 +170,11 @@ namespace PACS_NONAME_PLANETA
             }
 
             validationMessage = "VR" + stage.ToString() + RefVariables.ShipName + result;
-
-            string MessageReceived = clientTCP.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, validationMessage);
+            
+                if (clientTCP.MakePing(RefVariables.ShipIp))
+                {
+                    clientTCP.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, validationMessage);
+                }
         }
 
         private bool CheckDeliveryData()

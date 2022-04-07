@@ -61,7 +61,7 @@ namespace TCP
             }
         }
 
-        public int MakePing(string ipAddress, int times)
+        public int MakePingTimes(string ipAddress, int times)
         {
             int correctPings = 0;
             bool pingStatus;

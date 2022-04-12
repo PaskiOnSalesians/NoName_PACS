@@ -20,11 +20,12 @@ namespace PACS_NONAME_NAU
     {
         PacsTcpClient tcpClient = new PacsTcpClient();
         PacsTcpServer tcpServer = new PacsTcpServer();
-        
+
         DadesDB db = new DadesDB("SecureCoreG2");
-        Thread EstablishConnection, ShowEstablishedConnectionShip, WaitingVrMessage;
+        Thread WaitingVrMessage;
 
         bool accepted = false;
+        bool completat = false;
 
         public frmConnectionShip()
         {
@@ -33,11 +34,12 @@ namespace PACS_NONAME_NAU
 
         private void frmConnectionShip_Load(object sender, EventArgs e)
         {
+            btnCripto.Enabled = false;
             db.Connectar();
             LoadPlanetData();
             LoadShipData();
             Control.CheckForIllegalCrossThreadCalls = false;
-            
+
         }
 
         private void LoadShipData()
@@ -63,13 +65,8 @@ namespace PACS_NONAME_NAU
             rtxData.Font = new Font("Arial", 11, FontStyle.Bold);
             rtxData.ForeColor = Color.White;
 
-
-            EstablishConnection = new Thread(SendErMessage);
-            EstablishConnection.Start();
-
-            ShowEstablishedConnectionShip = new Thread(ShowEstablishedConnection);
-            ShowEstablishedConnectionShip.Start();
-
+            SendErMessage();
+            EntryRequirementShip();
             WaitingVrMessagePlanet();
 
 
@@ -84,17 +81,12 @@ namespace PACS_NONAME_NAU
             }
         }
 
-        private void ShowEstablishedConnection()
-        {
-            EntryRequirementShip();
-        }
+
 
         private void SendErMessage()
         {
-           tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.PlanetMessagePort, EntryRequirementPlanet());
-           accepted = true;
-           TancarFil();
-
+            tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.PlanetMessagePort, EntryRequirementPlanet());
+            accepted = true;
         }
 
         private string EntryRequirementPlanet()
@@ -121,7 +113,7 @@ namespace PACS_NONAME_NAU
                     message += ("ER" + "." + RefVariables.ShipName + "." + RefVariables.ShipName + "-" + RefVariables.PlanetCode + "\n" + "\n");
                     panStatus.BackColor = Color.Green;
 
-                   
+
                 }
                 else
                 {
@@ -133,7 +125,7 @@ namespace PACS_NONAME_NAU
             {
                 message += "Inaccessible network." + "\n";
             }
-            
+
             return message;
         }
 
@@ -188,41 +180,57 @@ namespace PACS_NONAME_NAU
         private void frmConnectionShip_Activated(object sender, EventArgs e)
         {
             WaitingVrMessagePlanet();
+            if (completat)
+            {
+                btnCripto.Enabled = true;
+            }
         }
 
         private void frmConnectionShip_FormClosing(object sender, FormClosingEventArgs e)
         {
             TancarFilListener();
-          
         }
 
         private void ServerListen()
         {
-           tcpServer.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);
+            tcpServer.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);
             tcpServer.ReceivePing();
             rtxData.Text += tcpServer.GetClientMessages();
-
+            CheckVR(tcpServer.GetClientMessages());
 
         }
 
-        private void TancarFil()
+
+        private void CheckVR(string message)
         {
-            if (EstablishConnection != null)
-            {
-                EstablishConnection.Abort();
-            }
+            string code = message.Substring(message.Length - 3);
 
-            if (ShowEstablishedConnectionShip != null)
+            if (code == "VP")
             {
-                ShowEstablishedConnectionShip.Abort();
+                btnCripto.Enabled = true;
+            } else
+            {
+                btnCripto.Enabled = false;
             }
         }
 
-       private void TancarFilListener()
+
+        private void btnCripto_Click(object sender, EventArgs e)
+        {
+
+            frmCriptografia frm = new frmCriptografia();
+            this.Visible = false;
+            frm.ShowDialog();
+            this.Close();
+        }
+
+
+        private void TancarFilListener()
         {
             if (WaitingVrMessage != null)
             {
                 WaitingVrMessage.Abort();
+
             }
         }
 

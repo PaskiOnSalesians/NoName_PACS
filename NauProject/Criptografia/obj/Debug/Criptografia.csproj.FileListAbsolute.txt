@@ -1,0 +1,6 @@
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\dll\Criptografia.dll
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\dll\Criptografia.pdb
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\Criptografia\obj\Debug\Criptografia.csproj.CoreCompileInputs.cache
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\Criptografia\obj\Debug\Criptografia.dll
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\Criptografia\obj\Debug\Criptografia.pdb
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\Criptografia\obj\Debug\Criptografia.csproj.AssemblyReference.cache

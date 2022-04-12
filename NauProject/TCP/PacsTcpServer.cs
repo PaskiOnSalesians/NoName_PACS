@@ -46,7 +46,7 @@ namespace TCP
             catch (Exception)
             {
 
-                MessageBox.Show("You can't Ping another time");
+                MessageBox.Show("Turnning of subprocess");
             }
             
         }

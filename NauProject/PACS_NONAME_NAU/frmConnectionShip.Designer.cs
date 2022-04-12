@@ -53,6 +53,7 @@ namespace PACS_NONAME_NAU
             this.rtxData = new System.Windows.Forms.RichTextBox();
             this.btnConnect = new System.Windows.Forms.Button();
             this.panStatus = new System.Windows.Forms.Panel();
+            this.btnCripto = new System.Windows.Forms.Button();
             this.tblpnlPlanetInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxShip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPlanet)).BeginInit();
@@ -379,11 +380,24 @@ namespace PACS_NONAME_NAU
             this.panStatus.Size = new System.Drawing.Size(112, 100);
             this.panStatus.TabIndex = 34;
             // 
+            // btnCripto
+            // 
+            this.btnCripto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.btnCripto.ForeColor = System.Drawing.Color.White;
+            this.btnCripto.Location = new System.Drawing.Point(803, 414);
+            this.btnCripto.Name = "btnCripto";
+            this.btnCripto.Size = new System.Drawing.Size(190, 80);
+            this.btnCripto.TabIndex = 35;
+            this.btnCripto.Text = "Continue";
+            this.btnCripto.UseVisualStyleBackColor = false;
+            this.btnCripto.Click += new System.EventHandler(this.btnCripto_Click);
+            // 
             // frmConnectionShip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1688, 880);
+            this.Controls.Add(this.btnCripto);
             this.Controls.Add(this.panStatus);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.rtxData);
@@ -404,6 +418,7 @@ namespace PACS_NONAME_NAU
             this.Controls.SetChildIndex(this.rtxData, 0);
             this.Controls.SetChildIndex(this.btnConnect, 0);
             this.Controls.SetChildIndex(this.panStatus, 0);
+            this.Controls.SetChildIndex(this.btnCripto, 0);
             this.tblpnlPlanetInfo.ResumeLayout(false);
             this.tblpnlPlanetInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxShip)).EndInit();
@@ -439,5 +454,6 @@ namespace PACS_NONAME_NAU
         private System.Windows.Forms.RichTextBox rtxData;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Panel panStatus;
+        private System.Windows.Forms.Button btnCripto;
     }
 }

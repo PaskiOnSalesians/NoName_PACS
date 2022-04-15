@@ -40,3 +40,16 @@ C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_P
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.exe
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.pdb
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.frmPlanetConnection.resources
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\dll\PACS_NONAME_PLANETA.exe.config
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\dll\PACS_NONAME_PLANETA.exe
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\dll\PACS_NONAME_PLANETA.pdb
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.csproj.AssemblyReference.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.frmPlanetConnection.resources
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.frmPlanetView.resources
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_NAU.frmSplash.resources
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.Properties.Resources.resources
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.csproj.GenerateResource.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.csproj.CoreCompileInputs.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.csproj.CopyComplete
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.exe
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\PACS_NONAME_PLANETA\obj\Debug\PACS_NONAME_PLANETA.pdb

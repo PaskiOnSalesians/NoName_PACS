@@ -47,3 +47,9 @@ C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_P
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\obj\Debug\AccesDades.dll
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\obj\Debug\AccesDades.pdb
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\bin\Debug\AccesDades.dll
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\bin\Debug\AccesDades.pdb
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\obj\Debug\AccesDades.csproj.AssemblyReference.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\obj\Debug\AccesDades.dll
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_NONAME\PACS_NONAME_PLANETA\AccesDades\obj\Debug\AccesDades.pdb

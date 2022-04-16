@@ -49,6 +49,8 @@ namespace PACS_Ship
             imageShipList.ImageSize = new Size(255, 255);
             imageShipList.ColorDepth = ColorDepth.Depth32Bit; // Aquesta es per evitar un rebordat blanc
 
+            updateIP();
+
             try
             {
                 taula = "SpaceShips";
@@ -184,6 +186,39 @@ namespace PACS_Ship
         private void lstvSpaceship_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             OpenForm(1);
+        }
+
+        #endregion
+
+        #region Metodes Principals
+
+        // Actualitzar IP
+        private void updateIP()
+        {
+            string query, taula, currentIP;
+
+            dts = new DataSet();
+
+            try
+            {
+                using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
+                {
+                    socket.Connect("10.0.123.2", 1337); // Dona igual quina ip sigui
+                    IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
+                    currentIP = endPoint.Address.ToString(); // Obtenim la ip
+
+                    Console.WriteLine("\n" + currentIP + "\n");
+
+                    taula = "SpaceShips";
+                    query = "Update " + taula + " set IPSpaceShip = '" + currentIP + "' where SpaceshipImage is not null";
+
+                    _Dades.Executar(query);
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Ha ocorregut un error.", "PACS - NONAME");
+            }
         }
 
         #endregion

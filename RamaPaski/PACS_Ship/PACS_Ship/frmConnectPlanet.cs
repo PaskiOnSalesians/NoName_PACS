@@ -8,16 +8,51 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using GlobalVariables;
 using FormBase;
+using TCP;
 
 namespace PACS_Ship
 {
     public partial class frmConnectPlanet : frmBase
     {
+        PacsTcpClient tcpClient = new PacsTcpClient();
+        PacsTcpServer tcpServer = new PacsTcpServer();
+
         public frmConnectPlanet()
         {
             InitializeComponent();
         }
+
+        #region Events
+
+        private void frmConnectPlanet_Load(object sender, EventArgs e)
+        {
+            Control.CheckForIllegalCrossThreadCalls = false;
+
+            LoadPlanetData();
+            LoadShipData();
+
+            btnNext.Enabled = false;
+        }
+
+        private void LoadShipData()
+        {
+            lblShipName.Text = RefVariables.ShipName;
+            lblShipIP.Text = RefVariables.ShipIp;
+            lblShipMessagePort.Text = RefVariables.ShipMessagePort.ToString();
+            pboxShip.Image = Image.FromFile(RefVariables.ShipImage);
+        }
+
+        private void LoadPlanetData()
+        {
+            lblPlanetName.Text = RefVariables.PlanetName;
+            lblPlanetIP.Text = RefVariables.PlanetIp;
+            lblPlanetMessagePort.Text = RefVariables.PlanetMessagePort.ToString();
+            pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
+        }
+
+        #endregion
 
         #region  Carregador de Formularis
 
@@ -85,6 +120,17 @@ namespace PACS_Ship
             OpenForm(5);
         }
 
+
         #endregion
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

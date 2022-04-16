@@ -1,0 +1,6 @@
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\dll\TCP.dll
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\dll\TCP.pdb
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\TCP\obj\Debug\TCP.csproj.CoreCompileInputs.cache
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\TCP\obj\Debug\TCP.dll
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\TCP\obj\Debug\TCP.pdb
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\TCP\obj\Debug\TCP.csproj.AssemblyReference.cache

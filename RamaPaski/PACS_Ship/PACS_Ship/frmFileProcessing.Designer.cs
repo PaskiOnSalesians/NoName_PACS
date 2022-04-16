@@ -39,6 +39,8 @@
             this.RightSeparatorButtons = new System.Windows.Forms.Panel();
             this.LeftSeparatorButtons = new System.Windows.Forms.Panel();
             this.BotSeparator = new System.Windows.Forms.Panel();
+            this.RightBar = new System.Windows.Forms.Panel();
+            this.LeftBar = new System.Windows.Forms.Panel();
             this.ButtonsContainer.SuspendLayout();
             this.Buttons.SuspendLayout();
             this.SuspendLayout();
@@ -208,17 +210,37 @@
             this.BotSeparator.Size = new System.Drawing.Size(1366, 25);
             this.BotSeparator.TabIndex = 5;
             // 
+            // RightBar
+            // 
+            this.RightBar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RightBar.Location = new System.Drawing.Point(1276, 100);
+            this.RightBar.Name = "RightBar";
+            this.RightBar.Size = new System.Drawing.Size(90, 458);
+            this.RightBar.TabIndex = 46;
+            // 
+            // LeftBar
+            // 
+            this.LeftBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LeftBar.Location = new System.Drawing.Point(0, 100);
+            this.LeftBar.Name = "LeftBar";
+            this.LeftBar.Size = new System.Drawing.Size(90, 458);
+            this.LeftBar.TabIndex = 45;
+            // 
             // frmFileProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.RightBar);
+            this.Controls.Add(this.LeftBar);
             this.Controls.Add(this.ButtonsContainer);
             this.Name = "frmFileProcessing";
             this.Text = "frmFileProcessing";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Controls.SetChildIndex(this.ButtonsContainer, 0);
+            this.Controls.SetChildIndex(this.LeftBar, 0);
+            this.Controls.SetChildIndex(this.RightBar, 0);
             this.ButtonsContainer.ResumeLayout(false);
             this.Buttons.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -238,5 +260,7 @@
         private System.Windows.Forms.Panel RightSeparatorButtons;
         private System.Windows.Forms.Panel LeftSeparatorButtons;
         private System.Windows.Forms.Panel BotSeparator;
+        private System.Windows.Forms.Panel RightBar;
+        private System.Windows.Forms.Panel LeftBar;
     }
 }

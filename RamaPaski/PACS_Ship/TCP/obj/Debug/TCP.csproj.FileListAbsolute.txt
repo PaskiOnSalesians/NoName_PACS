@@ -1,0 +1,12 @@
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\dll\TCP.dll
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\dll\TCP.pdb
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\TCP\obj\Debug\TCP.csproj.CoreCompileInputs.cache
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\TCP\obj\Debug\TCP.dll
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\TCP\obj\Debug\TCP.pdb
+C:\Users\Marc\source\repos\PACS_NONAME_NAU\TCP\obj\Debug\TCP.csproj.AssemblyReference.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\dll\TCP.dll
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\dll\TCP.pdb
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\TCP\obj\Debug\TCP.csproj.AssemblyReference.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\TCP\obj\Debug\TCP.csproj.CoreCompileInputs.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\TCP\obj\Debug\TCP.dll
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\TCP\obj\Debug\TCP.pdb

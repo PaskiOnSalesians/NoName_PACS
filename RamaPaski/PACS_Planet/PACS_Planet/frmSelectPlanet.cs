@@ -14,7 +14,7 @@ using FormBase;
 
 namespace PACS_Planet
 {
-    public partial class frmPlanetSelect : frmBase
+    public partial class frmSelectPlanet : frmBase
     {
         Dades _Dades = new Dades(); // Obtenir les funcions relacionades amb la base de dades
 
@@ -22,7 +22,7 @@ namespace PACS_Planet
         DataSet dts;
         string imageRoute = Application.StartupPath + "\\..\\Resources\\images\\Planets\\"; // Ruta a les imatges
 
-        public frmPlanetSelect()
+        public frmSelectPlanet()
         {
             InitializeComponent();
         }
@@ -45,7 +45,7 @@ namespace PACS_Planet
             // Creem una llista d'imatges i definim el tamany
             ImageList imagePlanetList = new ImageList();
             imagePlanetList.ImageSize = new Size(255, 255);
-            imagePlanetList.ColorDepth = ColorDepth.Depth32Bit;
+            imagePlanetList.ColorDepth = ColorDepth.Depth32Bit; // Aquesta es per evitar un rebordat blanc
 
             try
             {
@@ -98,17 +98,63 @@ namespace PACS_Planet
 
         #endregion
 
-        private void btnSpaceshipConnection_Click(object sender, EventArgs e)
-        {
-            OpenForm();
-        }
+        #region Carregador de Formularis
 
-        private void OpenForm()
+        // Carregador de formularis
+        private void OpenForm(int num)
         {
-            frmSpaceshipConnection frm = new frmSpaceshipConnection();
-            frm.Show();
+            switch (num)
+            {
+                case 0:
+                    frmSelectPlanet frmPlanet = new frmSelectPlanet();
+                    frmPlanet.Show();
+                    break;
+                case 1:
+                    frmSpaceshipConnection frmConnection = new frmSpaceshipConnection();
+                    frmConnection.Show();
+                    break;
+                case 2:
+                    frmEncryptCodes frmCodes = new frmEncryptCodes();
+                    frmCodes.Show();
+                    break;
+                case 3:
+                    frmFileProcessing frmFiles = new frmFileProcessing();
+                    frmFiles.Show();
+                    break;
+                case 4:
+                    frmEnd frmEnd = new frmEnd();
+                    frmEnd.Show();
+                    break;
+            }
 
             this.Hide();
         }
+
+        private void btnSelectPlanet_Click(object sender, EventArgs e)
+        {
+            //OpenForm(0);
+        }
+
+        private void btnSpaceshipConnection_Click_1(object sender, EventArgs e)
+        {
+            OpenForm(1);
+        }
+
+        private void btnEncryptCodes_Click(object sender, EventArgs e)
+        {
+            OpenForm(2);
+        }
+
+        private void btnFileProcessing_Click(object sender, EventArgs e)
+        {
+            OpenForm(3);
+        }
+
+        private void btnEnd_Click(object sender, EventArgs e)
+        {
+            OpenForm(4);
+        }
+
+        #endregion
     }
 }

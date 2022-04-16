@@ -1,7 +1,7 @@
 ﻿
 namespace PACS_Planet
 {
-    partial class frmPlanetSelect
+    partial class frmSelectPlanet
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,6 +29,16 @@ namespace PACS_Planet
         /// </summary>
         private void InitializeComponent()
         {
+            this.ButtonContainer = new System.Windows.Forms.Panel();
+            this.Buttons = new System.Windows.Forms.TableLayoutPanel();
+            this.btnEnd = new System.Windows.Forms.Button();
+            this.btnFileProcessing = new System.Windows.Forms.Button();
+            this.btnEncryptCodes = new System.Windows.Forms.Button();
+            this.btnSpaceshipConnection = new System.Windows.Forms.Button();
+            this.btnSelectPlanet = new System.Windows.Forms.Button();
+            this.RightSeparatorButtons = new System.Windows.Forms.Panel();
+            this.LeftSeparatorButtons = new System.Windows.Forms.Panel();
+            this.BotSeparator = new System.Windows.Forms.Panel();
             this.lstvPlanets = new System.Windows.Forms.ListView();
             this.lstvRightBorder = new System.Windows.Forms.Panel();
             this.lstvLeftBorder = new System.Windows.Forms.Panel();
@@ -38,108 +48,13 @@ namespace PACS_Planet
             this.LeftSeparator = new System.Windows.Forms.Panel();
             this.RightBar = new System.Windows.Forms.Panel();
             this.LeftBar = new System.Windows.Forms.Panel();
-            this.ButtonContainer = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSelectPlanet = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnSpaceshipConnection = new System.Windows.Forms.Button();
-            this.btnCurrentForm = new System.Windows.Forms.Button();
-            this.RightSeparatorButtons = new System.Windows.Forms.Panel();
-            this.LeftSeparatorButtons = new System.Windows.Forms.Panel();
-            this.BotSeparator = new System.Windows.Forms.Panel();
             this.ButtonContainer.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.Buttons.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lstvPlanets
-            // 
-            this.lstvPlanets.Alignment = System.Windows.Forms.ListViewAlignment.Default;
-            this.lstvPlanets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.lstvPlanets.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstvPlanets.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lstvPlanets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstvPlanets.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstvPlanets.ForeColor = System.Drawing.Color.White;
-            this.lstvPlanets.HideSelection = false;
-            this.lstvPlanets.Location = new System.Drawing.Point(100, 110);
-            this.lstvPlanets.MultiSelect = false;
-            this.lstvPlanets.Name = "lstvPlanets";
-            this.lstvPlanets.Size = new System.Drawing.Size(1166, 438);
-            this.lstvPlanets.TabIndex = 46;
-            this.lstvPlanets.UseCompatibleStateImageBehavior = false;
-            // 
-            // lstvRightBorder
-            // 
-            this.lstvRightBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.lstvRightBorder.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lstvRightBorder.Location = new System.Drawing.Point(1266, 110);
-            this.lstvRightBorder.Name = "lstvRightBorder";
-            this.lstvRightBorder.Size = new System.Drawing.Size(10, 438);
-            this.lstvRightBorder.TabIndex = 45;
-            // 
-            // lstvLeftBorder
-            // 
-            this.lstvLeftBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.lstvLeftBorder.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lstvLeftBorder.Location = new System.Drawing.Point(90, 110);
-            this.lstvLeftBorder.Name = "lstvLeftBorder";
-            this.lstvLeftBorder.Size = new System.Drawing.Size(10, 438);
-            this.lstvLeftBorder.TabIndex = 44;
-            // 
-            // lstvBotBorder
-            // 
-            this.lstvBotBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.lstvBotBorder.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lstvBotBorder.Location = new System.Drawing.Point(90, 548);
-            this.lstvBotBorder.Name = "lstvBotBorder";
-            this.lstvBotBorder.Size = new System.Drawing.Size(1186, 10);
-            this.lstvBotBorder.TabIndex = 43;
-            // 
-            // lstvTopBorder
-            // 
-            this.lstvTopBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.lstvTopBorder.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lstvTopBorder.Location = new System.Drawing.Point(90, 100);
-            this.lstvTopBorder.Name = "lstvTopBorder";
-            this.lstvTopBorder.Size = new System.Drawing.Size(1186, 10);
-            this.lstvTopBorder.TabIndex = 42;
-            // 
-            // RightSeparator
-            // 
-            this.RightSeparator.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RightSeparator.Location = new System.Drawing.Point(1276, 100);
-            this.RightSeparator.Name = "RightSeparator";
-            this.RightSeparator.Size = new System.Drawing.Size(25, 458);
-            this.RightSeparator.TabIndex = 41;
-            // 
-            // LeftSeparator
-            // 
-            this.LeftSeparator.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LeftSeparator.Location = new System.Drawing.Point(65, 100);
-            this.LeftSeparator.Name = "LeftSeparator";
-            this.LeftSeparator.Size = new System.Drawing.Size(25, 458);
-            this.LeftSeparator.TabIndex = 40;
-            // 
-            // RightBar
-            // 
-            this.RightBar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RightBar.Location = new System.Drawing.Point(1301, 100);
-            this.RightBar.Name = "RightBar";
-            this.RightBar.Size = new System.Drawing.Size(65, 458);
-            this.RightBar.TabIndex = 39;
-            // 
-            // LeftBar
-            // 
-            this.LeftBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LeftBar.Location = new System.Drawing.Point(0, 100);
-            this.LeftBar.Name = "LeftBar";
-            this.LeftBar.Size = new System.Drawing.Size(65, 458);
-            this.LeftBar.TabIndex = 38;
             // 
             // ButtonContainer
             // 
-            this.ButtonContainer.Controls.Add(this.tableLayoutPanel1);
+            this.ButtonContainer.Controls.Add(this.Buttons);
             this.ButtonContainer.Controls.Add(this.RightSeparatorButtons);
             this.ButtonContainer.Controls.Add(this.LeftSeparatorButtons);
             this.ButtonContainer.Controls.Add(this.BotSeparator);
@@ -149,78 +64,81 @@ namespace PACS_Planet
             this.ButtonContainer.Size = new System.Drawing.Size(1366, 125);
             this.ButtonContainer.TabIndex = 37;
             // 
-            // tableLayoutPanel1
+            // Buttons
             // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.btnSelectPlanet, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnSpaceshipConnection, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnCurrentForm, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(90, 25);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1186, 100);
-            this.tableLayoutPanel1.TabIndex = 26;
+            this.Buttons.ColumnCount = 5;
+            this.Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.Buttons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.Buttons.Controls.Add(this.btnEnd, 4, 0);
+            this.Buttons.Controls.Add(this.btnFileProcessing, 3, 0);
+            this.Buttons.Controls.Add(this.btnEncryptCodes, 2, 0);
+            this.Buttons.Controls.Add(this.btnSpaceshipConnection, 1, 0);
+            this.Buttons.Controls.Add(this.btnSelectPlanet, 0, 0);
+            this.Buttons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Buttons.Location = new System.Drawing.Point(90, 25);
+            this.Buttons.Name = "Buttons";
+            this.Buttons.RowCount = 1;
+            this.Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.Buttons.Size = new System.Drawing.Size(1186, 100);
+            this.Buttons.TabIndex = 27;
             // 
-            // btnSelectPlanet
+            // btnEnd
             // 
-            this.btnSelectPlanet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSelectPlanet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSelectPlanet.FlatAppearance.BorderSize = 5;
-            this.btnSelectPlanet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnSelectPlanet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.btnSelectPlanet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectPlanet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnSelectPlanet.ForeColor = System.Drawing.Color.White;
-            this.btnSelectPlanet.Location = new System.Drawing.Point(951, 3);
-            this.btnSelectPlanet.Name = "btnSelectPlanet";
-            this.btnSelectPlanet.Size = new System.Drawing.Size(232, 94);
-            this.btnSelectPlanet.TabIndex = 6;
-            this.btnSelectPlanet.Text = "×";
-            this.btnSelectPlanet.UseVisualStyleBackColor = true;
+            this.btnEnd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEnd.FlatAppearance.BorderSize = 5;
+            this.btnEnd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnEnd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnEnd.ForeColor = System.Drawing.Color.White;
+            this.btnEnd.Location = new System.Drawing.Point(951, 3);
+            this.btnEnd.Name = "btnEnd";
+            this.btnEnd.Size = new System.Drawing.Size(232, 94);
+            this.btnEnd.TabIndex = 6;
+            this.btnEnd.Text = "End";
+            this.btnEnd.UseVisualStyleBackColor = true;
+            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
             // 
-            // button4
+            // btnFileProcessing
             // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderSize = 5;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(714, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(231, 94);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "×";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnFileProcessing.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFileProcessing.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFileProcessing.FlatAppearance.BorderSize = 5;
+            this.btnFileProcessing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnFileProcessing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.btnFileProcessing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFileProcessing.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnFileProcessing.ForeColor = System.Drawing.Color.White;
+            this.btnFileProcessing.Location = new System.Drawing.Point(714, 3);
+            this.btnFileProcessing.Name = "btnFileProcessing";
+            this.btnFileProcessing.Size = new System.Drawing.Size(231, 94);
+            this.btnFileProcessing.TabIndex = 5;
+            this.btnFileProcessing.Text = "File Processing";
+            this.btnFileProcessing.UseVisualStyleBackColor = true;
+            this.btnFileProcessing.Click += new System.EventHandler(this.btnFileProcessing_Click);
             // 
-            // button3
+            // btnEncryptCodes
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 5;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(477, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(231, 94);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "×";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEncryptCodes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEncryptCodes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEncryptCodes.FlatAppearance.BorderSize = 5;
+            this.btnEncryptCodes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnEncryptCodes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.btnEncryptCodes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEncryptCodes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnEncryptCodes.ForeColor = System.Drawing.Color.White;
+            this.btnEncryptCodes.Location = new System.Drawing.Point(477, 3);
+            this.btnEncryptCodes.Name = "btnEncryptCodes";
+            this.btnEncryptCodes.Size = new System.Drawing.Size(231, 94);
+            this.btnEncryptCodes.TabIndex = 4;
+            this.btnEncryptCodes.Text = "Encrypt Codes";
+            this.btnEncryptCodes.UseVisualStyleBackColor = true;
+            this.btnEncryptCodes.Click += new System.EventHandler(this.btnEncryptCodes_Click);
             // 
             // btnSpaceshipConnection
             // 
@@ -238,24 +156,25 @@ namespace PACS_Planet
             this.btnSpaceshipConnection.TabIndex = 3;
             this.btnSpaceshipConnection.Text = "Spaceship Connection";
             this.btnSpaceshipConnection.UseVisualStyleBackColor = true;
-            this.btnSpaceshipConnection.Click += new System.EventHandler(this.btnSpaceshipConnection_Click);
+            this.btnSpaceshipConnection.Click += new System.EventHandler(this.btnSpaceshipConnection_Click_1);
             // 
-            // btnCurrentForm
+            // btnSelectPlanet
             // 
-            this.btnCurrentForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCurrentForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCurrentForm.FlatAppearance.BorderSize = 5;
-            this.btnCurrentForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnCurrentForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.btnCurrentForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCurrentForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCurrentForm.ForeColor = System.Drawing.Color.White;
-            this.btnCurrentForm.Location = new System.Drawing.Point(3, 3);
-            this.btnCurrentForm.Name = "btnCurrentForm";
-            this.btnCurrentForm.Size = new System.Drawing.Size(231, 94);
-            this.btnCurrentForm.TabIndex = 2;
-            this.btnCurrentForm.Text = "Select Planet";
-            this.btnCurrentForm.UseVisualStyleBackColor = true;
+            this.btnSelectPlanet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectPlanet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSelectPlanet.FlatAppearance.BorderSize = 5;
+            this.btnSelectPlanet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnSelectPlanet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.btnSelectPlanet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectPlanet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectPlanet.ForeColor = System.Drawing.Color.White;
+            this.btnSelectPlanet.Location = new System.Drawing.Point(3, 3);
+            this.btnSelectPlanet.Name = "btnSelectPlanet";
+            this.btnSelectPlanet.Size = new System.Drawing.Size(231, 94);
+            this.btnSelectPlanet.TabIndex = 2;
+            this.btnSelectPlanet.Text = "Select Planet";
+            this.btnSelectPlanet.UseVisualStyleBackColor = true;
+            this.btnSelectPlanet.Click += new System.EventHandler(this.btnSelectPlanet_Click);
             // 
             // RightSeparatorButtons
             // 
@@ -281,7 +200,92 @@ namespace PACS_Planet
             this.BotSeparator.Size = new System.Drawing.Size(1366, 25);
             this.BotSeparator.TabIndex = 5;
             // 
-            // frmPlanetSelect
+            // lstvPlanets
+            // 
+            this.lstvPlanets.Alignment = System.Windows.Forms.ListViewAlignment.Default;
+            this.lstvPlanets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.lstvPlanets.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstvPlanets.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lstvPlanets.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstvPlanets.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstvPlanets.ForeColor = System.Drawing.Color.White;
+            this.lstvPlanets.HideSelection = false;
+            this.lstvPlanets.Location = new System.Drawing.Point(100, 110);
+            this.lstvPlanets.MultiSelect = false;
+            this.lstvPlanets.Name = "lstvPlanets";
+            this.lstvPlanets.Size = new System.Drawing.Size(1166, 438);
+            this.lstvPlanets.TabIndex = 55;
+            this.lstvPlanets.UseCompatibleStateImageBehavior = false;
+            // 
+            // lstvRightBorder
+            // 
+            this.lstvRightBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.lstvRightBorder.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lstvRightBorder.Location = new System.Drawing.Point(1266, 110);
+            this.lstvRightBorder.Name = "lstvRightBorder";
+            this.lstvRightBorder.Size = new System.Drawing.Size(10, 438);
+            this.lstvRightBorder.TabIndex = 54;
+            // 
+            // lstvLeftBorder
+            // 
+            this.lstvLeftBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.lstvLeftBorder.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lstvLeftBorder.Location = new System.Drawing.Point(90, 110);
+            this.lstvLeftBorder.Name = "lstvLeftBorder";
+            this.lstvLeftBorder.Size = new System.Drawing.Size(10, 438);
+            this.lstvLeftBorder.TabIndex = 53;
+            // 
+            // lstvBotBorder
+            // 
+            this.lstvBotBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.lstvBotBorder.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lstvBotBorder.Location = new System.Drawing.Point(90, 548);
+            this.lstvBotBorder.Name = "lstvBotBorder";
+            this.lstvBotBorder.Size = new System.Drawing.Size(1186, 10);
+            this.lstvBotBorder.TabIndex = 52;
+            // 
+            // lstvTopBorder
+            // 
+            this.lstvTopBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.lstvTopBorder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lstvTopBorder.Location = new System.Drawing.Point(90, 100);
+            this.lstvTopBorder.Name = "lstvTopBorder";
+            this.lstvTopBorder.Size = new System.Drawing.Size(1186, 10);
+            this.lstvTopBorder.TabIndex = 51;
+            // 
+            // RightSeparator
+            // 
+            this.RightSeparator.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RightSeparator.Location = new System.Drawing.Point(1276, 100);
+            this.RightSeparator.Name = "RightSeparator";
+            this.RightSeparator.Size = new System.Drawing.Size(25, 458);
+            this.RightSeparator.TabIndex = 50;
+            // 
+            // LeftSeparator
+            // 
+            this.LeftSeparator.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LeftSeparator.Location = new System.Drawing.Point(65, 100);
+            this.LeftSeparator.Name = "LeftSeparator";
+            this.LeftSeparator.Size = new System.Drawing.Size(25, 458);
+            this.LeftSeparator.TabIndex = 49;
+            // 
+            // RightBar
+            // 
+            this.RightBar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RightBar.Location = new System.Drawing.Point(1301, 100);
+            this.RightBar.Name = "RightBar";
+            this.RightBar.Size = new System.Drawing.Size(65, 458);
+            this.RightBar.TabIndex = 48;
+            // 
+            // LeftBar
+            // 
+            this.LeftBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LeftBar.Location = new System.Drawing.Point(0, 100);
+            this.LeftBar.Name = "LeftBar";
+            this.LeftBar.Size = new System.Drawing.Size(65, 458);
+            this.LeftBar.TabIndex = 47;
+            // 
+            // frmSelectPlanet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -297,7 +301,7 @@ namespace PACS_Planet
             this.Controls.Add(this.RightBar);
             this.Controls.Add(this.LeftBar);
             this.Controls.Add(this.ButtonContainer);
-            this.Name = "frmPlanetSelect";
+            this.Name = "frmSelectPlanet";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPlanetSelect_Load);
             this.Controls.SetChildIndex(this.ButtonContainer, 0);
@@ -311,13 +315,16 @@ namespace PACS_Planet
             this.Controls.SetChildIndex(this.lstvRightBorder, 0);
             this.Controls.SetChildIndex(this.lstvPlanets, 0);
             this.ButtonContainer.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.Buttons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Panel ButtonContainer;
+        private System.Windows.Forms.Panel RightSeparatorButtons;
+        private System.Windows.Forms.Panel LeftSeparatorButtons;
+        private System.Windows.Forms.Panel BotSeparator;
         private System.Windows.Forms.ListView lstvPlanets;
         private System.Windows.Forms.Panel lstvRightBorder;
         private System.Windows.Forms.Panel lstvLeftBorder;
@@ -327,16 +334,12 @@ namespace PACS_Planet
         private System.Windows.Forms.Panel LeftSeparator;
         private System.Windows.Forms.Panel RightBar;
         private System.Windows.Forms.Panel LeftBar;
-        private System.Windows.Forms.Panel ButtonContainer;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnSelectPlanet;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TableLayoutPanel Buttons;
+        private System.Windows.Forms.Button btnEnd;
+        private System.Windows.Forms.Button btnFileProcessing;
+        private System.Windows.Forms.Button btnEncryptCodes;
         private System.Windows.Forms.Button btnSpaceshipConnection;
-        private System.Windows.Forms.Button btnCurrentForm;
-        private System.Windows.Forms.Panel RightSeparatorButtons;
-        private System.Windows.Forms.Panel LeftSeparatorButtons;
-        private System.Windows.Forms.Panel BotSeparator;
+        private System.Windows.Forms.Button btnSelectPlanet;
     }
 }
 

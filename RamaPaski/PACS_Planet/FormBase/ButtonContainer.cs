@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FormBase
 {
-    public partial class ButtonContainer : UserControl
+    public partial class Container : UserControl
     {
-        public ButtonContainer()
+        public Container()
         {
             InitializeComponent();
         }

@@ -1,0 +1,17 @@
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\dll\PACS_Ship.exe.config
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\dll\PACS_Ship.exe
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\dll\PACS_Ship.pdb
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.csproj.AssemblyReference.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.csproj.SuggestedBindingRedirects.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.frmSelectShip.resources
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.Properties.Resources.resources
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.csproj.GenerateResource.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.csproj.CoreCompileInputs.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.exe
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.pdb
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.csproj.CopyComplete
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.frmSelectPlanet.resources
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.frmConnectPlanet.resources
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.frmEncryptCodes.resources
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.frmEnd.resources
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.frmFileProcessing.resources

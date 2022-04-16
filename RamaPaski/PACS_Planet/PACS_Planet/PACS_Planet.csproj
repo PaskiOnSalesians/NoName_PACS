@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmEncryptCodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEncryptCodes.designer.cs">
+      <DependentUpon>frmEncryptCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnd.designer.cs">
+      <DependentUpon>frmEnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFileProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFileProcessing.designer.cs">
+      <DependentUpon>frmFileProcessing.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSelectPlanet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +78,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmEncryptCodes.resx">
+      <DependentUpon>frmEncryptCodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnd.resx">
+      <DependentUpon>frmEnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFileProcessing.resx">
+      <DependentUpon>frmFileProcessing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSpaceshipConnection.resx">
       <DependentUpon>frmSpaceshipConnection.cs</DependentUpon>
     </EmbeddedResource>

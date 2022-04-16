@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7a84ccd6-d9d8-4f19-b550-aef4147126d8": {
+      "ProjectGuid": "7a84ccd6-d9d8-4f19-b550-aef4147126d8",
+      "DisplayName": "PACS_Ship",
+      "ColorIndex": 0
+    },
+    "c00fc193-52d2-4385-b56f-99567bcfd99e": {
+      "ProjectGuid": "c00fc193-52d2-4385-b56f-99567bcfd99e",
+      "DisplayName": "FormBase",
+      "ColorIndex": 1
+    },
+    "52a7518a-bb97-4e9e-bca8-921cd1dbc990": {
+      "ProjectGuid": "52a7518a-bb97-4e9e-bca8-921cd1dbc990",
+      "DisplayName": "GlobalVariables",
+      "ColorIndex": 2
+    },
+    "b34a4254-fb07-4f32-88d0-f15f88c046d8": {
+      "ProjectGuid": "b34a4254-fb07-4f32-88d0-f15f88c046d8",
+      "DisplayName": "AccesDades",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

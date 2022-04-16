@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c00fc193-52d2-4385-b56f-99567bcfd99e": {
+      "ProjectGuid": "c00fc193-52d2-4385-b56f-99567bcfd99e",
+      "DisplayName": "FormBase",
+      "ColorIndex": 0
+    },
+    "c7d15483-92e0-4276-a47f-bcc2ea5f7896": {
+      "ProjectGuid": "c7d15483-92e0-4276-a47f-bcc2ea5f7896",
+      "DisplayName": "PACS_Planet",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

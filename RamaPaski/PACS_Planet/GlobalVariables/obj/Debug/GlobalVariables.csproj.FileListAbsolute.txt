@@ -15,3 +15,8 @@ C:\Users\Paski\source\repos\PACS_Planet\GlobalVariables\bin\Debug\GlobalVariable
 C:\Users\Paski\source\repos\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
 C:\Users\Paski\source\repos\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.dll
 C:\Users\Paski\source\repos\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.pdb
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\bin\Debug\GlobalVariables.dll
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\bin\Debug\GlobalVariables.pdb
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.dll
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.pdb

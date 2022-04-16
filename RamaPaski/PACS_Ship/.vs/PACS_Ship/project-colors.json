@@ -20,7 +20,12 @@
       "ProjectGuid": "b34a4254-fb07-4f32-88d0-f15f88c046d8",
       "DisplayName": "AccesDades",
       "ColorIndex": 3
+    },
+    "849087c6-4aef-4398-af7b-535c79f3facd": {
+      "ProjectGuid": "849087c6-4aef-4398-af7b-535c79f3facd",
+      "DisplayName": "TCP",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }

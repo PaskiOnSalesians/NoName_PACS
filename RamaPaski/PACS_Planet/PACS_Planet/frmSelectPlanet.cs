@@ -40,6 +40,8 @@ namespace PACS_Planet
             // planetes, llavors farem una query obtenint el nom de
             // les respectives imatges amb l'extensio.
 
+            //updateIP();
+
             dts = new DataSet();
 
             string query, taula;
@@ -49,12 +51,12 @@ namespace PACS_Planet
             imagePlanetList.ImageSize = new Size(255, 255);
             imagePlanetList.ColorDepth = ColorDepth.Depth32Bit; // Aquesta es per evitar un rebordat blanc
 
-            updateIP();
-
             try
             {
                 taula = "Planets";
                 query = "Select * from " + taula + " order by DescPlanet ASC";
+
+                _Dades.ConnectDB();
 
                 dts = _Dades.PortarPerConsulta(query, taula);
 
@@ -66,9 +68,9 @@ namespace PACS_Planet
                     lstvPlanets.Items[i].Tag = dts.Tables[0].Rows[i]["idPlanet"];
                 }
             }
-            catch (Exception)
+            catch (Exception error)
             {
-                MessageBox.Show("No s'ha pogut carregar correctament!", "PACS - NONAME");
+                MessageBox.Show(error.ToString());
             }
         }
 
@@ -90,7 +92,7 @@ namespace PACS_Planet
         private void LoadVariables(int idPlanetSelect)
         {
             dts = new DataSet();
-            dts = _Dades.PortarPerConsulta("select * from Planets where idPlanet = " + idPlanetSelect);
+            dts = _Dades.PortarPerConsulta("select * from Planets where idPlanet = " + idPlanetSelect, "Planets");
 
             RefVariables.PlanetCode = dts.Tables[0].Rows[0]["CodePlanet"].ToString();
             RefVariables.PlanetName = dts.Tables[0].Rows[0]["DescPlanet"].ToString();
@@ -111,27 +113,32 @@ namespace PACS_Planet
             {
                 case 0:
                     frmSelectPlanet frmPlanet = new frmSelectPlanet();
+                    this.Visible = false;
                     frmPlanet.Show();
                     break;
                 case 1:
                     frmSpaceshipConnection frmConnection = new frmSpaceshipConnection();
+                    this.Visible = false;
                     frmConnection.Show();
                     break;
                 case 2:
                     frmEncryptCodes frmCodes = new frmEncryptCodes();
+                    this.Visible = false;
                     frmCodes.Show();
                     break;
                 case 3:
                     frmFileProcessing frmFiles = new frmFileProcessing();
+                    this.Visible = false;
                     frmFiles.Show();
                     break;
                 case 4:
                     frmEnd frmEnd = new frmEnd();
+                    this.Visible = false;
                     frmEnd.Show();
                     break;
             }
 
-            this.Hide();
+            this.Close();
         }
 
         private void btnSelectPlanet_Click(object sender, EventArgs e)
@@ -193,5 +200,18 @@ namespace PACS_Planet
         }
 
         #endregion
+
+        private void lstvPlanets_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            OpenForm(1);
+        }
+
+        private void lstvPlanets_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                OpenForm(1);
+            }
+        }
     }
 }

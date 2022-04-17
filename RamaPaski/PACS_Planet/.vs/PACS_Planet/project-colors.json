@@ -20,7 +20,12 @@
       "ProjectGuid": "849087c6-4aef-4398-af7b-535c79f3facd",
       "DisplayName": "TCP",
       "ColorIndex": 3
+    },
+    "52a7518a-bb97-4e9e-bca8-921cd1dbc990": {
+      "ProjectGuid": "52a7518a-bb97-4e9e-bca8-921cd1dbc990",
+      "DisplayName": "GlobalVariables",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }

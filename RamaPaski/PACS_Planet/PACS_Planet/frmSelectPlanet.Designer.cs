@@ -216,6 +216,8 @@ namespace PACS_Planet
             this.lstvPlanets.Size = new System.Drawing.Size(1166, 438);
             this.lstvPlanets.TabIndex = 55;
             this.lstvPlanets.UseCompatibleStateImageBehavior = false;
+            this.lstvPlanets.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lstvPlanets_KeyPress);
+            this.lstvPlanets.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstvPlanets_MouseDoubleClick);
             // 
             // lstvRightBorder
             // 

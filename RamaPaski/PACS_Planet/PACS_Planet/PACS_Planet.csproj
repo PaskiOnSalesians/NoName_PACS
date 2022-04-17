@@ -128,6 +128,10 @@
       <Project>{52a7518a-bb97-4e9e-bca8-921cd1dbc990}</Project>
       <Name>GlobalVariables</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TCP\TCP.csproj">
+      <Project>{849087c6-4aef-4398-af7b-535c79f3facd}</Project>
+      <Name>TCP</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

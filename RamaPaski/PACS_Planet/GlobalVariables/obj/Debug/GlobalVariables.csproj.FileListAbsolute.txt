@@ -20,3 +20,5 @@ E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVa
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.dll
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.pdb
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\dll\GlobalVariables.dll
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\dll\GlobalVariables.pdb

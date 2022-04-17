@@ -22,3 +22,4 @@ E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\FormBase
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\FormBase\obj\Debug\FormBase.csproj.CoreCompileInputs.cache
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\FormBase\obj\Debug\FormBase.exe
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\FormBase\obj\Debug\FormBase.pdb
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\FormBase\obj\Debug\FormBase.csproj.AssemblyReference.cache

@@ -42,7 +42,7 @@
             this.BotSeparator = new System.Windows.Forms.Panel();
             this.RightBar = new System.Windows.Forms.Panel();
             this.LeftBar = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ConnectingPanel = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pboxShip = new System.Windows.Forms.PictureBox();
             this.pboxPlanet = new System.Windows.Forms.PictureBox();
@@ -96,7 +96,7 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.Buttons.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.ConnectingPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxShip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxPlanet)).BeginInit();
@@ -299,22 +299,22 @@
             this.LeftBar.Size = new System.Drawing.Size(90, 458);
             this.LeftBar.TabIndex = 45;
             // 
-            // tableLayoutPanel1
+            // ConnectingPanel
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 2, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(90, 100);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1186, 458);
-            this.tableLayoutPanel1.TabIndex = 47;
+            this.ConnectingPanel.ColumnCount = 3;
+            this.ConnectingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
+            this.ConnectingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.ConnectingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ConnectingPanel.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.ConnectingPanel.Controls.Add(this.tableLayoutPanel5, 1, 0);
+            this.ConnectingPanel.Controls.Add(this.panel4, 2, 0);
+            this.ConnectingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConnectingPanel.Location = new System.Drawing.Point(90, 100);
+            this.ConnectingPanel.Name = "ConnectingPanel";
+            this.ConnectingPanel.RowCount = 1;
+            this.ConnectingPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ConnectingPanel.Size = new System.Drawing.Size(1186, 458);
+            this.ConnectingPanel.TabIndex = 47;
             // 
             // tableLayoutPanel2
             // 
@@ -902,7 +902,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1366, 768);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.ConnectingPanel);
             this.Controls.Add(this.RightBar);
             this.Controls.Add(this.LeftBar);
             this.Controls.Add(this.panel2);
@@ -915,10 +915,10 @@
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.LeftBar, 0);
             this.Controls.SetChildIndex(this.RightBar, 0);
-            this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
+            this.Controls.SetChildIndex(this.ConnectingPanel, 0);
             this.panel2.ResumeLayout(false);
             this.Buttons.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.ConnectingPanel.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pboxShip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxPlanet)).EndInit();
@@ -957,7 +957,7 @@
         private System.Windows.Forms.Panel BotSeparator;
         private System.Windows.Forms.Panel RightBar;
         private System.Windows.Forms.Panel LeftBar;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel ConnectingPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.PictureBox pboxShip;

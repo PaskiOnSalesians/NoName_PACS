@@ -25,8 +25,7 @@ namespace PACS_Planet
         Dades _Dades = new Dades();
         DataSet dts;
 
-        string validationMessage;
-        string remoteIP;
+        string validationMessage, remoteIP;
 
         bool status = false;
 
@@ -44,32 +43,27 @@ namespace PACS_Planet
             {
                 case 0:
                     frmSelectPlanet frmPlanet = new frmSelectPlanet();
-                    this.Visible = false;
                     frmPlanet.Show();
                     break;
                 case 1:
                     frmSpaceshipConnection frmConnection = new frmSpaceshipConnection();
-                    this.Visible = false;
                     frmConnection.Show();
                     break;
                 case 2:
                     frmEncryptCodes frmCodes = new frmEncryptCodes();
-                    this.Visible = false;
                     frmCodes.Show();
                     break;
                 case 3:
                     frmFileProcessing frmFiles = new frmFileProcessing();
-                    this.Visible = false;
                     frmFiles.Show();
                     break;
                 case 4:
                     frmEnd frmEnd = new frmEnd();
-                    this.Visible = false;
                     frmEnd.Show();
                     break;
             }
 
-            this.Close();
+            this.Hide();
         }
 
         private void btnSelectPlanet_Click(object sender, EventArgs e)
@@ -107,26 +101,35 @@ namespace PACS_Planet
             _Dades.ConnectDB();
 
             // Dades inicials Planeta
-            lblPlanetName.Text = RefVariables.PlanetName;
-            lblPlanetIP.Text = RefVariables.PlanetIp;
-            lblPlanetMessagePort.Text = RefVariables.PlanetMessagePort.ToString();
-            //Console.WriteLine("\n" + RefVariables.PlanetImage + "\n");
-            pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
+            LoadPlanetData();
 
             // Dades inicials Nau
-            lblShipName.Text = "???";
-            lblShipIP.Text = "???";
-            lblShipMessagePort.Text = "???";
-            pboxShip.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Ships\\shipUnknown.png");
+            LoadShipInitialData();
 
             server = new Thread(ServerListen);
             server.Start();
         }
 
+        private void LoadPlanetData()
+        {
+            lblPlanetName.Text = RefVariables.PlanetName;
+            lblPlanetIP.Text = RefVariables.PlanetIp;
+            lblPlanetMessagePort.Text = RefVariables.PlanetMessagePort.ToString();
+            pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
+        }
+
+        private void LoadShipInitialData()
+        {
+            lblShipName.Text = "???";
+            lblShipIP.Text = "???";
+            lblShipMessagePort.Text = "???";
+            pboxShip.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Ships\\shipUnknown.png");
+        }
+
         private void ServerListen()
         {
-            serverTCP.StartServer(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
-            //serverTCP.ListenClient(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
+            //serverTCP.StartServer(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
+            serverTCP.ListenClient(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
             remoteIP = serverTCP.IPClient; // IP del client que ens fa ping
             rtxData.Text += serverTCP.GetClientMessages();
             LoadShipInfo(remoteIP);
@@ -141,7 +144,7 @@ namespace PACS_Planet
             }
         }
 
-        private void frmPlanetConnection_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmSpaceshipConnection_FormClosing(object sender, FormClosingEventArgs e)
         {
             server.Abort();
         }
@@ -203,9 +206,9 @@ namespace PACS_Planet
 
         #endregion
 
-        #region CheckData + Send validation
+        #region Send Validation + Checks
 
-        private void btnCheckChat_Click(object sender, EventArgs e)
+        private void btnConnect_Click(object sender, EventArgs e)
         {
             PacsTcpClient clientTCP = new PacsTcpClient();
 

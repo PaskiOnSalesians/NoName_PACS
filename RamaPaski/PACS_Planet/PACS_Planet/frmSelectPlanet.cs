@@ -40,7 +40,7 @@ namespace PACS_Planet
             // planetes, llavors farem una query obtenint el nom de
             // les respectives imatges amb l'extensio.
 
-            //updateIP();
+            updateIP();
 
             dts = new DataSet();
 
@@ -82,7 +82,6 @@ namespace PACS_Planet
             foreach (ListViewItem item in selectedPlanet)
             {
                 RefVariables.PlanetId = (int)item.Tag;
-                Console.WriteLine(RefVariables.PlanetId);
             }
 
             LoadVariables(RefVariables.PlanetId);
@@ -92,7 +91,7 @@ namespace PACS_Planet
         private void LoadVariables(int idPlanetSelect)
         {
             dts = new DataSet();
-            dts = _Dades.PortarPerConsulta("select * from Planets where idPlanet = " + idPlanetSelect, "Planets");
+            dts = _Dades.PortarPerConsulta("select * from Planets where idPlanet = " + idPlanetSelect);
 
             RefVariables.PlanetCode = dts.Tables[0].Rows[0]["CodePlanet"].ToString();
             RefVariables.PlanetName = dts.Tables[0].Rows[0]["DescPlanet"].ToString();
@@ -113,32 +112,33 @@ namespace PACS_Planet
             {
                 case 0:
                     frmSelectPlanet frmPlanet = new frmSelectPlanet();
-                    this.Visible = false;
+                    //this.Visible = false;
                     frmPlanet.Show();
                     break;
                 case 1:
                     frmSpaceshipConnection frmConnection = new frmSpaceshipConnection();
-                    this.Visible = false;
+                    //this.Visible = false;
                     frmConnection.Show();
                     break;
                 case 2:
                     frmEncryptCodes frmCodes = new frmEncryptCodes();
-                    this.Visible = false;
+                    //this.Visible = false;
                     frmCodes.Show();
                     break;
                 case 3:
                     frmFileProcessing frmFiles = new frmFileProcessing();
-                    this.Visible = false;
+                    //this.Visible = false;
                     frmFiles.Show();
                     break;
                 case 4:
                     frmEnd frmEnd = new frmEnd();
-                    this.Visible = false;
+                    //this.Visible = false;
                     frmEnd.Show();
                     break;
             }
 
-            this.Close();
+            this.Hide();
+            //this.Close();
         }
 
         private void btnSelectPlanet_Click(object sender, EventArgs e)
@@ -185,8 +185,6 @@ namespace PACS_Planet
                     IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
                     currentIP = endPoint.Address.ToString(); // Obtenim la ip
 
-                    Console.WriteLine("\n" + currentIP + "\n");
-
                     taula = "Planets";
                     query = "Update " + taula + " set IPPlanet = '" + currentIP + "' where PlanetPicture is not null";
 
@@ -195,7 +193,7 @@ namespace PACS_Planet
             }
             catch (Exception)
             {
-                Console.WriteLine("Ha ocorregut un error.", "PACS - NONAME");
+                MessageBox.Show("Ha ocorregut un error.", "PACS - NONAME");
             }
         }
 

@@ -694,8 +694,9 @@ namespace PACS_Planet
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(113, 82);
             this.btnConnect.TabIndex = 5;
-            this.btnConnect.Text = "Send Request";
+            this.btnConnect.Text = "Send Validation";
             this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // panel15
             // 
@@ -883,6 +884,7 @@ namespace PACS_Planet
             this.Name = "frmSpaceshipConnection";
             this.Text = "frmSpaceshipConnection";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSpaceshipConnection_FormClosing);
             this.Load += new System.EventHandler(this.frmSpaceshipConnection_Load);
             this.Controls.SetChildIndex(this.ButtonsContainer, 0);
             this.Controls.SetChildIndex(this.LeftBar, 0);

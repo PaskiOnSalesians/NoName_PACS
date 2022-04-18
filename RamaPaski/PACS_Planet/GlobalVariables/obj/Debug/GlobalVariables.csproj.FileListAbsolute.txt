@@ -22,3 +22,4 @@ E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVa
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.pdb
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\dll\GlobalVariables.dll
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\dll\GlobalVariables.pdb
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.csproj.AssemblyReference.cache

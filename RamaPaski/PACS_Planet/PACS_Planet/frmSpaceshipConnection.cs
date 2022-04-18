@@ -128,9 +128,8 @@ namespace PACS_Planet
 
         private void ServerListen()
         {
-            //serverTCP.StartServer(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
-            serverTCP.ListenClient(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
-            remoteIP = serverTCP.IPClient; // IP del client que ens fa ping
+            serverTCP.StartServer(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
+            remoteIP = serverTCP.ReceivePing();
             rtxtData.Text += serverTCP.GetClientMessages();
             LoadShipInfo(remoteIP);
             serverTCP.StopListening();

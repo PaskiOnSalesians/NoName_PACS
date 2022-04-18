@@ -46,29 +46,19 @@ namespace TCP
             }
             return final;
         }
-        
+
         // Iniciar Servidor
         public void StartServer(string ipAddress, int port)
         {
-            try
-            {
-                listener = new TcpListener(IPAddress.Parse(ipAddress), port);
-                listener.Start();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Turning of subprocess");
-            }
+            listener = new TcpListener(IPAddress.Parse(ipAddress), port);
+            listener.Start();
         }
 
-        // Escoltar a la direcció que ens fa ping
-        public void ListenClient(string ipAddress, int port)
+        // Escoltar ping
+        public string ReceivePing()
         {
             string data;
             byte[] buffer = new byte[1024];
-
-            listener = new TcpListener(IPAddress.Parse(ipAddress), port);
-            listener.Start();
 
             isConnected = true;
 
@@ -86,9 +76,13 @@ namespace TCP
                     IPEndPoint remoteIpEndPoint = client.Client.RemoteEndPoint as IPEndPoint;
                     clientMessages.Add(data);
 
-                    IPClient = remoteIpEndPoint.ToString();
+                    Console.WriteLine(remoteIpEndPoint);
+
+                    return remoteIpEndPoint.ToString();
                 }
             }
+
+            return null;
         }
     }
 }

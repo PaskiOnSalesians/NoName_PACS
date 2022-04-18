@@ -59,11 +59,7 @@ namespace PACS_Ship
 
         private void frmConnectPlanet_Activated(object sender, EventArgs e)
         {
-            WaitingVRMessagePlanet();
-            if (completat)
-            {
-                btnNext.Enabled = true;
-            }
+            
         }
 
         private void frmConnectPlanet_FormClosing(object sender, FormClosingEventArgs e)
@@ -160,10 +156,12 @@ namespace PACS_Ship
         // Iniciar Servidor
         private void ServerListen()
         {
+
             tcpServer.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);
             tcpServer.ReceivePing();
             rtxData.Text += tcpServer.GetClientMessages();
             CheckVR(tcpServer.GetClientMessages());
+            tcpServer.StopListening();
         }
 
         // Demanar peticio al planeta

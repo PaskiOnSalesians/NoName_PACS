@@ -50,15 +50,10 @@ namespace TCP
         // Iniciar Servidor
         public void StartServer(string ipAddress, int port)
         {
-            try
-            {
-                listener = new TcpListener(IPAddress.Parse(ipAddress), port);
-                listener.Start();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Turning of subprocess");
-            }
+            
+            listener = new TcpListener(IPAddress.Parse(ipAddress), port);
+            listener.Start();
+            
 
         }
 

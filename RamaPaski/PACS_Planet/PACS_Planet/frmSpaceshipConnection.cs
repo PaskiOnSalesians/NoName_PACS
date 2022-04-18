@@ -131,7 +131,7 @@ namespace PACS_Planet
             //serverTCP.StartServer(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
             serverTCP.ListenClient(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
             remoteIP = serverTCP.IPClient; // IP del client que ens fa ping
-            rtxData.Text += serverTCP.GetClientMessages();
+            rtxtData.Text += serverTCP.GetClientMessages();
             LoadShipInfo(remoteIP);
             serverTCP.StopListening();
         }
@@ -165,10 +165,10 @@ namespace PACS_Planet
             dts = _Dades.PortarPerConsulta("select * from SpaceShips where SpaceshipImage is not null and CodeSpaceShip = '" + cShip + "'", "SpaceShips");
 
             RefVariables.ShipName = cShip;
-            RefVariables.ShipMessagePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip1"].ToString());
+            RefVariables.ShipMessagePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip"].ToString());
             RefVariables.ShipImage = dts.Tables[0].Rows[0]["SpaceshipImage"].ToString();
             RefVariables.ShipId = int.Parse(dts.Tables[0].Rows[0]["idSpaceShip"].ToString());
-            RefVariables.ShipFilePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip"].ToString());
+            RefVariables.ShipFilePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip1"].ToString());
 
             RefVariables.DeliveryCode = delivery;
 
@@ -189,7 +189,7 @@ namespace PACS_Planet
             string[] finalSplitted;
             string codeShip, codeDelivery, text;
 
-            text = rtxData.Text;
+            text = rtxtData.Text;
 
             int notIndex = text.IndexOf("ER");
             int firstindex = text.IndexOf("ER", notIndex + 1);

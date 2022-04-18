@@ -82,7 +82,7 @@ namespace PACS_Planet
             this.pnlBackChat = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.rtxData = new System.Windows.Forms.RichTextBox();
+            this.rtxtData = new System.Windows.Forms.RichTextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -738,6 +738,7 @@ namespace PACS_Planet
             this.btnNext.TabIndex = 6;
             this.btnNext.Text = "Encrypt Codes";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnEncryptCodes_Click);
             // 
             // panel4
             // 
@@ -779,25 +780,25 @@ namespace PACS_Planet
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.rtxData);
+            this.panel13.Controls.Add(this.rtxtData);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(10, 10);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(326, 412);
             this.panel13.TabIndex = 5;
             // 
-            // rtxData
+            // rtxtData
             // 
-            this.rtxData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.rtxData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtxData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxData.ForeColor = System.Drawing.Color.White;
-            this.rtxData.Location = new System.Drawing.Point(0, 0);
-            this.rtxData.Name = "rtxData";
-            this.rtxData.Size = new System.Drawing.Size(326, 412);
-            this.rtxData.TabIndex = 1;
-            this.rtxData.Text = "";
+            this.rtxtData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.rtxtData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtxtData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtData.ForeColor = System.Drawing.Color.White;
+            this.rtxtData.Location = new System.Drawing.Point(0, 0);
+            this.rtxtData.Name = "rtxtData";
+            this.rtxtData.Size = new System.Drawing.Size(326, 412);
+            this.rtxtData.TabIndex = 1;
+            this.rtxtData.Text = "";
             // 
             // panel12
             // 
@@ -971,7 +972,7 @@ namespace PACS_Planet
         private System.Windows.Forms.Panel pnlBackChat;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.RichTextBox rtxData;
+        private System.Windows.Forms.RichTextBox rtxtData;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;

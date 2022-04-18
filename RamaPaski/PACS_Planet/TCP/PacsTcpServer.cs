@@ -57,7 +57,7 @@ namespace TCP
             }
             catch (Exception)
             {
-                MessageBox.Show("Turnning of subprocess");
+                MessageBox.Show("Turning of subprocess");
             }
         }
 

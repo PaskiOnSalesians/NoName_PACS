@@ -9,3 +9,4 @@ E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\dll\TCP.
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\TCP\obj\Debug\TCP.csproj.CoreCompileInputs.cache
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\TCP\obj\Debug\TCP.dll
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\TCP\obj\Debug\TCP.pdb
+E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\TCP\obj\Debug\TCP.csproj.AssemblyReference.cache

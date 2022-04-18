@@ -24,10 +24,10 @@ namespace TCP
          * 
          */
 
-        //public PacsTcpClient()
-        //{
+        public PacsTcpClient()
+        {
 
-        //}
+        }
 
         public bool CheckNetwork()
         {

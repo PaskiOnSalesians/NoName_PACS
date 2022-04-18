@@ -91,7 +91,7 @@ namespace PACS_Ship
             dts = new DataSet();
 
             //Cambiar select
-            dts = _Dades.PortarPerConsulta("select * from SpaceShips where SpaceshipImage is not null and idSpaceShip =" + id);
+            dts = _Dades.PortarPerConsulta("Select * from SpaceShips where SpaceshipImage is not null and idSpaceShip =" + id);
 
             RefVariables.ShipId = int.Parse(dts.Tables[0].Rows[0]["idSpaceShip"].ToString());
             RefVariables.ShipName = dts.Tables[0].Rows[0]["CodeSpaceShip"].ToString();

@@ -22,3 +22,8 @@ E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\GlobalVari
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.pdb
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\dll\GlobalVariables.dll
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\dll\GlobalVariables.pdb
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\dll\GlobalVariables.dll
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\dll\GlobalVariables.pdb
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.dll
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.pdb

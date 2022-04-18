@@ -96,8 +96,8 @@ namespace PACS_Ship
             RefVariables.ShipId = int.Parse(dts.Tables[0].Rows[0]["idSpaceShip"].ToString());
             RefVariables.ShipName = dts.Tables[0].Rows[0]["CodeSpaceShip"].ToString();
             RefVariables.ShipIp = dts.Tables[0].Rows[0]["IPSpaceShip"].ToString();
-            RefVariables.ShipFilePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip"].ToString());
-            RefVariables.ShipMessagePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip1"].ToString());
+            RefVariables.ShipFilePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip1"].ToString());
+            RefVariables.ShipMessagePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip"].ToString());
             RefVariables.ShipImage = imageShipRoute + (dts.Tables[0].Rows[0]["SpaceShipImage"].ToString());
         }
 

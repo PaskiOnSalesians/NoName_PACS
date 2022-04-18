@@ -23,7 +23,7 @@ namespace PACS_Ship
 
         Thread WaitingVRMessage;
 
-        bool isConnected = false, networkStatus;
+        bool networkStatus;
         bool accepted = false, completat = false;
 
         public frmConnectPlanet()
@@ -39,8 +39,6 @@ namespace PACS_Ship
 
             LoadPlanetData();
             LoadShipData();
-
-            btnNext.Enabled = false;
         }
 
         private void LoadShipData()
@@ -163,7 +161,7 @@ namespace PACS_Ship
         private void ServerListen()
         {
             tcpServer.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);
-            tcpServer.ListenClient(RefVariables.ShipIp, RefVariables.ShipMessagePort);
+            tcpServer.ReceivePing();
             rtxData.Text += tcpServer.GetClientMessages();
             CheckVR(tcpServer.GetClientMessages());
         }
@@ -195,7 +193,7 @@ namespace PACS_Ship
                 if (reply.Address != null)
                 {
                     message += "-------------- Delivery Data --------------\n\n";
-                    message += ("ER" + "." + RefVariables.ShipName + "." + RefVariables.ShipName + "-" + RefVariables.PlanetCode + "\n" + "\n");
+                    message += ("ER." + RefVariables.ShipName + "." + RefVariables.ShipName + "-" + RefVariables.PlanetCode + "\n\n");
                     NetworkConnectionPanel();
                 }
                 else
@@ -231,7 +229,6 @@ namespace PACS_Ship
                 pnlConn4.BackColor = Color.Red;
                 pnlConn5.BackColor = Color.Red;
             }
-            
         }
 
         #endregion
@@ -290,16 +287,15 @@ namespace PACS_Ship
 
         private void CheckVR(string message)
         {
-            string code = message.Substring(message.Length - 3);
+            string code = message.Substring(message.Length - 3, 2);
+            Console.Write(code);
 
-            if (code == "VP")
+            if (code.Equals("VP"))
             {
                 btnNext.Enabled = true;
             }
-            else
-            {
-                btnNext.Enabled = false;
-            }
+
+            completat = true;
         }
 
         private void TancarFilListener()

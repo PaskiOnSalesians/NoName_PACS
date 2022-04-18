@@ -57,12 +57,43 @@ namespace TCP
             }
             catch (Exception)
             {
-                MessageBox.Show("Turnning of subprocess");
+                MessageBox.Show("Turning of subprocess");
             }
-            
+
         }
 
-        // Escoltar a la direcció que ens fa ping
+        // Obtenir la direccio des d'on se'ns fa ping
+        public string ReceivePing()
+        {
+            string data;
+            byte[] buffer = new byte[1024];
+
+            isConnected = true;
+
+            clientMessages.Clear();
+            while (isConnected)
+            {
+                if (listener.Pending())
+                {
+                    client = listener.AcceptTcpClient();
+                    stream = client.GetStream();
+
+                    int num = stream.Read(buffer, 0, buffer.Length);
+                    data = Encoding.ASCII.GetString(buffer, 0, num);
+
+                    IPEndPoint remoteIpEndPoint = client.Client.RemoteEndPoint as IPEndPoint;
+                    clientMessages.Add("\nThe response from planet " + remoteIpEndPoint.Address + " was: " + data);
+
+                    Console.WriteLine(remoteIpEndPoint);
+
+                    return remoteIpEndPoint.ToString();
+                }
+            }
+
+            return null;
+        }
+
+        // Escoltar
         public void ListenClient(string ipAddress, int port)
         {
             string data;
@@ -85,9 +116,7 @@ namespace TCP
                     data = Encoding.ASCII.GetString(buffer, 0, num);
 
                     IPEndPoint remoteIpEndPoint = client.Client.RemoteEndPoint as IPEndPoint;
-                    clientMessages.Add(data); // "\nThe response from Planet " + remoteIpEndPoint.Address + " was: " + 
-
-                    IPClient = remoteIpEndPoint.ToString();
+                    clientMessages.Add(remoteIpEndPoint.Address + ";" + data);
                 }
             }
         }

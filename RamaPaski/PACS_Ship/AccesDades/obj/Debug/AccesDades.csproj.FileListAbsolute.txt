@@ -66,3 +66,9 @@ E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\AccesDades
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\dll\AccesDades.dll
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\dll\AccesDades.pdb
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.csproj.AssemblyReference.cache
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\dll\AccesDades.dll
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\dll\AccesDades.pdb
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.csproj.AssemblyReference.cache
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.dll
+C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.pdb

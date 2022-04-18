@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.LeftSeparatorButtons = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Buttons = new System.Windows.Forms.TableLayoutPanel();
@@ -93,7 +92,6 @@
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.Buttons.SuspendLayout();
             this.ConnectingPanel.SuspendLayout();
@@ -717,6 +715,7 @@
             this.btnConnect.TabIndex = 5;
             this.btnConnect.Text = "Send Request";
             this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // panel15
             // 
@@ -746,6 +745,7 @@
             // 
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNext.Enabled = false;
             this.btnNext.FlatAppearance.BorderSize = 2;
             this.btnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -758,6 +758,7 @@
             this.btnNext.TabIndex = 6;
             this.btnNext.Text = "Encrypt Codes";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // panel4
             // 
@@ -891,11 +892,6 @@
             this.panel5.Size = new System.Drawing.Size(25, 452);
             this.panel5.TabIndex = 0;
             // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 1000;
-            // 
             // frmConnectPlanet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1008,6 +1004,5 @@
         private System.Windows.Forms.Panel pnlConn3;
         private System.Windows.Forms.Panel pnlConn2;
         private System.Windows.Forms.Panel pnlConn1;
-        private System.Windows.Forms.Timer timer;
     }
 }

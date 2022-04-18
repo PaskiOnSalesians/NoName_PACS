@@ -156,7 +156,6 @@ namespace PACS_Ship
         // Iniciar Servidor
         private void ServerListen()
         {
-
             tcpServer.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);
             tcpServer.ReceivePing();
             rtxData.Text += tcpServer.GetClientMessages();

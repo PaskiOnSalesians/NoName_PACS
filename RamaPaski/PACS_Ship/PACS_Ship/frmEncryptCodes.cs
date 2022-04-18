@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using FormBase;
+using GlobalVariables;
 
 namespace PACS_Ship
 {
@@ -86,5 +87,12 @@ namespace PACS_Ship
         }
 
         #endregion
+
+        private void frmEncryptCodes_Load(object sender, EventArgs e)
+        {
+            pboxPlanet.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Planets" + RefVariables.PlanetImage);
+            pboxShip.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Ships" + RefVariables.ShipImage);
+            lblDelivery.Text = RefVariables.DeliveryCode;
+        }
     }
 }

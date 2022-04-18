@@ -638,6 +638,7 @@
             this.Name = "frmEncryptCodes";
             this.Text = "frmEncryptCodes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmEncryptCodes_Load);
             this.Controls.SetChildIndex(this.ButtonsContainer, 0);
             this.Controls.SetChildIndex(this.LeftBar, 0);
             this.Controls.SetChildIndex(this.RightBar, 0);

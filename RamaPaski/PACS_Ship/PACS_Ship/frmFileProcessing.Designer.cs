@@ -636,6 +636,7 @@
             this.Name = "frmFileProcessing";
             this.Text = "frmFileProcessing";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmFileProcessing_Load);
             this.Controls.SetChildIndex(this.ButtonsContainer, 0);
             this.Controls.SetChildIndex(this.LeftBar, 0);
             this.Controls.SetChildIndex(this.RightBar, 0);

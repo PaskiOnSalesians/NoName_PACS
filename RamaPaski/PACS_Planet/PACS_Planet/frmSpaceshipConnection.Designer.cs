@@ -374,10 +374,10 @@ namespace PACS_Planet
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 54);
+            this.label1.Size = new System.Drawing.Size(126, 54);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ship Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -386,10 +386,10 @@ namespace PACS_Planet
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 54);
+            this.label3.Size = new System.Drawing.Size(126, 54);
             this.label3.TabIndex = 1;
             this.label3.Text = "IP Address";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -398,10 +398,10 @@ namespace PACS_Planet
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(6, 117);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 54);
+            this.label5.Size = new System.Drawing.Size(157, 54);
             this.label5.TabIndex = 2;
             this.label5.Text = "Message Port";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -410,10 +410,10 @@ namespace PACS_Planet
             // 
             this.lblShipName.AutoSize = true;
             this.lblShipName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblShipName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblShipName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShipName.Location = new System.Drawing.Point(205, 3);
             this.lblShipName.Name = "lblShipName";
-            this.lblShipName.Size = new System.Drawing.Size(148, 54);
+            this.lblShipName.Size = new System.Drawing.Size(119, 54);
             this.lblShipName.TabIndex = 3;
             this.lblShipName.Text = "ShipName";
             this.lblShipName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -422,10 +422,10 @@ namespace PACS_Planet
             // 
             this.lblShipIP.AutoSize = true;
             this.lblShipIP.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblShipIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblShipIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShipIP.Location = new System.Drawing.Point(205, 60);
             this.lblShipIP.Name = "lblShipIP";
-            this.lblShipIP.Size = new System.Drawing.Size(100, 54);
+            this.lblShipIP.Size = new System.Drawing.Size(80, 54);
             this.lblShipIP.TabIndex = 4;
             this.lblShipIP.Text = "ShipIP";
             this.lblShipIP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -434,10 +434,10 @@ namespace PACS_Planet
             // 
             this.lblShipMessagePort.AutoSize = true;
             this.lblShipMessagePort.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblShipMessagePort.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblShipMessagePort.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShipMessagePort.Location = new System.Drawing.Point(205, 117);
             this.lblShipMessagePort.Name = "lblShipMessagePort";
-            this.lblShipMessagePort.Size = new System.Drawing.Size(185, 54);
+            this.lblShipMessagePort.Size = new System.Drawing.Size(150, 54);
             this.lblShipMessagePort.TabIndex = 5;
             this.lblShipMessagePort.Text = "MessagePort";
             this.lblShipMessagePort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -497,10 +497,10 @@ namespace PACS_Planet
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 54);
+            this.label2.Size = new System.Drawing.Size(146, 54);
             this.label2.TabIndex = 0;
             this.label2.Text = "Planet Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -509,10 +509,10 @@ namespace PACS_Planet
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 60);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 54);
+            this.label4.Size = new System.Drawing.Size(126, 54);
             this.label4.TabIndex = 1;
             this.label4.Text = "IP Address";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -521,10 +521,10 @@ namespace PACS_Planet
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(6, 117);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 56);
+            this.label6.Size = new System.Drawing.Size(157, 56);
             this.label6.TabIndex = 2;
             this.label6.Text = "Message Port";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -533,10 +533,10 @@ namespace PACS_Planet
             // 
             this.lblPlanetName.AutoSize = true;
             this.lblPlanetName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblPlanetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblPlanetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlanetName.Location = new System.Drawing.Point(205, 3);
             this.lblPlanetName.Name = "lblPlanetName";
-            this.lblPlanetName.Size = new System.Drawing.Size(173, 54);
+            this.lblPlanetName.Size = new System.Drawing.Size(139, 54);
             this.lblPlanetName.TabIndex = 3;
             this.lblPlanetName.Text = "PlanetName";
             this.lblPlanetName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -545,10 +545,10 @@ namespace PACS_Planet
             // 
             this.lblPlanetIP.AutoSize = true;
             this.lblPlanetIP.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblPlanetIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblPlanetIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlanetIP.Location = new System.Drawing.Point(205, 60);
             this.lblPlanetIP.Name = "lblPlanetIP";
-            this.lblPlanetIP.Size = new System.Drawing.Size(125, 54);
+            this.lblPlanetIP.Size = new System.Drawing.Size(100, 54);
             this.lblPlanetIP.TabIndex = 4;
             this.lblPlanetIP.Text = "PlanetIP";
             this.lblPlanetIP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -557,10 +557,10 @@ namespace PACS_Planet
             // 
             this.lblPlanetMessagePort.AutoSize = true;
             this.lblPlanetMessagePort.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblPlanetMessagePort.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblPlanetMessagePort.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlanetMessagePort.Location = new System.Drawing.Point(205, 117);
             this.lblPlanetMessagePort.Name = "lblPlanetMessagePort";
-            this.lblPlanetMessagePort.Size = new System.Drawing.Size(185, 56);
+            this.lblPlanetMessagePort.Size = new System.Drawing.Size(150, 56);
             this.lblPlanetMessagePort.TabIndex = 5;
             this.lblPlanetMessagePort.Text = "MessagePort";
             this.lblPlanetMessagePort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -684,7 +684,7 @@ namespace PACS_Planet
             // 
             this.btnConnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConnect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnConnect.FlatAppearance.BorderSize = 2;
+            this.btnConnect.FlatAppearance.BorderSize = 3;
             this.btnConnect.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnConnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
             this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -726,7 +726,7 @@ namespace PACS_Planet
             // 
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNext.FlatAppearance.BorderSize = 2;
+            this.btnNext.FlatAppearance.BorderSize = 3;
             this.btnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

@@ -312,13 +312,13 @@ namespace PACS_Planet
             {
                 UnicodeEncoding ByteConverter = new UnicodeEncoding();
 
-                //var newData = data.Split('\n');
-                //byte[] value = ByteConverter.GetBytes(newData[0]);
+                var newData = data.Split('\n');
+                byte[] value = ByteConverter.GetBytes(newData[newData.Length - 2]);
+
                 Console.WriteLine(Convert.GetTypeCode(data));
-                byte[] decryptedData = rsa.Decrypt(Convert.FromBase64String(data), false); //value
+                byte[] decryptedData = rsa.Decrypt(value, false);
                 string decodedText = ByteConverter.GetString(decryptedData);
             }
-
 
             rtxtData.Text +=
                 "-------- Decrypting key --------\n" +

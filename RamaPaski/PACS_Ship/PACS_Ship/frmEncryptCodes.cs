@@ -18,6 +18,14 @@ namespace PACS_Ship
 {
     public partial class frmEncryptCodes : frmBase
     {
+        int idPlanet;
+        Dades db;
+        string code, publicKey;
+        byte[] encryptedData;
+        string encryptedCode;
+
+        bool timeDownload = false, timeEncrypt = false, timeSend = false;
+
         public frmEncryptCodes()
         {
             InitializeComponent();
@@ -101,17 +109,29 @@ namespace PACS_Ship
             db = new Dades();
         }
 
-        int idPlanet;
-        Dades db;
-        string code, publicKey;
-        byte [] encryptedData;
-        string encryptedCode;
+        private void enableButtons()
+        {
+            if (timeEncrypt)
+            {
+                btnGetPublicKey.Enabled = false;
+                btnEncrypt.Enabled = true;
+            } else if (timeSend)
+            {
+                btnEncrypt.Enabled = false;
+                btnSendKey.Enabled = true;
+            }
+        }
 
         private void btnGetPublicKey_Click(object sender, EventArgs e)
         {
             this.code = GetValidationCode();
             this.publicKey = GetPublicKey();
-
+            rtxtData.Text +=
+                "******** Started encryption methods ********\n" +
+                "Getting public key...\n" +
+                "Public key obtained!\n\n";
+            timeEncrypt = true;
+            enableButtons();
         }
 
         private string GetValidationCode()
@@ -159,24 +179,35 @@ namespace PACS_Ship
         private void btnEncrypt_Click(object sender, EventArgs e)
         {
             this.encryptedCode = EncryptValidationCode(publicKey, code);
-            MessageBox.Show(encryptedCode);
-            
+            //MessageBox.Show(encryptedCode);
 
+            rtxtData.Text +=
+                "--------- Encrypting Validation Code ---------\n" +
+                "· Validation Code Encrypted: \n" + encryptedCode + "\n\n";
+            timeEncrypt = false;
+            timeSend = true;
+            enableButtons();
         }
 
         private void btnSendKey_Click(object sender, EventArgs e)
         {
-            PacsTcpClient tcpClient = new PacsTcpClient();
-            if (tcpClient.MakePing(RefVariables.PlanetIp))
+            if (timeSend)
             {
-                string result = tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.ShipMessagePort, encryptedCode);
-                MessageBox.Show(result);
+                PacsTcpClient tcpClient = new PacsTcpClient();
+                if (tcpClient.MakePing(RefVariables.PlanetIp))
+                {
+                    string result = tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.ShipMessagePort, encryptedCode);
+                    //MessageBox.Show(result);
+                    rtxtData.Text += "Sending encrypted key...\nSended!";
+                }
+
+
+                // Start listening for a response
+                server = new Thread(ServerListen);
+                server.Start();
+
+                btnSendKey.Enabled = false;
             }
-
-
-            // Start listening for a response
-            server = new Thread(ServerListen);
-            server.Start();
         }
 
         private string EncryptValidationCode(string xmlKey, string validationCode)

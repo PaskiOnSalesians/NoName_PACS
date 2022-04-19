@@ -4,17 +4,29 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using FormBase;
 using GlobalVariables;
+using AccesDades;
+using System.IO;
+using TCP;
+using System.Threading;
 
 namespace PACS_Planet
 {
     public partial class frmEncryptCodes : frmBase
     {
+
+        class Xifrat
+        {
+            public string lletra;
+            public string numero;
+        }
+
         public frmEncryptCodes()
         {
             InitializeComponent();
@@ -82,9 +94,234 @@ namespace PACS_Planet
 
         private void frmEncryptCodes_Load(object sender, EventArgs e)
         {
-            pboxPlanet.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Planets" + RefVariables.PlanetImage);
-            pboxShip.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Ships" + RefVariables.ShipImage);
+            pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
+            pboxShip.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Ships\\" + RefVariables.ShipImage);
             lblDelivery.Text = RefVariables.DeliveryCode;
+
+            idPlanet = RefVariables.PlanetId;
+            db = new Dades();
+
+            GenerateKeyPair();
+
+            server = new Thread(ServerListen);
+            server.Start();
+
+        }
+
+        Dades db;
+        int idPlanet;
+        string clauPlaneta = "Testeo";
+        string xmlPath = Application.StartupPath + "/../Resources/files/plublicKey.xml";
+        PacsTcpServer serverTCP = new PacsTcpServer();
+        Thread server;
+
+        bool status = false;
+
+        private void btnGenerateCode_Click(object sender, EventArgs e)
+        {
+            // Generar código de 12 chars, insertar en InnerEncryption)
+            string code = GenerarCodiValidacio();
+            InsertarCodiValidacio(code);
+
+            // Insertar codificación (letra-numero), donde el idInnerEncryption es el creado anteriormente
+            int idInnerEnc = GetIdInnerEncryption();
+            if (idInnerEnc != -1)
+            {
+                List<Xifrat> codificacioLletraNum = GenerarParsLletraNum();
+                InsertarCodificacions(idInnerEnc, codificacioLletraNum);
+            }
+        }
+
+        private void GenerateKeyPair()
+        {
+            string clauPublica = GenerarParClaus();
+            File.WriteAllText(xmlPath, clauPublica);
+            InsertarPlanetKey(clauPublica);
+        }
+
+        private CspParameters CrearCsp()
+        {
+            CspParameters cspp = new CspParameters();
+            cspp.KeyContainerName = this.clauPlaneta;
+            return cspp;
+        }
+
+        private void InsertarPlanetKey(string clauPublica)
+        {
+            string consulta = @"INSERT INTO PlanetKeys (idPlanet, XMLKey)
+                                values(" + this.idPlanet + ", '" + clauPublica + "');";
+            db.Executar(consulta);
+        }
+
+        public string GenerarParClaus()
+        {
+
+            CspParameters cspp = CrearCsp();
+
+            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(cspp);
+            string publicKey = rsa.ToXmlString(false);
+            rsa.PersistKeyInCsp = true;
+            rsa.Clear();
+
+            return publicKey;
+        }
+
+        private string GenerarCodiValidacio()
+        {
+            // Generar codi de 12 caracters (A - Z) | (a - z) | (0 - 9)
+            string valors = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            string codi = GetValorsAleatoris(12, valors);
+            return codi;
+        }
+
+        private void InsertarCodiValidacio(string codi)
+        {
+
+            string consulta = @"INSERT INTO InnerEncryption (idPlanet, ValidationCode)
+                                values(" + this.idPlanet + ", '" + codi + "');";
+            db.Executar(consulta);
+        }
+
+        private List<Xifrat> GenerarParsLletraNum()
+        {
+            // Generar llistat amb par (lletra - numero)
+            string lletres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            HashSet<string> numerosAleatoris = GenerarNumerosRandom(lletres.Length);
+            List<Xifrat> xifrats = new List<Xifrat>();
+
+            for (int i = 0; i < lletres.Length; i++)
+            {
+                Xifrat x = new Xifrat
+                {
+                    lletra = lletres[i].ToString(),
+                    numero = numerosAleatoris.ElementAt(i)
+                };
+
+                xifrats.Add(x);
+            }
+
+            return xifrats;
+        }
+
+        private void InsertarCodificacio(int idInnerEncryption, Xifrat codi)
+        {
+
+            string consulta = @"INSERT INTO InnerEncryptionData (idInnerEncryption, Word, Numbers)
+                             values(" + idInnerEncryption + ", '" + codi.lletra + "', '" + codi.numero + "');";
+            this.db.Executar(consulta);
+        }
+
+        private void InsertarCodificacions(int idInnerEncryption, List<Xifrat> xifrats)
+        {
+            foreach (Xifrat codi in xifrats)
+            {
+                InsertarCodificacio(idInnerEncryption, codi);
+            }
+        }
+
+        private int GetIdInnerEncryption()
+        {
+            int idInnerEncryption;
+            string consulta = "SELECT MAX(idInnerEncryption) idInnerEncryption  FROM InnerEncryption";
+            DataSet resultat = db.PortarPerConsulta(consulta, "InnerEncryption");
+
+            if (resultat.Tables[0].Rows.Count > 0)
+            {
+                idInnerEncryption = int.Parse(resultat.Tables[0].Rows[0]["idInnerEncryption"].ToString());
+            }
+            else
+            {
+                idInnerEncryption = -1;
+            }
+
+
+            return idInnerEncryption;
+        }
+
+        public string GetValorsAleatoris(int numCaracters, string valors)
+        {
+            string codi = "";
+            int indexValors;
+            for (int i = 0; i < numCaracters; i++)
+            {
+                indexValors = GetNumeroAleatori(valors.Length);
+                codi += valors[indexValors];
+            }
+
+            return codi;
+        }
+
+        public int GetNumeroAleatori(int valorMaxim)
+        {
+            RNGCryptoServiceProvider provider = new RNGCryptoServiceProvider();
+            byte[] data = new byte[8];
+
+            provider.GetBytes(data);
+            var value = BitConverter.ToUInt32(data, 0);
+            int rNumber = (int)(value % valorMaxim);
+
+            return rNumber;
+        }
+
+        public HashSet<string> GenerarNumerosRandom(int numXifres)
+        {
+            HashSet<string> numeros = new HashSet<string>();
+            int numeroAleatori;
+            string numeroAmbZeros;
+
+            while (numeros.Count < numXifres)
+            {
+                numeroAleatori = GetNumeroAleatori(999);
+                numeroAmbZeros = numeroAleatori.ToString().PadLeft(3, '0');
+                numeros.Add(numeroAmbZeros);
+            }
+
+            return numeros;
+        }
+
+        private void btnDecrypt_Click(object sender, EventArgs e)
+        {
+            CspParameters cspp = new CspParameters();
+
+            // check!
+            cspp.KeyContainerName = clauPlaneta;
+
+            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(cspp);
+            UnicodeEncoding ByteConverter = new UnicodeEncoding();
+
+            var newData = data.Split('\n');
+            byte[] value = ByteConverter.GetBytes(newData[newData.Length - 2]);
+
+            byte[] decryptedData = rsa.Decrypt(value, false);
+            string decodedText = ByteConverter.GetString(decryptedData);
+        }
+
+        string data = "";
+
+        private void ServerListen()
+        {
+            serverTCP.StartServer(RefVariables.PlanetIp, RefVariables.ShipMessagePort);
+            serverTCP.ReceivePing();
+            data += serverTCP.GetClientMessages();
+            serverTCP.StopListening();
+        }
+
+        private void CheckThreadStatus()
+        {
+            if (status)
+            {
+                server.Abort();
+            }
+        }
+
+        private void frmEncryptCodes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            server.Abort();
+        }
+
+        private void btnSendValidation_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

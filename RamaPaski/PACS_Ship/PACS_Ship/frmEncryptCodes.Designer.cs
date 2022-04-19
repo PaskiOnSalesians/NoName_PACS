@@ -69,9 +69,9 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnGetPublicKey = new System.Windows.Forms.Button();
+            this.btnEncrypt = new System.Windows.Forms.Button();
+            this.btnSendKey = new System.Windows.Forms.Button();
             this.ButtonsContainer.SuspendLayout();
             this.Buttons.SuspendLayout();
             this.ConnectingPanel.SuspendLayout();
@@ -507,7 +507,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(253, 88);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
@@ -570,9 +570,9 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66533F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66533F));
-            this.tableLayoutPanel3.Controls.Add(this.button1, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.button2, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.button3, 4, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnGetPublicKey, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnEncrypt, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnSendKey, 4, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -583,47 +583,50 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(778, 220);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // button1
+            // btnGetPublicKey
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 76);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 67);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Download Public Key";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGetPublicKey.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnGetPublicKey.FlatAppearance.BorderSize = 3;
+            this.btnGetPublicKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetPublicKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetPublicKey.ForeColor = System.Drawing.Color.White;
+            this.btnGetPublicKey.Location = new System.Drawing.Point(3, 76);
+            this.btnGetPublicKey.Name = "btnGetPublicKey";
+            this.btnGetPublicKey.Size = new System.Drawing.Size(201, 67);
+            this.btnGetPublicKey.TabIndex = 0;
+            this.btnGetPublicKey.Text = "Download Public Key";
+            this.btnGetPublicKey.UseVisualStyleBackColor = true;
+            this.btnGetPublicKey.Click += new System.EventHandler(this.btnGetPublicKey_Click);
             // 
-            // button2
+            // btnEncrypt
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(287, 76);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(201, 67);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Encrypt";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEncrypt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEncrypt.FlatAppearance.BorderSize = 3;
+            this.btnEncrypt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEncrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEncrypt.ForeColor = System.Drawing.Color.White;
+            this.btnEncrypt.Location = new System.Drawing.Point(287, 76);
+            this.btnEncrypt.Name = "btnEncrypt";
+            this.btnEncrypt.Size = new System.Drawing.Size(201, 67);
+            this.btnEncrypt.TabIndex = 1;
+            this.btnEncrypt.Text = "Encrypt";
+            this.btnEncrypt.UseVisualStyleBackColor = true;
+            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
             // 
-            // button3
+            // btnSendKey
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(571, 76);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(204, 67);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Send Key";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSendKey.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSendKey.FlatAppearance.BorderSize = 3;
+            this.btnSendKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendKey.ForeColor = System.Drawing.Color.White;
+            this.btnSendKey.Location = new System.Drawing.Point(571, 76);
+            this.btnSendKey.Name = "btnSendKey";
+            this.btnSendKey.Size = new System.Drawing.Size(204, 67);
+            this.btnSendKey.TabIndex = 2;
+            this.btnSendKey.Text = "Send Code";
+            this.btnSendKey.UseVisualStyleBackColor = true;
+            this.btnSendKey.Click += new System.EventHandler(this.btnSendKey_Click);
             // 
             // frmEncryptCodes
             // 
@@ -638,6 +641,7 @@
             this.Name = "frmEncryptCodes";
             this.Text = "frmEncryptCodes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEncryptCodes_FormClosing);
             this.Load += new System.EventHandler(this.frmEncryptCodes_Load);
             this.Controls.SetChildIndex(this.ButtonsContainer, 0);
             this.Controls.SetChildIndex(this.LeftBar, 0);
@@ -706,8 +710,8 @@
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnGetPublicKey;
+        private System.Windows.Forms.Button btnEncrypt;
+        private System.Windows.Forms.Button btnSendKey;
     }
 }

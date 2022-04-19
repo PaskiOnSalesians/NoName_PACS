@@ -78,6 +78,7 @@ namespace PACS_Ship
         {
             frmEncryptCodes frmCodes = new frmEncryptCodes();
             frmCodes.Show();
+            this.Hide();
         }
 
         #endregion

@@ -4,12 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using AccesDades;
 using FormBase;
 using GlobalVariables;
+using TCP;
 
 namespace PACS_Ship
 {
@@ -90,9 +93,133 @@ namespace PACS_Ship
 
         private void frmEncryptCodes_Load(object sender, EventArgs e)
         {
-            pboxPlanet.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Planets" + RefVariables.PlanetImage);
-            pboxShip.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Ships" + RefVariables.ShipImage);
+            pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
+            pboxShip.Image = Image.FromFile(RefVariables.ShipImage);
             lblDelivery.Text = RefVariables.DeliveryCode;
+
+            idPlanet = RefVariables.PlanetId;
+            db = new Dades();
+        }
+
+        int idPlanet;
+        Dades db;
+        string code, publicKey;
+        byte [] encryptedData;
+        string encryptedCode;
+
+        private void btnGetPublicKey_Click(object sender, EventArgs e)
+        {
+            this.code = GetValidationCode();
+            this.publicKey = GetPublicKey();
+
+        }
+
+        private string GetValidationCode()
+        {
+            string validationCode;
+            string consulta = "SELECT ValidationCode FROM InnerEncryption WHERE idPlanet = " + this.idPlanet;
+            DataSet resultat = db.PortarPerConsulta(consulta, "InnerEncryption");
+
+            int consultaLong = resultat.Tables[0].Rows.Count;
+
+            if (consultaLong > 0)
+            {
+                validationCode = resultat.Tables[0].Rows[consultaLong - 1]["ValidationCode"].ToString();
+            }
+            else
+            {
+                validationCode = "";
+            }
+
+
+            return validationCode;
+        }
+
+        private string GetPublicKey()
+        {
+            string validationCode;
+            string consulta = "SELECT XmlKey FROM PlanetKeys WHERE idPlanet = " + this.idPlanet;
+            DataSet resultat = db.PortarPerConsulta(consulta, "PlanetKeys");
+
+            int consultaLong = resultat.Tables[0].Rows.Count;
+
+            if (consultaLong > 0)
+            {
+                validationCode = resultat.Tables[0].Rows[consultaLong - 1]["XmlKey"].ToString();
+            }
+            else
+            {
+                validationCode = "";
+            }
+
+
+            return validationCode;
+        }
+
+        private void btnEncrypt_Click(object sender, EventArgs e)
+        {
+            this.encryptedCode = EncryptValidationCode(publicKey, code);
+            MessageBox.Show(encryptedCode);
+            
+
+        }
+
+        private void btnSendKey_Click(object sender, EventArgs e)
+        {
+            PacsTcpClient tcpClient = new PacsTcpClient();
+            if (tcpClient.MakePing(RefVariables.PlanetIp))
+            {
+                string result = tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.ShipMessagePort, encryptedCode);
+                MessageBox.Show(result);
+            }
+
+
+            // Start listening for a response
+            server = new Thread(ServerListen);
+            server.Start();
+        }
+
+        private string EncryptValidationCode(string xmlKey, string validationCode)
+        {
+            UnicodeEncoding ByteConverter = new UnicodeEncoding();
+            byte [] dataToEncrypt = ByteConverter.GetBytes(validationCode);
+
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            {
+                rsa.FromXmlString(xmlKey);
+                this.encryptedData = rsa.Encrypt(dataToEncrypt, false);
+                return ByteConverter.GetString(encryptedData);
+            }
+        }
+
+        PacsTcpServer serverTCP = new PacsTcpServer();
+        Thread server;
+
+
+        private void ServerListen()
+        {
+            serverTCP.StartServer(RefVariables.ShipIp, RefVariables.PlanetMessagePort);
+            serverTCP.ReceivePing();
+            rtxtData.Text += serverTCP.GetClientMessages();
+            serverTCP.StopListening();
+
+            ValidationResponse(rtxtData.Text);
+        }
+
+        private void frmEncryptCodes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            server.Abort();
+        }
+
+        private void ValidationResponse(string data)
+        {
+            var newData = data.Split('\n');
+            string valor = newData[newData.Length - 2];
+
+            if (valor.EndsWith("SI"))
+            {
+                MessageBox.Show("Nice!");
+            }
         }
     }
 }

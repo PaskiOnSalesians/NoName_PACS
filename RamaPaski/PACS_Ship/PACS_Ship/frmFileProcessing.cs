@@ -90,8 +90,8 @@ namespace PACS_Ship
 
         private void frmFileProcessing_Load(object sender, EventArgs e)
         {
-            pboxPlanet.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Planets" + RefVariables.PlanetImage);
-            pboxShip.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Ships" + RefVariables.ShipImage);
+            pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
+            pboxShip.Image = Image.FromFile(RefVariables.ShipImage);
             lblDelivery.Text = RefVariables.DeliveryCode;
         }
     }

@@ -74,7 +74,7 @@ namespace TCP
                     stream = client.GetStream();
 
                     int num = stream.Read(buffer, 0, buffer.Length);
-                    data = Encoding.ASCII.GetString(buffer, 0, num);
+                    data = UTF8Encoding.UTF8.GetString(buffer, 0, num);
 
                     IPEndPoint remoteIpEndPoint = client.Client.RemoteEndPoint as IPEndPoint;
                     clientMessages.Add("\nThe response from planet " + remoteIpEndPoint.Address + " was: " + data);
@@ -108,7 +108,7 @@ namespace TCP
                     stream = client.GetStream();
 
                     int num = stream.Read(buffer, 0, buffer.Length);
-                    data = Encoding.ASCII.GetString(buffer, 0, num);
+                    data = UTF8Encoding.UTF8.GetString(buffer, 0, num);
 
                     IPEndPoint remoteIpEndPoint = client.Client.RemoteEndPoint as IPEndPoint;
                     clientMessages.Add(remoteIpEndPoint.Address + ";" + data);

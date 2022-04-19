@@ -57,20 +57,20 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pboxPlanet = new System.Windows.Forms.PictureBox();
             this.pboxShip = new System.Windows.Forms.PictureBox();
+            this.pboxPlanet = new System.Windows.Forms.PictureBox();
             this.pnlDelivery = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDelivery = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnGenerateCode = new System.Windows.Forms.Button();
+            this.btnDecrypt = new System.Windows.Forms.Button();
+            this.btnSendValidation = new System.Windows.Forms.Button();
             this.ButtonsContainer.SuspendLayout();
             this.Buttons.SuspendLayout();
             this.ConnectingPanel.SuspendLayout();
@@ -80,13 +80,13 @@
             this.panel13.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxPlanet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxShip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxPlanet)).BeginInit();
             this.pnlDelivery.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // ButtonsContainer
@@ -425,15 +425,6 @@
             this.panel2.Size = new System.Drawing.Size(778, 220);
             this.panel2.TabIndex = 0;
             // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.tableLayoutPanel3);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(3, 229);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(778, 220);
-            this.panel14.TabIndex = 1;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
@@ -452,15 +443,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(778, 220);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // pboxPlanet
-            // 
-            this.pboxPlanet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pboxPlanet.Location = new System.Drawing.Point(3, 3);
-            this.pboxPlanet.Name = "pboxPlanet";
-            this.pboxPlanet.Size = new System.Drawing.Size(253, 214);
-            this.pboxPlanet.TabIndex = 0;
-            this.pboxPlanet.TabStop = false;
-            // 
             // pboxShip
             // 
             this.pboxShip.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -469,6 +451,15 @@
             this.pboxShip.Size = new System.Drawing.Size(254, 214);
             this.pboxShip.TabIndex = 5;
             this.pboxShip.TabStop = false;
+            // 
+            // pboxPlanet
+            // 
+            this.pboxPlanet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pboxPlanet.Location = new System.Drawing.Point(3, 3);
+            this.pboxPlanet.Name = "pboxPlanet";
+            this.pboxPlanet.Size = new System.Drawing.Size(253, 214);
+            this.pboxPlanet.TabIndex = 0;
+            this.pboxPlanet.TabStop = false;
             // 
             // pnlDelivery
             // 
@@ -480,85 +471,6 @@
             this.pnlDelivery.Name = "pnlDelivery";
             this.pnlDelivery.Size = new System.Drawing.Size(253, 214);
             this.pnlDelivery.TabIndex = 6;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 5;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66533F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66533F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66533F));
-            this.tableLayoutPanel3.Controls.Add(this.button1, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.button2, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.button3, 4, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(778, 220);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 76);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 67);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Generate Code";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(287, 76);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(201, 67);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Decrypt";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(571, 76);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(204, 67);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Send Validation";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // panel15
-            // 
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(0, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(253, 63);
-            this.panel15.TabIndex = 0;
-            // 
-            // panel16
-            // 
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(0, 151);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(253, 63);
-            this.panel16.TabIndex = 1;
             // 
             // tableLayoutPanel4
             // 
@@ -575,7 +487,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(253, 88);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
@@ -605,6 +517,97 @@
             this.lblDelivery.Text = "Code";
             this.lblDelivery.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // panel16
+            // 
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(0, 151);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(253, 63);
+            this.panel16.TabIndex = 1;
+            // 
+            // panel15
+            // 
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(0, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(253, 63);
+            this.panel15.TabIndex = 0;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.tableLayoutPanel3);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(3, 229);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(778, 220);
+            this.panel14.TabIndex = 1;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 5;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66533F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66533F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66533F));
+            this.tableLayoutPanel3.Controls.Add(this.btnGenerateCode, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnDecrypt, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnSendValidation, 4, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(778, 220);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // btnGenerateCode
+            // 
+            this.btnGenerateCode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnGenerateCode.FlatAppearance.BorderSize = 3;
+            this.btnGenerateCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerateCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateCode.ForeColor = System.Drawing.Color.White;
+            this.btnGenerateCode.Location = new System.Drawing.Point(3, 76);
+            this.btnGenerateCode.Name = "btnGenerateCode";
+            this.btnGenerateCode.Size = new System.Drawing.Size(201, 67);
+            this.btnGenerateCode.TabIndex = 0;
+            this.btnGenerateCode.Text = "Generate Code";
+            this.btnGenerateCode.UseVisualStyleBackColor = true;
+            this.btnGenerateCode.Click += new System.EventHandler(this.btnGenerateCode_Click);
+            // 
+            // btnDecrypt
+            // 
+            this.btnDecrypt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDecrypt.FlatAppearance.BorderSize = 3;
+            this.btnDecrypt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDecrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDecrypt.ForeColor = System.Drawing.Color.White;
+            this.btnDecrypt.Location = new System.Drawing.Point(287, 76);
+            this.btnDecrypt.Name = "btnDecrypt";
+            this.btnDecrypt.Size = new System.Drawing.Size(201, 67);
+            this.btnDecrypt.TabIndex = 1;
+            this.btnDecrypt.Text = "Decrypt";
+            this.btnDecrypt.UseVisualStyleBackColor = true;
+            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
+            // 
+            // btnSendValidation
+            // 
+            this.btnSendValidation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSendValidation.FlatAppearance.BorderSize = 3;
+            this.btnSendValidation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendValidation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendValidation.ForeColor = System.Drawing.Color.White;
+            this.btnSendValidation.Location = new System.Drawing.Point(571, 76);
+            this.btnSendValidation.Name = "btnSendValidation";
+            this.btnSendValidation.Size = new System.Drawing.Size(204, 67);
+            this.btnSendValidation.TabIndex = 2;
+            this.btnSendValidation.Text = "Send Validation";
+            this.btnSendValidation.UseVisualStyleBackColor = true;
+            this.btnSendValidation.Click += new System.EventHandler(this.btnSendValidation_Click);
+            // 
             // frmEncryptCodes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -618,6 +621,7 @@
             this.Name = "frmEncryptCodes";
             this.Text = "frmEncryptCodes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEncryptCodes_FormClosing);
             this.Load += new System.EventHandler(this.frmEncryptCodes_Load);
             this.Controls.SetChildIndex(this.ButtonsContainer, 0);
             this.Controls.SetChildIndex(this.LeftBar, 0);
@@ -632,14 +636,14 @@
             this.panel13.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pboxPlanet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxShip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxPlanet)).EndInit();
             this.pnlDelivery.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -680,9 +684,9 @@
         private System.Windows.Forms.PictureBox pboxPlanet;
         private System.Windows.Forms.Panel pnlDelivery;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnGenerateCode;
+        private System.Windows.Forms.Button btnDecrypt;
+        private System.Windows.Forms.Button btnSendValidation;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel15;

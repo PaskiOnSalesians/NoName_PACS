@@ -72,3 +72,8 @@ C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\AccesDades\obj\
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.dll
 C:\Users\Paski\Documents\ForkGit\noname_pacs\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.pdb
+C:\Users\Admin\Documents\GitHub\noname_pacs\RamaPaski\PACS_Ship\dll\AccesDades.dll
+C:\Users\Admin\Documents\GitHub\noname_pacs\RamaPaski\PACS_Ship\dll\AccesDades.pdb
+C:\Users\Admin\Documents\GitHub\noname_pacs\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\noname_pacs\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.dll
+C:\Users\Admin\Documents\GitHub\noname_pacs\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.pdb

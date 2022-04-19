@@ -23,3 +23,8 @@ E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVa
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\dll\GlobalVariables.dll
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\dll\GlobalVariables.pdb
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\noname_pacs\RamaPaski\PACS_Planet\dll\GlobalVariables.dll
+C:\Users\Admin\Documents\GitHub\noname_pacs\RamaPaski\PACS_Planet\dll\GlobalVariables.pdb
+C:\Users\Admin\Documents\GitHub\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.dll
+C:\Users\Admin\Documents\GitHub\noname_pacs\RamaPaski\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.pdb

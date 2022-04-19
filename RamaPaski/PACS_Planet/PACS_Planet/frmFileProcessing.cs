@@ -81,7 +81,7 @@ namespace PACS_Planet
 
         private void frmFileProcessing_Load(object sender, EventArgs e)
         {
-            pboxPlanet.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Planets" + RefVariables.PlanetImage);
+            pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
             pboxShip.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Ships" + RefVariables.ShipImage);
             lblDelivery.Text = RefVariables.DeliveryCode;
         }

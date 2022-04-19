@@ -42,7 +42,7 @@ namespace TCP
             {
                 this.client = new TcpClient(server, port);
 
-                sendData = Encoding.ASCII.GetBytes(message);
+                sendData = UTF8Encoding.UTF8.GetBytes(message);
                 this.stream = this.client.GetStream();
                 this.stream.Write(sendData, 0, sendData.Length);
 

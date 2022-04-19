@@ -181,6 +181,17 @@ namespace PACS_Planet
             lblShipName.Text = cShip;
             lblShipMessagePort.Text = RefVariables.ShipMessagePort.ToString();
             pboxShip.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Ships\\" + RefVariables.ShipImage);
+
+            connectedPanelsColor();
+        }
+
+        private void connectedPanelsColor()
+        {
+            pnlConn1.BackColor = Color.Green;
+            pnlConn2.BackColor = Color.Green;
+            pnlConn3.BackColor = Color.Green;
+            pnlConn4.BackColor = Color.Green;
+            pnlConn5.BackColor = Color.Green;
         }
 
         private (string, string) DefragmentCode()
@@ -231,6 +242,7 @@ namespace PACS_Planet
             if (clientTCP.MakePing(RefVariables.ShipIp))
             {
                 clientTCP.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, validationMessage);
+                btnNext.Enabled = true;
             }
         }
 

@@ -581,6 +581,7 @@
             // btnDecrypt
             // 
             this.btnDecrypt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDecrypt.Enabled = false;
             this.btnDecrypt.FlatAppearance.BorderSize = 3;
             this.btnDecrypt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDecrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -596,6 +597,7 @@
             // btnSendValidation
             // 
             this.btnSendValidation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSendValidation.Enabled = false;
             this.btnSendValidation.FlatAppearance.BorderSize = 3;
             this.btnSendValidation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSendValidation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

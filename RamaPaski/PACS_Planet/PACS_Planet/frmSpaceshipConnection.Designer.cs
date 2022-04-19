@@ -726,6 +726,7 @@ namespace PACS_Planet
             // 
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNext.Enabled = false;
             this.btnNext.FlatAppearance.BorderSize = 3;
             this.btnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));

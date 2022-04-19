@@ -20,6 +20,17 @@ namespace PACS_Planet
 {
     public partial class frmEncryptCodes : frmBase
     {
+        Dades db;
+        int idPlanet;
+        string clauPlaneta = "stargate";
+        string xmlPath = Application.StartupPath + "/../Resources/files/publicKey.xml";
+        PacsTcpServer serverTCP = new PacsTcpServer();
+        Thread server;
+
+        bool timeDecrypt = false, timeValidation = false;
+
+        bool status = false;
+        string data = "";
 
         class Xifrat
         {
@@ -108,15 +119,6 @@ namespace PACS_Planet
 
         }
 
-        Dades db;
-        int idPlanet;
-        string clauPlaneta = "Testeo";
-        string xmlPath = Application.StartupPath + "/../Resources/files/plublicKey.xml";
-        PacsTcpServer serverTCP = new PacsTcpServer();
-        Thread server;
-
-        bool status = false;
-
         private void btnGenerateCode_Click(object sender, EventArgs e)
         {
             // Generar código de 12 chars, insertar en InnerEncryption)
@@ -129,6 +131,27 @@ namespace PACS_Planet
             {
                 List<Xifrat> codificacioLletraNum = GenerarParsLletraNum();
                 InsertarCodificacions(idInnerEnc, codificacioLletraNum);
+
+                rtxtData.Text +=
+                    "****** Generatng Codes ******\n" +
+                    "Codes generated correctly!\n\n";
+
+
+                timeDecrypt = true;
+                enableButtons();
+            }
+        }
+
+        private void enableButtons()
+        {
+            if (timeDecrypt)
+            {
+                btnGenerateCode.Enabled = false;
+                btnDecrypt.Enabled = true;
+            } else if (timeValidation)
+            {
+                btnDecrypt.Enabled = false;
+                btnSendValidation.Enabled = true;
             }
         }
 
@@ -142,7 +165,7 @@ namespace PACS_Planet
         private CspParameters CrearCsp()
         {
             CspParameters cspp = new CspParameters();
-            cspp.KeyContainerName = this.clauPlaneta;
+            cspp.KeyContainerName = clauPlaneta;
             return cspp;
         }
 
@@ -283,20 +306,28 @@ namespace PACS_Planet
         {
             CspParameters cspp = new CspParameters();
 
-            // check!
             cspp.KeyContainerName = clauPlaneta;
 
-            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(cspp);
-            UnicodeEncoding ByteConverter = new UnicodeEncoding();
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(cspp))
+            {
+                UnicodeEncoding ByteConverter = new UnicodeEncoding();
 
-            var newData = data.Split('\n');
-            byte[] value = ByteConverter.GetBytes(newData[newData.Length - 2]);
+                //var newData = data.Split('\n');
+                //byte[] value = ByteConverter.GetBytes(newData[0]);
+                Console.WriteLine(Convert.GetTypeCode(data));
+                byte[] decryptedData = rsa.Decrypt(Convert.FromBase64String(data), false); //value
+                string decodedText = ByteConverter.GetString(decryptedData);
+            }
 
-            byte[] decryptedData = rsa.Decrypt(value, false);
-            string decodedText = ByteConverter.GetString(decryptedData);
+
+            rtxtData.Text +=
+                "-------- Decrypting key --------\n" +
+                "Decrypted. Prepare for sending the Validation.\n\n";
+
+            timeDecrypt = false;
+            timeValidation = true;
+            enableButtons();
         }
-
-        string data = "";
 
         private void ServerListen()
         {
@@ -321,7 +352,7 @@ namespace PACS_Planet
 
         private void btnSendValidation_Click(object sender, EventArgs e)
         {
-
+            rtxtData.Text += "Sending Validation!";
         }
     }
 }

@@ -274,6 +274,8 @@ namespace PACS_Ship
                 rtxData.AppendText("Inaccessible network.\n");
             }
 
+            RefVariables.DeliveryCode = RefVariables.ShipName + "-" + RefVariables.PlanetCode;
+
             message += rtxData.Text;
 
             return message;

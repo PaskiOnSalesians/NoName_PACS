@@ -601,6 +601,7 @@
             // btnEncrypt
             // 
             this.btnEncrypt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEncrypt.Enabled = false;
             this.btnEncrypt.FlatAppearance.BorderSize = 3;
             this.btnEncrypt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEncrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -616,6 +617,7 @@
             // btnSendKey
             // 
             this.btnSendKey.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSendKey.Enabled = false;
             this.btnSendKey.FlatAppearance.BorderSize = 3;
             this.btnSendKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSendKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -50,11 +50,8 @@ namespace TCP
         // Iniciar Servidor
         public void StartServer(string ipAddress, int port)
         {
-            
             listener = new TcpListener(IPAddress.Parse(ipAddress), port);
             listener.Start();
-            
-
         }
 
         // Obtenir la direccio des d'on se'ns fa ping

@@ -92,6 +92,7 @@ namespace PACS_Planet
         Thread createPacsFiles;
         Thread zipPacsFiles;
         Thread listenFiles;
+        Thread checkFiles;
         Dades db = new Dades();
 
         // Dictionary for letter-number values
@@ -177,6 +178,9 @@ namespace PACS_Planet
 
             createPacsFiles.Start(3);
             zipPacsFiles.Start();
+
+            listenFiles = new Thread(ReceiveTCP);
+            listenFiles.Start();
         }
 
         private void CreatePacsFiles(object numberOfFiles)
@@ -243,20 +247,21 @@ namespace PACS_Planet
 
         private void CheckFilesValues()
         {
-
+            
             string planetValues = ConcatLettersFiles(this.basePath + "/PLANET/letters_files");
             // This file will be received from the SpaceShip, and saved into a Planet directory
             string spaceShipValues = File.ReadAllText(this.basePath + "/SPACESHIP/PACSSOL.txt").Trim();
 
             bool result = planetValues == spaceShipValues;
-            rtxtData.Text = "Equal values: " + result.ToString();
+            rtxtData.Text += "********** Checking content **********";
+            rtxtData.Text += "\nEqual values: " + result.ToString();
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            listenFiles = new Thread(ReceiveTCP);
-            listenFiles.Start();
-            CheckFilesValues();
+            
+            checkFiles = new Thread(CheckFilesValues);
+            checkFiles.Start();
         }
 
         private void LoadEncryptions()
@@ -325,7 +330,7 @@ namespace PACS_Planet
                     netstream.Write(SendingBuffer, 0, (int)SendingBuffer.Length);
                    
                 }
-                rtxtData.Text += "File sended";
+                rtxtData.Text += "File sended\n";
 
 
                 Fs.Close();
@@ -345,7 +350,7 @@ namespace PACS_Planet
         {
             TcpListener Listener = null;
             int BufferSize = 1024;
-            string zipPath = this.basePath + "/PACS.zip";
+            string zipPath = this.basePath + "/SPACESHIP/PACSSOL.txt";
 
             if (File.Exists(zipPath))
             {
@@ -374,7 +379,7 @@ namespace PACS_Planet
                 {
                     client = Listener.AcceptTcpClient();
                     netstream = client.GetStream();
-                    rtxtData.Text += "Files received successfully";
+                    rtxtData.Text += "\nFiles received successfully";
 
                     int totalrecbytes = 0;
                     FileStream Fs = new FileStream(zipPath, FileMode.OpenOrCreate, FileAccess.Write);

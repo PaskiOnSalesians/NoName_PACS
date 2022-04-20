@@ -82,3 +82,8 @@ C:\Users\Marc\Desktop\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.dll
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Ship\AccesDades\obj\Debug\AccesDades.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\AccesDades.dll
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\AccesDades.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\AccesDades\obj\Debug\AccesDades.dll
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\AccesDades\obj\Debug\AccesDades.pdb

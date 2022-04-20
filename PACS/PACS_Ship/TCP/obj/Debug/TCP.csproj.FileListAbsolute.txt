@@ -27,3 +27,8 @@ C:\Users\Marc\Desktop\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Ship\TCP\obj\Debug\TCP.csproj.CoreCompileInputs.cache
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Ship\TCP\obj\Debug\TCP.dll
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Ship\TCP\obj\Debug\TCP.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\TCP.dll
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\TCP.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.csproj.CoreCompileInputs.cache
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.dll
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.pdb

@@ -37,3 +37,8 @@ C:\Users\Marc\Desktop\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.dll
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\GlobalVariables.dll
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\GlobalVariables.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.dll
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.pdb

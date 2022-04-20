@@ -77,3 +77,18 @@ C:\Users\Marc\Desktop\noname_pacs-PaskiBranch (2)\noname_pacs-PaskiBranch\noname
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch (2)\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.csproj.CoreCompileInputs.cache
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch (2)\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.exe
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch (2)\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\PACS_Ship.exe.config
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\PACS_Ship.exe
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\PACS_Ship.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.csproj.AssemblyReference.cache
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.frmConnectPlanet.resources
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.frmEncryptCodes.resources
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.frmEnd.resources
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.frmFileProcessing.resources
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.frmSelectPlanet.resources
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.frmSelectShip.resources
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.Properties.Resources.resources
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.csproj.GenerateResource.cache
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.csproj.CoreCompileInputs.cache
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.exe
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.pdb

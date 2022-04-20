@@ -96,6 +96,8 @@ namespace PACS_Ship
 
         string basePath = Application.StartupPath + "/../Resources/PACS";
         Dades db;
+        string zipPath;
+
 
         // SpaceShip threads
         Thread unzipPacsFiles;
@@ -116,9 +118,10 @@ namespace PACS_Ship
             Control.CheckForIllegalCrossThreadCalls = false;
 
             btnDecode.Enabled = false;
-            btnSend.Enabled = false;
+
 
             LoadEncryptions();
+            zipPath = this.basePath + "/PACS.zip";
 
             listenFiles = new Thread(ReceiveTCP);
             listenFiles.Start();
@@ -135,7 +138,7 @@ namespace PACS_Ship
 
         private void UnzipFile()
         {
-            string zipPath = this.basePath + "/PACS.zip";
+            
             string extractPath = this.basePath + "/SPACESHIP/encoded_files";
 
             // Clean directory
@@ -150,7 +153,6 @@ namespace PACS_Ship
             rtxtData.Text = "Files unzipped\n";
             btnDecode.Enabled = true;
             btnDecompress.Enabled = false;
-            btnSend.Enabled = false;
         }
 
         private string DecodeFileContent(string filePath)
@@ -188,9 +190,8 @@ namespace PACS_Ship
 
             File.WriteAllText(baseDirPath + "/PACSSOL.txt", letters);
             rtxtData.Text += "PACS files decoded into \"PACSSOL.txt\"!\n";
-            btnSend.Enabled = true;
             btnDecompress.Enabled = false;
-            SendTCP(baseDirPath, RefVariables.PlanetIp, RefVariables.PlanetFilePort);
+            SendTCP(baseDirPath + "/PACSSOL.txt", RefVariables.PlanetIp, RefVariables.PlanetFilePort);
         }
 
         private void btnDecode_Click(object sender, EventArgs e)
@@ -326,7 +327,7 @@ namespace PACS_Ship
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -334,11 +335,6 @@ namespace PACS_Ship
                 client.Close();
 
             }
-        }
-
-        private void btnSend_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

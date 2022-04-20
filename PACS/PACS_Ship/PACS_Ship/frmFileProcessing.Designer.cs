@@ -71,7 +71,6 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnDecompress = new System.Windows.Forms.Button();
             this.btnDecode = new System.Windows.Forms.Button();
-            this.btnSend = new System.Windows.Forms.Button();
             this.ButtonsContainer.SuspendLayout();
             this.Buttons.SuspendLayout();
             this.ConnectingPanel.SuspendLayout();
@@ -603,14 +602,13 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 5;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66533F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66533F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.002F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66533F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.9984F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0016F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0016F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.9984F));
             this.tableLayoutPanel3.Controls.Add(this.btnDecompress, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.btnDecode, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.btnSend, 4, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnDecode, 4, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
@@ -629,10 +627,10 @@
             this.btnDecompress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDecompress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecompress.ForeColor = System.Drawing.Color.White;
-            this.btnDecompress.Location = new System.Drawing.Point(4, 94);
+            this.btnDecompress.Location = new System.Drawing.Point(4, 93);
             this.btnDecompress.Margin = new System.Windows.Forms.Padding(4);
             this.btnDecompress.Name = "btnDecompress";
-            this.btnDecompress.Size = new System.Drawing.Size(268, 82);
+            this.btnDecompress.Size = new System.Drawing.Size(407, 81);
             this.btnDecompress.TabIndex = 0;
             this.btnDecompress.Text = "Decompress";
             this.btnDecompress.UseVisualStyleBackColor = true;
@@ -645,30 +643,14 @@
             this.btnDecode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDecode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecode.ForeColor = System.Drawing.Color.White;
-            this.btnDecode.Location = new System.Drawing.Point(383, 94);
+            this.btnDecode.Location = new System.Drawing.Point(625, 93);
             this.btnDecode.Margin = new System.Windows.Forms.Padding(4);
             this.btnDecode.Name = "btnDecode";
-            this.btnDecode.Size = new System.Drawing.Size(268, 82);
+            this.btnDecode.Size = new System.Drawing.Size(409, 81);
             this.btnDecode.TabIndex = 1;
-            this.btnDecode.Text = "Decode";
+            this.btnDecode.Text = "Decode and Send";
             this.btnDecode.UseVisualStyleBackColor = true;
             this.btnDecode.Click += new System.EventHandler(this.btnDecode_Click);
-            // 
-            // btnSend
-            // 
-            this.btnSend.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSend.FlatAppearance.BorderSize = 3;
-            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSend.ForeColor = System.Drawing.Color.White;
-            this.btnSend.Location = new System.Drawing.Point(762, 94);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(272, 82);
-            this.btnSend.TabIndex = 2;
-            this.btnSend.Text = "Send";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // frmFileProcessing
             // 
@@ -755,6 +737,5 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btnDecompress;
         private System.Windows.Forms.Button btnDecode;
-        private System.Windows.Forms.Button btnSend;
     }
 }

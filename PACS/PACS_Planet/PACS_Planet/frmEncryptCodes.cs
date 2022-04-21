@@ -106,7 +106,7 @@ namespace PACS_Planet
         private void frmEncryptCodes_Load(object sender, EventArgs e)
         {
             pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
-            pboxShip.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Ships\\" + RefVariables.ShipImage);
+            pboxShip.Image = Image.FromFile(RefVariables.ShipImage);
             lblDelivery.Text = RefVariables.DeliveryCode;
 
             idPlanet = RefVariables.PlanetId;

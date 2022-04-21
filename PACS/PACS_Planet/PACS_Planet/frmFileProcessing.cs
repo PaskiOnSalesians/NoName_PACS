@@ -102,7 +102,7 @@ namespace PACS_Planet
         private void frmFileProcessing_Load(object sender, EventArgs e)
         {
             pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
-            //pboxShip.Image = Image.FromFile(Application.StartupPath + RefVariables.ShipImage);
+            pboxShip.Image = Image.FromFile(RefVariables.ShipImage);
             lblDelivery.Text = RefVariables.DeliveryCode;
 
             Control.CheckForIllegalCrossThreadCalls = false;
@@ -120,24 +120,80 @@ namespace PACS_Planet
             return content;
         }
 
+        private void CreatePacsFiles(object numberOfFiles)
+        {
+            string folderPath = this.basePath + "/PLANET";
+            rtxtData.Text = "... Creating PACS files ...\n";
+
+            Parallel.For(1, (int)numberOfFiles + 1,
+            index =>
+            {
+
+                string lettersFilePath = folderPath + "/letters_files/letters" + index.ToString() + ".txt";
+                CreateLettersFile(lettersFilePath);
+
+                string encodedFilesPath = folderPath + "/encoded_files/PACS" + index.ToString() + ".txt";
+                CreateEncodedPacsFile(lettersFilePath, encodedFilesPath);
+
+
+            });
+
+            rtxtData.Text += "PACS files created!\n";
+        }
+
         private void CreateLettersFile(string path)
         {
-            string content = GetRandomLetters();
-            File.WriteAllText(path, content);
+            int LETTERS_NUMBER = 100_000;
+            string LETTERS_USED = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            int indexValors;
+
+            FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+            StreamWriter sw = new StreamWriter(fs);
+
+            for (int i = 0; i < LETTERS_NUMBER; i++)
+            {
+                indexValors = GetNumeroAleatori(LETTERS_USED.Length);
+                sw.Write(LETTERS_USED[indexValors]);
+            }
+
+            sw.Close();
+            fs.Close();
         }
+
+        //private void CreateLettersFile(string path)
+        //{
+        //    string content = GetRandomLetters();
+        //    File.WriteAllText(path, content);
+        //}
 
         private void CreateEncodedPacsFile(string lettersFilePath, string newEncodedFilesPath)
         {
             string content = File.ReadAllText(lettersFilePath).Trim();
-            string encodedContent = "";
+
+            FileStream fs = new FileStream(newEncodedFilesPath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+            StreamWriter sw = new StreamWriter(fs);
 
             foreach (var item in content)
             {
-                encodedContent += innerEncryptionPairs[item.ToString()];
+                sw.Write(innerEncryptionPairs[item.ToString()]);
             }
 
-            File.WriteAllText(newEncodedFilesPath, encodedContent);
+            sw.Close();
+            fs.Close();
         }
+
+        //private void CreateEncodedPacsFile(string lettersFilePath, string newEncodedFilesPath)
+        //{
+        //    string content = File.ReadAllText(lettersFilePath).Trim();
+        //    string encodedContent = "";
+
+        //    foreach (var item in content)
+        //    {
+        //        encodedContent += innerEncryptionPairs[item.ToString()];
+        //    }
+
+        //    File.WriteAllText(newEncodedFilesPath, encodedContent);
+        //}
 
         // methods extracted from Criptografia class
         private string GetValorsAleatoris(int numCaracters, string valors)
@@ -184,26 +240,26 @@ namespace PACS_Planet
             listenFiles.Start();
         }
 
-        private void CreatePacsFiles(object numberOfFiles)
-        {
-            string folderPath = this.basePath + "/PLANET";
-            rtxtData.Text = "... Creating PACS files ...\n";
+        //private void CreatePacsFiles(object numberOfFiles)
+        //{
+        //    string folderPath = this.basePath + "/PLANET";
+        //    rtxtData.Text = "... Creating PACS files ...\n";
 
-            Parallel.For(1, (int)numberOfFiles + 1,
-            index =>
-            {
+        //    Parallel.For(1, (int)numberOfFiles + 1,
+        //    index =>
+        //    {
 
-                string lettersFilePath = folderPath + "/letters_files/letters" + index.ToString() + ".txt";
-                CreateLettersFile(lettersFilePath);
+        //        string lettersFilePath = folderPath + "/letters_files/letters" + index.ToString() + ".txt";
+        //        CreateLettersFile(lettersFilePath);
 
-                string encodedFilesPath = folderPath + "/encoded_files/PACS" + index.ToString() + ".txt";
-                CreateEncodedPacsFile(lettersFilePath, encodedFilesPath);
+        //        string encodedFilesPath = folderPath + "/encoded_files/PACS" + index.ToString() + ".txt";
+        //        CreateEncodedPacsFile(lettersFilePath, encodedFilesPath);
 
 
-            });
+        //    });
 
-            rtxtData.Text += "PACS files created!\n";
-        }
+        //    rtxtData.Text += "PACS files created!\n";
+        //}
 
         // Method prob from FileHandling class
         private void CreateZipFile(string zipPath, string[] files)
@@ -421,7 +477,22 @@ namespace PACS_Planet
 
         private void frmFileProcessing_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(checkFiles != null)
+            if (createPacsFiles != null)
+            {
+                createPacsFiles.Abort();
+            }
+
+            if (zipPacsFiles != null)
+            {
+                zipPacsFiles.Abort();
+            }
+
+            if (listenFiles != null)
+            {
+                listenFiles.Abort();
+            }
+
+            if (checkFiles != null)
             {
                 checkFiles.Abort();
             }

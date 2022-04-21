@@ -165,7 +165,7 @@ namespace PACS_Planet
 
             RefVariables.ShipName = cShip;
             RefVariables.ShipMessagePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip"].ToString());
-            RefVariables.ShipImage = dts.Tables[0].Rows[0]["SpaceshipImage"].ToString();
+            RefVariables.ShipImage = Application.StartupPath + "\\..\\Resources\\images\\Ships\\" + dts.Tables[0].Rows[0]["SpaceshipImage"].ToString();
             RefVariables.ShipId = int.Parse(dts.Tables[0].Rows[0]["idSpaceShip"].ToString());
             RefVariables.ShipFilePort = int.Parse(dts.Tables[0].Rows[0]["PortSpaceShip1"].ToString());
 
@@ -180,7 +180,7 @@ namespace PACS_Planet
 
             lblShipName.Text = cShip;
             lblShipMessagePort.Text = RefVariables.ShipMessagePort.ToString();
-            pboxShip.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Ships\\" + RefVariables.ShipImage);
+            pboxShip.Image = Image.FromFile(RefVariables.ShipImage);
 
             connectedPanelsColor();
         }

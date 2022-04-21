@@ -230,7 +230,6 @@ namespace PACS_Ship
         PacsTcpServer serverTCP = new PacsTcpServer();
         Thread server;
 
-
         private void ServerListen()
         {
             serverTCP.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);

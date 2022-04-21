@@ -348,10 +348,12 @@ namespace PACS_Planet
             if (result)
             {
                 message += "VP";
+                rtxtData.Text += "SpaceShip correct!\n";
             }
             else
             {
                 message += "AD";
+                rtxtData.Text += "SpaceShip incorrect!\n";
             }
 
             PacsTcpClient tcpClient = new PacsTcpClient();

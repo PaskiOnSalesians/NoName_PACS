@@ -355,11 +355,7 @@ namespace PACS_Planet
             }
 
             PacsTcpClient tcpClient = new PacsTcpClient();
-            tcpClient.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, message);
-
-
-
-            
+            tcpClient.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, message);            
 
 
         }

@@ -252,9 +252,12 @@ namespace PACS_Ship
             var newData = data.Split('\n');
             string valor = newData[newData.Length - 2];
 
-            if (valor.EndsWith("SI"))
+            if (valor.EndsWith("VP"))
             {
-                MessageBox.Show("Nice!");
+                rtxtData.Text += "Validated\n";
+            } else
+            {
+                rtxtData.Text += "Not validated\n";
             }
         }
     }

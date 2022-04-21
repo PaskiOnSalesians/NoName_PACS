@@ -90,5 +90,31 @@ namespace TCP
             return correctPings;
         }
 
+
+        public void SendMessage(string server, int port, byte[] data)
+        {
+            try
+            {
+                TcpClient client = new TcpClient(server, port);
+                NetworkStream stream = client.GetStream();
+
+                stream.Write(data, 0, data.Length);
+
+                stream.Close();
+                client.Close();
+            }
+            catch (ArgumentNullException e)
+            {
+                Console.WriteLine("ArgumentNullException: {0}", e);
+            }
+            catch (SocketException e)
+            {
+                Console.WriteLine("SocketException: {0}", e);
+            }
+
+            Console.WriteLine("\n Press Enter to continue...");
+            Console.Read();
+        }
+
     }
 }

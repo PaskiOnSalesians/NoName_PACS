@@ -21,8 +21,7 @@ namespace PACS_Ship
         int idPlanet;
         Dades db;
         string code, publicKey;
-        byte[] encryptedData;
-        string encryptedCode;
+        byte[] encryptedCode;
 
         bool timeDownload = false, timeEncrypt = false, timeSend = false;
 
@@ -186,7 +185,7 @@ namespace PACS_Ship
         private void btnEncrypt_Click(object sender, EventArgs e)
         {
             this.encryptedCode = EncryptValidationCode(publicKey, code);
-            //MessageBox.Show(encryptedCode);
+            string encryptedCode = Encoding.ASCII.GetString(this.encryptedCode);
 
             rtxtData.Text +=
                 "--------- Encrypting Validation Code ---------\n" +
@@ -203,8 +202,7 @@ namespace PACS_Ship
                 PacsTcpClient tcpClient = new PacsTcpClient();
                 if (tcpClient.MakePing(RefVariables.PlanetIp))
                 {
-                    string result = tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.ShipMessagePort, encryptedCode);
-                    //MessageBox.Show(result);
+                    tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.ShipMessagePort, this.encryptedCode);
                     rtxtData.Text += "Sending encrypted key...\nSended!";
                 }
 
@@ -217,16 +215,15 @@ namespace PACS_Ship
             }
         }
 
-        private string EncryptValidationCode(string xmlKey, string validationCode)
+        private byte[] EncryptValidationCode(string xmlKey, string validationCode)
         {
-            UnicodeEncoding ByteConverter = new UnicodeEncoding();
-            byte [] dataToEncrypt = ByteConverter.GetBytes(validationCode);
+
+            byte[] dataToEncrypt = Encoding.ASCII.GetBytes(validationCode);
 
             using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
                 rsa.FromXmlString(xmlKey);
-                this.encryptedData = rsa.Encrypt(dataToEncrypt, false);
-                return ByteConverter.GetString(encryptedData);
+                return rsa.Encrypt(dataToEncrypt, false);
             }
         }
 

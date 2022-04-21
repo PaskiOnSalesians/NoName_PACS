@@ -15,6 +15,8 @@ using AccesDades;
 using System.IO;
 using TCP;
 using System.Threading;
+using System.Net.Sockets;
+using System.Net;
 
 namespace PACS_Planet
 {
@@ -31,6 +33,8 @@ namespace PACS_Planet
 
         bool status = false;
         string data = "";
+
+        byte[] bytes;
 
         class Xifrat
         {
@@ -114,7 +118,7 @@ namespace PACS_Planet
 
             GenerateKeyPair();
 
-            server = new Thread(ServerListen);
+            server = new Thread(ListenBytes);
             server.Start();
 
         }
@@ -310,24 +314,16 @@ namespace PACS_Planet
         {
             CspParameters cspp = new CspParameters();
 
-            cspp.KeyContainerName = clauPlaneta;
-
-            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(cspp))
-            {
-                UnicodeEncoding ByteConverter = new UnicodeEncoding();
-
-                var newData = data.Split('\n');
-                byte[] value = ByteConverter.GetBytes(newData[newData.Length - 2]);
-                //byte[] value = ByteConverter.GetBytes(data);
-
-                Console.WriteLine(Convert.GetTypeCode(data));
-                byte[] decryptedData = rsa.Decrypt(value, false);
-                string decodedText = ByteConverter.GetString(decryptedData);
-            }
+            string keyName = clauPlaneta;
+            cspp.KeyContainerName = keyName;
+            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(cspp);
+            var decryptedData = rsa.Decrypt(this.bytes, false);
+            string decodedText = Encoding.ASCII.GetString(decryptedData);
+            MessageBox.Show(decodedText);
 
             rtxtData.Text +=
                 "-------- Decrypting key --------\n" +
-                "Decrypted. Prepare for sending the Validation.\n\n";
+                "Code decrypted: " + decodedText +  "\nPrepare for sending the Validation.\n\n";
 
             timeDecrypt = false;
             timeValidation = true;
@@ -358,6 +354,54 @@ namespace PACS_Planet
         private void btnSendValidation_Click(object sender, EventArgs e)
         {
             rtxtData.Text += "Sending Validation!";
+        }
+
+        private void ListenBytes()
+        {
+            bool estat = true;
+
+            TcpListener server = null;
+            try
+            {
+                IPAddress localAddr = IPAddress.Parse(RefVariables.PlanetIp);
+
+                // TcpListener server = new TcpListener(port);
+                server = new TcpListener(localAddr, RefVariables.ShipMessagePort);
+
+                // Start listening for client requests.
+                server.Start();
+
+                // Enter the listening loop.
+                while (estat)
+                {
+                    Console.Write("Waiting for a connection... ");
+
+                    // Perform a blocking call to accept requests.
+                    // You could also use server.AcceptSocket() here.
+                    TcpClient client = server.AcceptTcpClient();
+                    Console.WriteLine("Connected!");
+
+                    // Get a stream object for reading and writing
+                    NetworkStream stream = client.GetStream();
+
+                    int i = stream.Read(bytes, 0, bytes.Length);
+
+                    // Shutdown and end connection
+                    client.Close();
+
+                    estat = false;
+                }
+            }
+            catch (SocketException e)
+            {
+                Console.WriteLine("SocketException: {0}", e);
+            }
+            finally
+            {
+                // Stop listening for new clients.
+                server.Stop();
+            }
+
         }
     }
 }

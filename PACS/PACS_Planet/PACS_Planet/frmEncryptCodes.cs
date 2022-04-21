@@ -106,7 +106,7 @@ namespace PACS_Planet
         private void frmEncryptCodes_Load(object sender, EventArgs e)
         {
             pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
-            pboxShip.Image = Image.FromFile(Application.StartupPath + "\\..\\Resources\\images\\Ships\\" + RefVariables.ShipImage);
+            pboxShip.Image = Image.FromFile(RefVariables.ShipImage);
             lblDelivery.Text = RefVariables.DeliveryCode;
 
             idPlanet = RefVariables.PlanetId;
@@ -136,6 +136,10 @@ namespace PACS_Planet
                     "****** Generatng Codes ******\n" +
                     "Codes generated correctly!\n\n";
 
+                string codeGenerated = "\n------ Codes generated! ------";
+
+                PacsTcpClient tcpClient = new PacsTcpClient();
+                tcpClient.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, codeGenerated);
 
                 timeDecrypt = true;
                 enableButtons();

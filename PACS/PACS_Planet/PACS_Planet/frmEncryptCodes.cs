@@ -109,6 +109,7 @@ namespace PACS_Planet
 
         private void frmEncryptCodes_Load(object sender, EventArgs e)
         {
+            btnDecrypt.Enabled = false;
             pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
             pboxShip.Image = Image.FromFile(RefVariables.ShipImage);
             lblDelivery.Text = RefVariables.DeliveryCode;
@@ -330,22 +331,6 @@ namespace PACS_Planet
             enableButtons();
         }
 
-        private void ServerListen()
-        {
-            serverTCP.StartServer(RefVariables.PlanetIp, RefVariables.ShipMessagePort);
-            serverTCP.ReceivePing();
-            data += serverTCP.GetClientMessages();
-            serverTCP.StopListening();
-        }
-
-        private void CheckThreadStatus()
-        {
-            if (status)
-            {
-                server.Abort();
-            }
-        }
-
         private void frmEncryptCodes_FormClosing(object sender, FormClosingEventArgs e)
         {
             server.Abort();
@@ -390,6 +375,10 @@ namespace PACS_Planet
                     client.Close();
 
                     estat = false;
+                    rtxtData.Text += "Code received. Ready to decrypt the message\n";
+                    btnDecrypt.Enabled = true;
+
+
                 }
             }
             catch (SocketException e)

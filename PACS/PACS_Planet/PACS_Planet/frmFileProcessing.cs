@@ -160,12 +160,6 @@ namespace PACS_Planet
             fs.Close();
         }
 
-        //private void CreateLettersFile(string path)
-        //{
-        //    string content = GetRandomLetters();
-        //    File.WriteAllText(path, content);
-        //}
-
         private void CreateEncodedPacsFile(string lettersFilePath, string newEncodedFilesPath)
         {
             string content = File.ReadAllText(lettersFilePath).Trim();
@@ -182,20 +176,6 @@ namespace PACS_Planet
             fs.Close();
         }
 
-        //private void CreateEncodedPacsFile(string lettersFilePath, string newEncodedFilesPath)
-        //{
-        //    string content = File.ReadAllText(lettersFilePath).Trim();
-        //    string encodedContent = "";
-
-        //    foreach (var item in content)
-        //    {
-        //        encodedContent += innerEncryptionPairs[item.ToString()];
-        //    }
-
-        //    File.WriteAllText(newEncodedFilesPath, encodedContent);
-        //}
-
-        // methods extracted from Criptografia class
         private string GetValorsAleatoris(int numCaracters, string valors)
         {
             string codi = "";
@@ -240,28 +220,6 @@ namespace PACS_Planet
             listenFiles.Start();
         }
 
-        //private void CreatePacsFiles(object numberOfFiles)
-        //{
-        //    string folderPath = this.basePath + "/PLANET";
-        //    rtxtData.Text = "... Creating PACS files ...\n";
-
-        //    Parallel.For(1, (int)numberOfFiles + 1,
-        //    index =>
-        //    {
-
-        //        string lettersFilePath = folderPath + "/letters_files/letters" + index.ToString() + ".txt";
-        //        CreateLettersFile(lettersFilePath);
-
-        //        string encodedFilesPath = folderPath + "/encoded_files/PACS" + index.ToString() + ".txt";
-        //        CreateEncodedPacsFile(lettersFilePath, encodedFilesPath);
-
-
-        //    });
-
-        //    rtxtData.Text += "PACS files created!\n";
-        //}
-
-        // Method prob from FileHandling class
         private void CreateZipFile(string zipPath, string[] files)
         {
             createPacsFiles.Join();
@@ -310,7 +268,7 @@ namespace PACS_Planet
             string spaceShipValues = File.ReadAllText(this.basePath + "/SPACESHIP/PACSSOL.txt").Trim();
 
             bool result = planetValues == spaceShipValues;
-            rtxtData.Text += "\n********** Checking content **********";
+            rtxtData.Text += "\n\n********** Checking content **********";
             rtxtData.Text += "\nEqual values: " + result.ToString();
 
             string accessPlanet = "", accessValidation;
@@ -324,18 +282,20 @@ namespace PACS_Planet
                 accessPlanet = "AD";
             }
 
-            accessValidation = "\n******* Access Planet *******\nVR3" + RefVariables.ShipName + accessPlanet;
+            accessValidation = "\n\n******* Access Planet *******\nVR3" + RefVariables.ShipName + accessPlanet;
 
             PacsTcpClient tcpClient = new PacsTcpClient();
-            if (tcpClient.MakePing(RefVariables.ShipIp))
+            try 
             {
                 tcpClient.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, accessValidation);
+            } catch(Exception)
+            {
+                MessageBox.Show("No s'ha pogut connectar amb la nau!");
             }
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            
             checkFiles = new Thread(CheckFilesValues);
             checkFiles.Start();
         }
@@ -353,9 +313,6 @@ namespace PACS_Planet
                     innerEncryptionPairs.Add(item["word"].ToString(), item["numbers"].ToString());
                 }
             }
-
-
-
         }
 
         private int GetIdInnerEncryption()

@@ -264,9 +264,6 @@ namespace PACS_Ship
             {
                 TcpClient client = null;
                 NetworkStream netstream = null;
-      
-
-
 
                 if (Listener.Pending())
                 {

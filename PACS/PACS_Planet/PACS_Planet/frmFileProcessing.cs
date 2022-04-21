@@ -17,6 +17,7 @@ using AccesDades;
 
 using FormBase;
 using GlobalVariables;
+using TCP;
 
 namespace PACS_Planet
 {
@@ -253,8 +254,27 @@ namespace PACS_Planet
             string spaceShipValues = File.ReadAllText(this.basePath + "/SPACESHIP/PACSSOL.txt").Trim();
 
             bool result = planetValues == spaceShipValues;
-            rtxtData.Text += "********** Checking content **********";
+            rtxtData.Text += "\n********** Checking content **********";
             rtxtData.Text += "\nEqual values: " + result.ToString();
+
+            string accessPlanet = "", accessValidation;
+
+            if (result)
+            {
+                accessPlanet = "AG";
+            }
+            else
+            {
+                accessPlanet = "AD";
+            }
+
+            accessValidation = "\n******* Access Planet *******\nVR3" + RefVariables.ShipName + accessPlanet;
+
+            PacsTcpClient tcpClient = new PacsTcpClient();
+            if (tcpClient.MakePing(RefVariables.ShipIp))
+            {
+                tcpClient.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, accessValidation);
+            }
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
@@ -399,6 +419,12 @@ namespace PACS_Planet
             }
         }
 
-
+        private void frmFileProcessing_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(checkFiles != null)
+            {
+                checkFiles.Abort();
+            }
+        }
     }
 }

@@ -282,7 +282,7 @@ namespace PACS_Planet
                 accessPlanet = "AD";
             }
 
-            accessValidation = "\n\n******* Access Planet *******\nVR3" + RefVariables.ShipName + accessPlanet;
+            accessValidation = "\n\n------ Access Planet ------nVR3" + RefVariables.ShipName + accessPlanet;
 
             PacsTcpClient tcpClient = new PacsTcpClient();
             try 

@@ -797,6 +797,7 @@ namespace PACS_Planet
             this.rtxtData.ForeColor = System.Drawing.Color.White;
             this.rtxtData.Location = new System.Drawing.Point(0, 0);
             this.rtxtData.Name = "rtxtData";
+            this.rtxtData.ReadOnly = true;
             this.rtxtData.Size = new System.Drawing.Size(326, 412);
             this.rtxtData.TabIndex = 1;
             this.rtxtData.Text = "";

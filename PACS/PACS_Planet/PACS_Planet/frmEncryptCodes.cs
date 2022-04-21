@@ -136,6 +136,10 @@ namespace PACS_Planet
                     "****** Generatng Codes ******\n" +
                     "Codes generated correctly!\n\n";
 
+                string codeGenerated = "\n------ Codes generated! ------";
+
+                PacsTcpClient tcpClient = new PacsTcpClient();
+                tcpClient.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, codeGenerated);
 
                 timeDecrypt = true;
                 enableButtons();

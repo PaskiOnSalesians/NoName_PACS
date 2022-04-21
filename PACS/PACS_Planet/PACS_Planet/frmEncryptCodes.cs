@@ -34,7 +34,7 @@ namespace PACS_Planet
         bool status = false;
         string data = "";
 
-        byte[] bytes;
+        byte[] bytes = new byte[128];
 
         class Xifrat
         {

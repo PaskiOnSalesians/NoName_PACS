@@ -42,3 +42,9 @@ C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\GlobalVariables.pd
 C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
 C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.dll
 C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.pdb
+C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\dll\GlobalVariables.dll
+C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\dll\GlobalVariables.pdb
+C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.csproj.AssemblyReference.cache
+C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
+C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.dll
+C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.pdb

@@ -107,7 +107,14 @@ namespace PACS_Ship
 
             idPlanet = RefVariables.PlanetId;
             db = new Dades();
+
+            btnGetPublicKey.Enabled = false;
+
+            server = new Thread(ServerListen);
+            server.Start();
         }
+
+        
 
         private void enableButtons()
         {
@@ -229,12 +236,13 @@ namespace PACS_Ship
 
         private void ServerListen()
         {
-            serverTCP.StartServer(RefVariables.ShipIp, RefVariables.PlanetMessagePort);
+            serverTCP.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);
             serverTCP.ReceivePing();
             rtxtData.Text += serverTCP.GetClientMessages();
             serverTCP.StopListening();
 
             ValidationResponse(rtxtData.Text);
+            btnGetPublicKey.Enabled = true;
         }
 
         private void frmEncryptCodes_FormClosing(object sender, FormClosingEventArgs e)

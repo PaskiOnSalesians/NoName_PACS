@@ -15,7 +15,8 @@ using GlobalVariables;
 using AccesDades;
 using System.Net.Sockets;
 using System.Net;
-using GlobalVariables;
+using TCP;
+
 
 namespace PACS_Ship
 {
@@ -96,6 +97,7 @@ namespace PACS_Ship
 
         string basePath = Application.StartupPath + "/../Resources/PACS";
         Dades db;
+        PacsTcpServer tcpServer = new PacsTcpServer();
         string zipPath;
 
 
@@ -103,6 +105,7 @@ namespace PACS_Ship
         Thread unzipPacsFiles;
         Thread decodePacsFiles;
         Thread listenFiles;
+        Thread listenValidation;
 
         // Dictionary for letter-number values
         Dictionary<string, string> innerEncryptionPairs;
@@ -131,6 +134,7 @@ namespace PACS_Ship
 
         private void btnDecompress_Click(object sender, EventArgs e)
         {
+            listenFiles.Abort();
             unzipPacsFiles = new Thread(UnzipFile);
             unzipPacsFiles.Start();
 
@@ -192,12 +196,27 @@ namespace PACS_Ship
             rtxtData.Text += "PACS files decoded into \"PACSSOL.txt\"!\n";
             btnDecompress.Enabled = false;
             SendTCP(baseDirPath + "/PACSSOL.txt", RefVariables.PlanetIp, RefVariables.PlanetFilePort);
+            
+        }
+
+        private void ListenValidation()
+        {
+            
+            tcpServer.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);
+            tcpServer.ReceivePing();
+            rtxtData.Text += tcpServer.GetClientMessages();
+           
         }
 
         private void btnDecode_Click(object sender, EventArgs e)
         {
+
             decodePacsFiles = new Thread(DecodePacsFiles);
             decodePacsFiles.Start();
+
+            listenValidation = new Thread(ListenValidation);
+            listenValidation.Start();
+
         }
 
         private void LoadEncryptions()
@@ -266,8 +285,6 @@ namespace PACS_Ship
                 NetworkStream netstream = null;
       
 
-
-
                 if (Listener.Pending())
                 {
                     client = Listener.AcceptTcpClient();
@@ -285,8 +302,6 @@ namespace PACS_Ship
 
                     netstream.Close();
                     client.Close();
-
-
                 }
 
             }
@@ -314,7 +329,7 @@ namespace PACS_Ship
                         TotalLength = TotalLength - CurrentPacketLength;
                     }
                     else
-                        CurrentPacketLength = TotalLength;
+                    CurrentPacketLength = TotalLength;
                     SendingBuffer = new byte[CurrentPacketLength];
                     Fs.Read(SendingBuffer, 0, CurrentPacketLength);
                     netstream.Write(SendingBuffer, 0, (int)SendingBuffer.Length);
@@ -334,6 +349,25 @@ namespace PACS_Ship
                 netstream.Close();
                 client.Close();
 
+            }
+        }
+
+ 
+        private void frmFileProcessing_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (unzipPacsFiles != null)
+            {
+                unzipPacsFiles.Abort();
+            }
+
+            if (decodePacsFiles != null)
+            {
+                decodePacsFiles.Abort();
+            }
+
+            if (listenFiles != null)
+            {
+                listenFiles.Abort();
             }
         }
     }

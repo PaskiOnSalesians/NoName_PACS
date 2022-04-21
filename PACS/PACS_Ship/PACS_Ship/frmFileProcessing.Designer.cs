@@ -627,10 +627,10 @@
             this.btnDecompress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDecompress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecompress.ForeColor = System.Drawing.Color.White;
-            this.btnDecompress.Location = new System.Drawing.Point(4, 93);
+            this.btnDecompress.Location = new System.Drawing.Point(4, 94);
             this.btnDecompress.Margin = new System.Windows.Forms.Padding(4);
             this.btnDecompress.Name = "btnDecompress";
-            this.btnDecompress.Size = new System.Drawing.Size(407, 81);
+            this.btnDecompress.Size = new System.Drawing.Size(407, 82);
             this.btnDecompress.TabIndex = 0;
             this.btnDecompress.Text = "Decompress";
             this.btnDecompress.UseVisualStyleBackColor = true;
@@ -643,10 +643,10 @@
             this.btnDecode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDecode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecode.ForeColor = System.Drawing.Color.White;
-            this.btnDecode.Location = new System.Drawing.Point(625, 93);
+            this.btnDecode.Location = new System.Drawing.Point(625, 94);
             this.btnDecode.Margin = new System.Windows.Forms.Padding(4);
             this.btnDecode.Name = "btnDecode";
-            this.btnDecode.Size = new System.Drawing.Size(409, 81);
+            this.btnDecode.Size = new System.Drawing.Size(409, 82);
             this.btnDecode.TabIndex = 1;
             this.btnDecode.Text = "Decode and Send";
             this.btnDecode.UseVisualStyleBackColor = true;
@@ -666,6 +666,7 @@
             this.Name = "frmFileProcessing";
             this.Text = "frmFileProcessing";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmFileProcessing_FormClosing);
             this.Load += new System.EventHandler(this.frmFileProcessing_Load);
             this.Controls.SetChildIndex(this.ButtonsContainer, 0);
             this.Controls.SetChildIndex(this.LeftBar, 0);

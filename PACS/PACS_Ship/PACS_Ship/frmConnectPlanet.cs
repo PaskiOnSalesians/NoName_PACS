@@ -24,7 +24,7 @@ namespace PACS_Ship
         Thread WaitingVRMessage;
 
         bool networkStatus;
-        bool accepted = false, completat = false;
+        bool accepted = false;
 
         public frmConnectPlanet()
         {
@@ -295,7 +295,7 @@ namespace PACS_Ship
                 btnNext.Enabled = true;
             }
 
-            completat = true;
+
         }
 
         private void TancarFilListener()

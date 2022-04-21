@@ -36,6 +36,9 @@ namespace PACS_Planet
 
         byte[] bytes = new byte[128];
 
+        string code;
+        string decodedText;
+
         class Xifrat
         {
             public string lletra;
@@ -127,7 +130,7 @@ namespace PACS_Planet
         private void btnGenerateCode_Click(object sender, EventArgs e)
         {
             // Generar código de 12 chars, insertar en InnerEncryption)
-            string code = GenerarCodiValidacio();
+            code = GenerarCodiValidacio();
             InsertarCodiValidacio(code);
 
             // Insertar codificación (letra-numero), donde el idInnerEncryption es el creado anteriormente
@@ -319,8 +322,7 @@ namespace PACS_Planet
             cspp.KeyContainerName = keyName;
             RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(cspp);
             var decryptedData = rsa.Decrypt(this.bytes, false);
-            string decodedText = Encoding.ASCII.GetString(decryptedData);
-            MessageBox.Show(decodedText);
+            decodedText = Encoding.ASCII.GetString(decryptedData);
 
             rtxtData.Text +=
                 "-------- Decrypting key --------\n" +
@@ -338,7 +340,33 @@ namespace PACS_Planet
 
         private void btnSendValidation_Click(object sender, EventArgs e)
         {
-            rtxtData.Text += "Sending Validation!";
+            btnDecrypt.Enabled = false;
+            rtxtData.Text += "Validating!\n";
+            bool result = CheckValidationCode();
+            string message = "VR" + this.code;
+
+            if (result)
+            {
+                message += "VP";
+            }
+            else
+            {
+                message += "AD";
+            }
+
+            PacsTcpClient tcpClient = new PacsTcpClient();
+            tcpClient.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, message);
+
+
+
+            
+
+
+        }
+
+        private bool CheckValidationCode()
+        {
+            return this.code == this.decodedText;
         }
 
         private void ListenBytes()
@@ -359,23 +387,16 @@ namespace PACS_Planet
                 // Enter the listening loop.
                 while (estat)
                 {
-                    Console.Write("Waiting for a connection... ");
 
-                    // Perform a blocking call to accept requests.
-                    // You could also use server.AcceptSocket() here.
                     TcpClient client = server.AcceptTcpClient();
                     Console.WriteLine("Connected!");
-
-                    // Get a stream object for reading and writing
                     NetworkStream stream = client.GetStream();
 
                     int i = stream.Read(bytes, 0, bytes.Length);
-
-                    // Shutdown and end connection
                     client.Close();
 
                     estat = false;
-                    rtxtData.Text += "Code received. Ready to decrypt the message\n";
+                    rtxtData.Text += "Code received. Ready to decrypt.\n\n";
                     btnDecrypt.Enabled = true;
 
 

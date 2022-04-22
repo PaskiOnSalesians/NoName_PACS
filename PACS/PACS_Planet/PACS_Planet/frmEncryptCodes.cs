@@ -26,10 +26,9 @@ namespace PACS_Planet
         int idPlanet;
         string clauPlaneta = "KeyPlanet";
         string xmlPath = Application.StartupPath + "/../Resources/files/publicKey.xml";
+        
         PacsTcpServer serverTCP = new PacsTcpServer();
         Thread server;
-
-        bool timeDecrypt = false, timeValidation = false;
 
         bool status = false;
         string data = "";
@@ -124,6 +123,7 @@ namespace PACS_Planet
 
             server = new Thread(ListenBytes);
             server.Start();
+
             btnSelectPlanet.ForeColor = Color.White;
             btnSelectPlanet.BackColor = Color.DarkGreen;
             btnSpaceshipConnection.ForeColor = Color.White;
@@ -155,21 +155,7 @@ namespace PACS_Planet
                 PacsTcpClient tcpClient = new PacsTcpClient();
                 tcpClient.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, codeGenerated);
 
-                timeDecrypt = true;
-                enableButtons();
-            }
-        }
-
-        private void enableButtons()
-        {
-            if (timeDecrypt)
-            {
                 btnGenerateCode.Enabled = false;
-                btnDecrypt.Enabled = true;
-            } else if (timeValidation)
-            {
-                btnDecrypt.Enabled = false;
-                btnSendValidation.Enabled = true;
             }
         }
 
@@ -333,10 +319,9 @@ namespace PACS_Planet
             rtxtData.Text +=
                 "-------- Decrypting key --------\n" +
                 "Code decrypted: " + decodedText +  "\nPrepare for sending the Validation.\n\n";
-
-            timeDecrypt = false;
-            timeValidation = true;
-            enableButtons();
+            
+            btnSendValidation.Enabled = true;
+            btnDecrypt.Enabled = false;
         }
 
         private void frmEncryptCodes_FormClosing(object sender, FormClosingEventArgs e)
@@ -347,7 +332,7 @@ namespace PACS_Planet
         private void btnSendValidation_Click(object sender, EventArgs e)
         {
             btnDecrypt.Enabled = false;
-            rtxtData.Text += "Validating!\n";
+            rtxtData.Text += "Validating...\n";
             bool result = CheckValidationCode();
             string message = "VR" + this.code;
 
@@ -366,6 +351,7 @@ namespace PACS_Planet
             tcpClient.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, message);            
 
             btnFileProcessing.Enabled = true;
+            btnSendValidation.Enabled = false;
         }
 
         private bool CheckValidationCode()

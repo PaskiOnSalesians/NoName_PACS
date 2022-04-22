@@ -106,6 +106,8 @@ namespace PACS_Planet
             // Dades inicials Nau
             LoadShipInitialData();
 
+            btnConnect.Enabled = false;
+
             server = new Thread(ServerListen);
             server.Start();
 
@@ -136,6 +138,10 @@ namespace PACS_Planet
         {
             serverTCP.StartServer(RefVariables.PlanetIp, RefVariables.PlanetMessagePort);
             remoteIP = serverTCP.ReceivePing();
+            if(remoteIP != null || remoteIP != "")
+            {
+                btnConnect.Enabled = true;
+            }
             rtxtData.Text += serverTCP.GetClientMessages();
             LoadShipInfo(remoteIP);
             serverTCP.StopListening();
@@ -252,6 +258,7 @@ namespace PACS_Planet
             }
 
             btnEncryptCodes.Enabled = true;
+            btnConnect.Enabled = false;
         }
 
         private bool CheckDeliveryData()

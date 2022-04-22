@@ -278,9 +278,8 @@ namespace PACS_Planet
 
             bool result = planetValues == spaceShipValues;
             rtxtData.Text += "\n\n********** Checking content **********";
-            rtxtData.Text += "\nEqual values: " + result.ToString();
 
-            string accessPlanet = "", accessValidation;
+            string accessPlanet, accessValidation, finalMessage;
 
             if (result)
             {
@@ -291,7 +290,18 @@ namespace PACS_Planet
                 accessPlanet = "AD";
             }
 
-            accessValidation = "\n\n------ Access Planet ------nVR3" + RefVariables.ShipName + accessPlanet;
+            if (accessPlanet.Equals("AG"))
+            {
+                finalMessage = "Access granted!!";
+            }
+            else
+            {
+                finalMessage = "Access denied!!";
+            }
+
+            rtxtData.Text += finalMessage;
+
+            accessValidation = "\n\n------ Access Planet ------\nVR3" + RefVariables.ShipName + accessPlanet;
 
             PacsTcpClient tcpClient = new PacsTcpClient();
             try 
@@ -309,6 +319,7 @@ namespace PACS_Planet
             checkFiles.Start();
 
             btnEnd.Enabled = true;
+            btnCheck.Enabled = false;
         }
 
         private void LoadEncryptions()
@@ -355,7 +366,7 @@ namespace PACS_Planet
             try
             {
                 client = new TcpClient(ip, port);
-                rtxtData.Text += "Connected to the Server...\n";
+                rtxtData.Text += "Connecting to the spaceship...\n";
                 netstream = client.GetStream();
                 FileStream Fs = new FileStream(resourcePath, FileMode.Open, FileAccess.Read);
                 int NoOfPackets = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(Fs.Length) / Convert.ToDouble(BufferSize)));

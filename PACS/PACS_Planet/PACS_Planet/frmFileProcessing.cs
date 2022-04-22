@@ -238,7 +238,7 @@ namespace PACS_Planet
                 File.Delete(zipPath);
             }
 
-            rtxtData.Text += "... Creating ZIP file ...\n";
+            rtxtData.Text += "-------- Creating ZIP file --------\n";
             using (var archive = ZipFile.Open(zipPath, ZipArchiveMode.Create))
             {
                 string filename;
@@ -250,7 +250,7 @@ namespace PACS_Planet
 
             }
             rtxtData.Text += "ZIP file created!\n";
-            btnCheck.Enabled = true;
+
             btnCompress.Enabled = false;
             SendTCP(zipPath, RefVariables.ShipIp, RefVariables.ShipFilePort);
         }
@@ -299,7 +299,7 @@ namespace PACS_Planet
                 finalMessage = "Access denied!!";
             }
 
-            rtxtData.Text += finalMessage;
+            rtxtData.Text += "\n" + finalMessage;
 
             accessValidation = "\n\n------ Access Planet ------\nVR3" + RefVariables.ShipName + accessPlanet;
 
@@ -434,7 +434,9 @@ namespace PACS_Planet
                 {
                     client = Listener.AcceptTcpClient();
                     netstream = client.GetStream();
-                    rtxtData.Text += "\nFiles received successfully";
+                    rtxtData.Text += "\nPACSSOL.txt received successfully!";
+
+                    btnCheck.Enabled = true;
 
                     int totalrecbytes = 0;
                     FileStream Fs = new FileStream(zipPath, FileMode.OpenOrCreate, FileAccess.Write);

@@ -170,6 +170,7 @@ namespace PACS_Planet
             // 
             this.btnEnd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEnd.Enabled = false;
             this.btnEnd.FlatAppearance.BorderSize = 5;
             this.btnEnd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnEnd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -188,6 +189,7 @@ namespace PACS_Planet
             // 
             this.btnFileProcessing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFileProcessing.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFileProcessing.Enabled = false;
             this.btnFileProcessing.FlatAppearance.BorderSize = 5;
             this.btnFileProcessing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnFileProcessing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -206,6 +208,7 @@ namespace PACS_Planet
             // 
             this.btnEncryptCodes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEncryptCodes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEncryptCodes.Enabled = false;
             this.btnEncryptCodes.FlatAppearance.BorderSize = 5;
             this.btnEncryptCodes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnEncryptCodes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -224,6 +227,7 @@ namespace PACS_Planet
             // 
             this.btnSelectPlanet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectPlanet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSelectPlanet.Enabled = false;
             this.btnSelectPlanet.FlatAppearance.BorderSize = 5;
             this.btnSelectPlanet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnSelectPlanet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));

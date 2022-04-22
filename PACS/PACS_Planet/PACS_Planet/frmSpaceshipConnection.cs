@@ -79,6 +79,7 @@ namespace PACS_Planet
         private void btnEncryptCodes_Click(object sender, EventArgs e)
         {
             OpenForm(2);
+            btnEncryptCodes.Enabled = true;
         }
 
         private void btnFileProcessing_Click(object sender, EventArgs e)
@@ -108,6 +109,12 @@ namespace PACS_Planet
 
             server = new Thread(ServerListen);
             server.Start();
+
+            btnSelectPlanet.BackColor = Color.DarkGreen;
+            btnSelectPlanet.ForeColor = Color.White;
+            btnEncryptCodes.ForeColor = Color.White;
+            btnFileProcessing.ForeColor = Color.White;
+            btnEnd.ForeColor = Color.White;
         }
 
         private void LoadPlanetData()

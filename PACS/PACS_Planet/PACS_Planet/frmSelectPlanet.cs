@@ -72,6 +72,10 @@ namespace PACS_Planet
             {
                 MessageBox.Show(error.ToString());
             }
+
+            btnSpaceshipConnection.ForeColor = Color.White;
+            btnFileProcessing.ForeColor = Color.White;
+            btnEnd.ForeColor = Color.White;
         }
 
         // Seleccio del planeta
@@ -85,6 +89,8 @@ namespace PACS_Planet
             }
 
             LoadVariables(RefVariables.PlanetId);
+
+            btnSpaceshipConnection.Enabled = true;
         }
 
         // Metode auxiliar per emmagatzemar dades globals

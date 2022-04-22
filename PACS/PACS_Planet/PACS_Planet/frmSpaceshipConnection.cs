@@ -79,7 +79,6 @@ namespace PACS_Planet
         private void btnEncryptCodes_Click(object sender, EventArgs e)
         {
             OpenForm(2);
-            btnEncryptCodes.Enabled = true;
         }
 
         private void btnFileProcessing_Click(object sender, EventArgs e)
@@ -251,6 +250,8 @@ namespace PACS_Planet
                 clientTCP.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, validationMessage);
                 btnNext.Enabled = true;
             }
+
+            btnEncryptCodes.Enabled = true;
         }
 
         private bool CheckDeliveryData()

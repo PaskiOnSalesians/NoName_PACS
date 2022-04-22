@@ -77,5 +77,17 @@ namespace PACS_Planet
         }
 
         #endregion
+
+        private void frmEnd_Load(object sender, EventArgs e)
+        {
+            btnSelectPlanet.BackColor = Color.DarkGreen;
+            btnSelectPlanet.ForeColor = Color.White;
+            btnSpaceshipConnection.BackColor = Color.DarkGreen;
+            btnSpaceshipConnection.ForeColor = Color.White;
+            btnEncryptCodes.BackColor = Color.DarkGreen;
+            btnEncryptCodes.ForeColor = Color.White;
+            btnFileProcessing.BackColor = Color.DarkGreen;
+            btnFileProcessing.ForeColor = Color.White;
+        }
     }
 }

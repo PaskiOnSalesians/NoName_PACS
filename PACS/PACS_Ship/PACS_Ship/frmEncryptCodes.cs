@@ -111,6 +111,16 @@ namespace PACS_Ship
 
             server = new Thread(ServerListen);
             server.Start();
+
+            btnSelectShip.ForeColor = Color.White;
+            btnSelectShip.BackColor = Color.DarkGreen;
+            btnSelectPlanet.ForeColor = Color.White;
+            btnSelectPlanet.BackColor = Color.DarkGreen;
+            btnConnectPlanet.ForeColor = Color.White;
+            btnConnectPlanet.BackColor = Color.DarkGreen;
+            btnEncryptCodes.ForeColor = Color.White;
+            btnFileProcessing.ForeColor = Color.White;
+            btnEnd.ForeColor = Color.White;
         }
 
         
@@ -212,6 +222,8 @@ namespace PACS_Ship
                 server.Start();
 
                 btnSendKey.Enabled = false;
+
+                btnFileProcessing.Enabled = true;
             }
         }
 

@@ -86,5 +86,19 @@ namespace PACS_Ship
         }
 
         #endregion
+
+        private void frmEnd_Load(object sender, EventArgs e)
+        {
+            btnSelectShip.ForeColor = Color.White;
+            btnSelectShip.BackColor = Color.DarkGreen;
+            btnSelectPlanet.ForeColor = Color.White;
+            btnSelectPlanet.BackColor = Color.DarkGreen;
+            btnConnectPlanet.ForeColor = Color.White;
+            btnEncryptCodes.ForeColor = Color.White;
+            btnEncryptCodes.BackColor = Color.DarkGreen;
+            btnFileProcessing.ForeColor = Color.White;
+            btnFileProcessing.BackColor = Color.DarkGreen;
+            btnEnd.ForeColor = Color.White;
+        }
     }
 }

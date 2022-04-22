@@ -240,6 +240,7 @@
             this.Name = "frmEnd";
             this.Text = "frmEnd";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmEnd_Load);
             this.Controls.SetChildIndex(this.ButtonsContainer, 0);
             this.Controls.SetChildIndex(this.LeftBar, 0);
             this.Controls.SetChildIndex(this.RightBar, 0);

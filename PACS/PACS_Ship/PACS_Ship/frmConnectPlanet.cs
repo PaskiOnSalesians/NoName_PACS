@@ -39,6 +39,15 @@ namespace PACS_Ship
 
             LoadPlanetData();
             LoadShipData();
+
+            btnSelectShip.ForeColor = Color.White;
+            btnSelectShip.BackColor = Color.DarkGreen;
+            btnSelectPlanet.ForeColor = Color.White;
+            btnSelectPlanet.BackColor = Color.DarkGreen;
+            btnConnectPlanet.ForeColor = Color.White;
+            btnEncryptCodes.ForeColor = Color.White;
+            btnFileProcessing.ForeColor = Color.White;
+            btnEnd.ForeColor = Color.White;
         }
 
         private void LoadShipData()
@@ -72,6 +81,8 @@ namespace PACS_Ship
             SendRequestMessage();
             EntryRequirementShip();
             WaitingVRMessagePlanet();
+
+            btnEncryptCodes.Enabled = true;
         }
 
         private void btnNext_Click(object sender, EventArgs e)

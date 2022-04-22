@@ -124,7 +124,13 @@ namespace PACS_Planet
 
             server = new Thread(ListenBytes);
             server.Start();
+            btnSelectPlanet.ForeColor = Color.White;
+            btnSelectPlanet.BackColor = Color.DarkGreen;
+            btnSpaceshipConnection.ForeColor = Color.White;
+            btnSpaceshipConnection.BackColor = Color.DarkGreen;
 
+            btnFileProcessing.ForeColor = Color.White;
+            btnEnd.ForeColor = Color.White;
         }
 
         private void btnGenerateCode_Click(object sender, EventArgs e)
@@ -359,7 +365,7 @@ namespace PACS_Planet
             PacsTcpClient tcpClient = new PacsTcpClient();
             tcpClient.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, message);            
 
-
+            btnFileProcessing.Enabled = true;
         }
 
         private bool CheckValidationCode()

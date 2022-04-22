@@ -66,6 +66,14 @@ namespace PACS_Ship
             {
                 MessageBox.Show("No s'ha pogut carregar correctament!", "PACS - NONAME");
             }
+
+
+            btnSelectShip.ForeColor = Color.White;
+            btnSelectShip.BackColor = Color.DarkGreen;
+            btnConnectPlanet.ForeColor = Color.White;
+            btnEncryptCodes.ForeColor = Color.White;
+            btnFileProcessing.ForeColor = Color.White;
+            btnEnd.ForeColor = Color.White;
         }
 
         // Seleccio del planeta
@@ -80,6 +88,8 @@ namespace PACS_Ship
             }
 
             LoadVariables(RefVariables.PlanetId);
+
+            btnConnectPlanet.Enabled = true;
         }
 
         // Metode auxiliar per emmagatzemar dades globals

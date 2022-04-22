@@ -110,6 +110,15 @@ namespace PACS_Planet
             btnCheck.Enabled = false;
 
             LoadEncryptions();
+
+            btnSelectPlanet.BackColor = Color.DarkGreen;
+            btnSelectPlanet.ForeColor = Color.White;
+            btnSpaceshipConnection.BackColor = Color.DarkGreen;
+            btnSpaceshipConnection.ForeColor = Color.White;
+            btnEncryptCodes.BackColor = Color.DarkGreen;
+            btnEncryptCodes.ForeColor = Color.White;
+
+            btnEnd.ForeColor = Color.White;
         }
 
         private string GetRandomLetters()
@@ -298,6 +307,8 @@ namespace PACS_Planet
         {
             checkFiles = new Thread(CheckFilesValues);
             checkFiles.Start();
+
+            btnEnd.Enabled = true;
         }
 
         private void LoadEncryptions()

@@ -73,6 +73,7 @@ namespace PACS_Planet
                 MessageBox.Show(error.ToString());
             }
 
+            btnEncryptCodes.ForeColor = Color.White;
             btnSpaceshipConnection.ForeColor = Color.White;
             btnFileProcessing.ForeColor = Color.White;
             btnEnd.ForeColor = Color.White;

@@ -128,6 +128,16 @@ namespace PACS_Ship
 
             listenFiles = new Thread(ReceiveTCP);
             listenFiles.Start();
+
+            btnSelectShip.ForeColor = Color.White;
+            btnSelectShip.BackColor = Color.DarkGreen;
+            btnSelectPlanet.ForeColor = Color.White;
+            btnSelectPlanet.BackColor = Color.DarkGreen;
+            btnConnectPlanet.ForeColor = Color.White;
+            btnEncryptCodes.ForeColor = Color.White;
+            btnEncryptCodes.BackColor = Color.DarkGreen;
+            btnFileProcessing.ForeColor = Color.White;
+            btnEnd.ForeColor = Color.White;
         }
 
 
@@ -217,6 +227,7 @@ namespace PACS_Ship
             listenValidation = new Thread(ListenValidation);
             listenValidation.Start();
 
+            btnEnd.Enabled = true;
         }
 
         private void LoadEncryptions()

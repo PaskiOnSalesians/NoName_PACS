@@ -126,6 +126,7 @@
             // 
             this.btnEnd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEnd.Enabled = false;
             this.btnEnd.FlatAppearance.BorderSize = 5;
             this.btnEnd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnEnd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -162,6 +163,7 @@
             // 
             this.btnEncryptCodes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEncryptCodes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEncryptCodes.Enabled = false;
             this.btnEncryptCodes.FlatAppearance.BorderSize = 5;
             this.btnEncryptCodes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnEncryptCodes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -180,6 +182,7 @@
             // 
             this.btnSpaceshipConnection.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSpaceshipConnection.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSpaceshipConnection.Enabled = false;
             this.btnSpaceshipConnection.FlatAppearance.BorderSize = 5;
             this.btnSpaceshipConnection.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnSpaceshipConnection.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -198,6 +201,7 @@
             // 
             this.btnSelectPlanet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectPlanet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSelectPlanet.Enabled = false;
             this.btnSelectPlanet.FlatAppearance.BorderSize = 5;
             this.btnSelectPlanet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnSelectPlanet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));

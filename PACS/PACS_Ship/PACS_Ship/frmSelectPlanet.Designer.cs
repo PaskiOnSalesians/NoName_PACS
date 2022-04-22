@@ -91,6 +91,7 @@
             // 
             this.btnSelectShip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectShip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSelectShip.Enabled = false;
             this.btnSelectShip.FlatAppearance.BorderSize = 5;
             this.btnSelectShip.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnSelectShip.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -109,6 +110,7 @@
             // 
             this.btnConnectPlanet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConnectPlanet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnConnectPlanet.Enabled = false;
             this.btnConnectPlanet.FlatAppearance.BorderSize = 5;
             this.btnConnectPlanet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnConnectPlanet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -145,6 +147,7 @@
             // 
             this.btnEnd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEnd.Enabled = false;
             this.btnEnd.FlatAppearance.BorderSize = 5;
             this.btnEnd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnEnd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -163,6 +166,7 @@
             // 
             this.btnFileProcessing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFileProcessing.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFileProcessing.Enabled = false;
             this.btnFileProcessing.FlatAppearance.BorderSize = 5;
             this.btnFileProcessing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnFileProcessing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -181,6 +185,7 @@
             // 
             this.btnEncryptCodes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEncryptCodes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEncryptCodes.Enabled = false;
             this.btnEncryptCodes.FlatAppearance.BorderSize = 5;
             this.btnEncryptCodes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnEncryptCodes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));

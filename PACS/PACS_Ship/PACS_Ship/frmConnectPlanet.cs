@@ -81,6 +81,7 @@ namespace PACS_Ship
             SendRequestMessage();
             EntryRequirementShip();
             WaitingVRMessagePlanet();
+            btnConnect.Enabled = false;
         }
 
         private void btnNext_Click(object sender, EventArgs e)

@@ -81,8 +81,6 @@ namespace PACS_Ship
             SendRequestMessage();
             EntryRequirementShip();
             WaitingVRMessagePlanet();
-
-            btnEncryptCodes.Enabled = true;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -203,12 +201,12 @@ namespace PACS_Ship
                 {
                     message += "-------------- Delivery Data --------------\n\n";
                     message += ("ER." + RefVariables.ShipName + "." + RefVariables.ShipName + "-" + RefVariables.PlanetCode + "\n\n");
-                    NetworkConnectionPanel();
+                    NetworkConnectionPanel(true);
                 }
                 else
                 {
                     message += "Response from " + ip_ping + ": Destination host inaccessible.\n";
-                    NetworkConnectionPanel();
+                    NetworkConnectionPanel(false);
                 }
             }
             else
@@ -220,9 +218,9 @@ namespace PACS_Ship
         }
 
         // Color de connexio
-        private void NetworkConnectionPanel()
+        private void NetworkConnectionPanel(bool Ping)
         {
-            if (networkStatus)
+            if (Ping)
             {
                 pnlConn1.BackColor = Color.Green;
                 pnlConn2.BackColor = Color.Green;
@@ -304,6 +302,7 @@ namespace PACS_Ship
             if (code.Equals("VP"))
             {
                 btnNext.Enabled = true;
+                btnEncryptCodes.Enabled = true;
             }
 
 

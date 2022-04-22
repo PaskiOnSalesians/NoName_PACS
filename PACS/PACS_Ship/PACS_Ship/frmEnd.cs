@@ -94,6 +94,7 @@ namespace PACS_Ship
             btnSelectPlanet.ForeColor = Color.White;
             btnSelectPlanet.BackColor = Color.DarkGreen;
             btnConnectPlanet.ForeColor = Color.White;
+            btnConnectPlanet.BackColor = Color.DarkGreen;
             btnEncryptCodes.ForeColor = Color.White;
             btnEncryptCodes.BackColor = Color.DarkGreen;
             btnFileProcessing.ForeColor = Color.White;

@@ -74,7 +74,7 @@ namespace TCP
                     data = UTF8Encoding.UTF8.GetString(buffer, 0, num);
 
                     IPEndPoint remoteIpEndPoint = client.Client.RemoteEndPoint as IPEndPoint;
-                    clientMessages.Add("\nThe response from planet " + remoteIpEndPoint.Address + " was: " + data);
+                    clientMessages.Add(data);
 
                     Console.WriteLine(remoteIpEndPoint);
 

@@ -216,7 +216,7 @@ namespace PACS_Ship
                 if (tcpClient.MakePing(RefVariables.PlanetIp))
                 {
                     tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.ShipMessagePort, this.encryptedCode);
-                    rtxtData.Text += "Sending encrypted key...\t\tSended!";
+                    rtxtData.Text += "Sending...\t\tSended!";
                 }
 
 
@@ -254,6 +254,7 @@ namespace PACS_Ship
 
             if(stage != 1)
             {
+                rtxtData.Text += "\n----------VALIDATION RESULT----------\n";
                 ValidationResponse(rtxtData.Text);
             }
             else
@@ -274,10 +275,10 @@ namespace PACS_Ship
 
             if (valor.EndsWith("VP"))
             {
-                rtxtData.Text += "Validated\n";
+                rtxtData.Text += "Correct you can proceed\n";
             } else
             {
-                rtxtData.Text += "Not validated\n";
+                rtxtData.Text += "Incorrect\n";
             }
         }
     }

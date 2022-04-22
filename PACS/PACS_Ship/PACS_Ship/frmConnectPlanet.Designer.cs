@@ -821,6 +821,7 @@
             this.rtxData.ForeColor = System.Drawing.Color.White;
             this.rtxData.Location = new System.Drawing.Point(0, 0);
             this.rtxData.Name = "rtxData";
+            this.rtxData.ReadOnly = true;
             this.rtxData.Size = new System.Drawing.Size(326, 412);
             this.rtxData.TabIndex = 1;
             this.rtxData.Text = "";

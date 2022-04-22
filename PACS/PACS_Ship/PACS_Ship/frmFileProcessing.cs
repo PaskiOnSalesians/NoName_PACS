@@ -121,6 +121,7 @@ namespace PACS_Ship
             Control.CheckForIllegalCrossThreadCalls = false;
 
             btnDecode.Enabled = false;
+            btnDecompress.Enabled = false;
 
 
             LoadEncryptions();
@@ -165,7 +166,7 @@ namespace PACS_Ship
 
             ZipFile.ExtractToDirectory(zipPath, extractPath);
 
-            rtxtData.Text = "Files unzipped\n";
+            rtxtData.Text += "\nZip file received successfully!\n";
             btnDecode.Enabled = true;
             btnDecompress.Enabled = false;
         }
@@ -229,6 +230,7 @@ namespace PACS_Ship
             listenValidation.Start();
 
             btnEnd.Enabled = true;
+            btnDecode.Enabled = false;
         }
 
         private void LoadEncryptions()
@@ -302,7 +304,9 @@ namespace PACS_Ship
                     client = Listener.AcceptTcpClient();
                     netstream = client.GetStream();
                     rtxtData.Text += "Files received successfully";
-                   
+
+                    btnDecompress.Enabled = true;
+
                     int totalrecbytes = 0;
                     FileStream Fs = new FileStream(zipPath, FileMode.OpenOrCreate, FileAccess.Write);
                     while ((RecBytes = netstream.Read(RecData, 0, RecData.Length)) > 0)
@@ -315,7 +319,6 @@ namespace PACS_Ship
                     netstream.Close();
                     client.Close();
                 }
-
             }
         }
         public void SendTCP(string resourcePath, string ip, int port)
@@ -328,7 +331,7 @@ namespace PACS_Ship
             try
             {
                 client = new TcpClient(ip, port);
-                rtxtData.Text += "Connected to the Server...\n";
+                rtxtData.Text += "Sending file...\n";
                 netstream = client.GetStream();
                 FileStream Fs = new FileStream(resourcePath, FileMode.Open, FileAccess.Read);
                 int NoOfPackets = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(Fs.Length) / Convert.ToDouble(BufferSize)));
@@ -347,7 +350,7 @@ namespace PACS_Ship
                     netstream.Write(SendingBuffer, 0, (int)SendingBuffer.Length);
 
                 }
-                rtxtData.Text += "File sended";
+                rtxtData.Text += "File sent!";
 
 
                 Fs.Close();

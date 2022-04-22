@@ -168,6 +168,7 @@ namespace PACS_Ship
         {
             tcpServer.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);
             tcpServer.ReceivePing();
+            rtxData.Text += "\n----------VALIDATION RESULT----------\n";
             rtxData.Text += tcpServer.GetClientMessages();
             CheckVR(tcpServer.GetClientMessages());
             tcpServer.StopListening();

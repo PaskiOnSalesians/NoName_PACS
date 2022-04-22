@@ -23,6 +23,7 @@ namespace PACS_Ship
         string code, publicKey;
         byte[] encryptedCode;
 
+        int stage = 1;
         bool timeDownload = false, timeEncrypt = false, timeSend = false;
 
         public frmEncryptCodes()
@@ -207,13 +208,15 @@ namespace PACS_Ship
 
         private void btnSendKey_Click(object sender, EventArgs e)
         {
+            stage++;
+
             if (timeSend)
             {
                 PacsTcpClient tcpClient = new PacsTcpClient();
                 if (tcpClient.MakePing(RefVariables.PlanetIp))
                 {
                     tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.ShipMessagePort, this.encryptedCode);
-                    rtxtData.Text += "Sending encrypted key...\nSended!";
+                    rtxtData.Text += "Sending encrypted key...\t\tSended!";
                 }
 
 
@@ -249,8 +252,14 @@ namespace PACS_Ship
             rtxtData.Text += serverTCP.GetClientMessages();
             serverTCP.StopListening();
 
-            ValidationResponse(rtxtData.Text);
-            btnGetPublicKey.Enabled = true;
+            if(stage != 1)
+            {
+                ValidationResponse(rtxtData.Text);
+            }
+            else
+            {
+                btnGetPublicKey.Enabled = true;
+            }
         }
 
         private void frmEncryptCodes_FormClosing(object sender, FormClosingEventArgs e)

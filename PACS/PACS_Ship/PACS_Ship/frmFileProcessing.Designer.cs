@@ -93,6 +93,7 @@
             // 
             this.btnEnd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEnd.Enabled = false;
             this.btnEnd.FlatAppearance.BorderSize = 5;
             this.btnEnd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnEnd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -508,7 +509,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(253, 88);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
@@ -623,7 +624,7 @@
             this.Controls.Add(this.RightBar);
             this.Controls.Add(this.LeftBar);
             this.Controls.Add(this.ButtonsContainer);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmFileProcessing";
             this.Text = "frmFileProcessing";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

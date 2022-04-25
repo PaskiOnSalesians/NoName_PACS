@@ -243,6 +243,8 @@ namespace PACS_Planet
             if (CheckDeliveryData())
             {
                 result = "VP";
+                btnEncryptCodes.Enabled = true;
+                btnNext.Enabled = true;
             }
             else
             {
@@ -251,13 +253,14 @@ namespace PACS_Planet
 
             validationMessage = "VR" + stage.ToString() + RefVariables.ShipName + result;
 
+            rtxtData.Text += "------ VALIDATION RESULT ------\n" + validationMessage;
+
             if (clientTCP.MakePing(RefVariables.ShipIp))
             {
                 clientTCP.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, validationMessage);
-                btnNext.Enabled = true;
             }
 
-            btnEncryptCodes.Enabled = true;
+            
             btnConnect.Enabled = false;
         }
 
@@ -267,7 +270,7 @@ namespace PACS_Planet
 
             dts = _Dades.PortarPerConsulta("select * from DeliveryData where idPlanet =" + RefVariables.PlanetId +
                 " and idSpaceShip =" + RefVariables.ShipId +
-                " and CodeDelivery ='" + RefVariables.DeliveryCode +
+                " and CodeDelivery ='" + RefVariables.DeliveryCode + "'" +
                 "' and DeliveryDate = '2022-05-04'"
                 );
 

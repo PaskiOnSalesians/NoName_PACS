@@ -118,6 +118,7 @@ namespace PACS_Planet
             // 
             this.btnSpaceshipConnection.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSpaceshipConnection.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSpaceshipConnection.Enabled = false;
             this.btnSpaceshipConnection.FlatAppearance.BorderSize = 5;
             this.btnSpaceshipConnection.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnSpaceshipConnection.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));

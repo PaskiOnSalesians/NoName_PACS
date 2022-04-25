@@ -166,6 +166,7 @@ namespace PACS_Planet
             // 
             this.btnSelectPlanet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectPlanet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSelectPlanet.Enabled = false;
             this.btnSelectPlanet.FlatAppearance.BorderSize = 5;
             this.btnSelectPlanet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnSelectPlanet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));

@@ -150,7 +150,7 @@ namespace PACS_Planet
                     "****** Generatng Codes ******\n" +
                     "Codes generated correctly!\n\n";
 
-                string codeGenerated = "\n------ Codes generated! ------";
+                string codeGenerated = "------ Codes generated! ------\n";
 
                 PacsTcpClient tcpClient = new PacsTcpClient();
                 tcpClient.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, codeGenerated);
@@ -334,7 +334,7 @@ namespace PACS_Planet
             btnDecrypt.Enabled = false;
             rtxtData.Text += "Validating...\n";
             bool result = CheckValidationCode();
-            string message = "VR" + this.code;
+            string message = "VR" + RefVariables.ShipName;
 
             if (result)
             {
@@ -386,7 +386,7 @@ namespace PACS_Planet
                     client.Close();
 
                     estat = false;
-                    rtxtData.Text += "Code received. Ready to decrypt.\n\n";
+                    rtxtData.Text += "------- VALIDATION KEY -------\nVK\n\n";
                     btnDecrypt.Enabled = true;
 
 

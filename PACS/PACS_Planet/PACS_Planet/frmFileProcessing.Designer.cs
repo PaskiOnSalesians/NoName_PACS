@@ -145,6 +145,7 @@
             // 
             this.btnFileProcessing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFileProcessing.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFileProcessing.Enabled = false;
             this.btnFileProcessing.FlatAppearance.BorderSize = 5;
             this.btnFileProcessing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnFileProcessing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));

@@ -270,7 +270,7 @@ namespace PACS_Planet
 
             dts = _Dades.PortarPerConsulta("select * from DeliveryData where idPlanet =" + RefVariables.PlanetId +
                 " and idSpaceShip =" + RefVariables.ShipId +
-                " and CodeDelivery ='" + RefVariables.DeliveryCode + "'" +
+                " and CodeDelivery ='" + RefVariables.DeliveryCode +
                 "' and DeliveryDate = '2022-05-04'"
                 );
 

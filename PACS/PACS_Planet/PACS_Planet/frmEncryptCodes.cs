@@ -121,9 +121,6 @@ namespace PACS_Planet
 
             GenerateKeyPair();
 
-            server = new Thread(ListenBytes);
-            server.Start();
-
             btnSelectPlanet.ForeColor = Color.White;
             btnSelectPlanet.BackColor = Color.DarkGreen;
             btnSpaceshipConnection.ForeColor = Color.White;
@@ -154,6 +151,9 @@ namespace PACS_Planet
 
                 PacsTcpClient tcpClient = new PacsTcpClient();
                 tcpClient.SendMessage(RefVariables.ShipIp, RefVariables.ShipMessagePort, codeGenerated);
+
+                server = new Thread(ListenBytes);
+                server.Start();
 
                 btnGenerateCode.Enabled = false;
             }

@@ -24,7 +24,7 @@ namespace PACS_Ship
         byte[] encryptedCode;
 
         int stage = 1;
-        bool timeDownload = false, timeEncrypt = false, timeSend = false;
+        bool timeEncrypt = false, timeSend = false;
 
         public frmEncryptCodes()
         {
@@ -216,7 +216,7 @@ namespace PACS_Ship
                 if (tcpClient.MakePing(RefVariables.PlanetIp))
                 {
                     tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.ShipMessagePort, this.encryptedCode);
-                    rtxtData.Text += "Sending...\t\tSended!";
+                    rtxtData.Text += "\nSending...\nSended!\n";
                 }
 
 
@@ -249,16 +249,18 @@ namespace PACS_Ship
         {
             serverTCP.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);
             serverTCP.ReceivePing();
-            rtxtData.Text += serverTCP.GetClientMessages();
+           
             serverTCP.StopListening();
 
             if(stage != 1)
             {
                 rtxtData.Text += "\n----------VALIDATION RESULT----------\n";
+                rtxtData.Text += serverTCP.GetClientMessages();
                 ValidationResponse(rtxtData.Text);
             }
             else
             {
+                rtxtData.Text += serverTCP.GetClientMessages();
                 btnGetPublicKey.Enabled = true;
             }
         }
@@ -275,7 +277,7 @@ namespace PACS_Ship
 
             if (valor.EndsWith("VP"))
             {
-                rtxtData.Text += "Correct you can proceed\n";
+                rtxtData.Text += "Correct, you can proceed\n";
             } else
             {
                 rtxtData.Text += "Incorrect\n";

@@ -100,6 +100,21 @@ namespace PACS_Ship
             btnFileProcessing.ForeColor = Color.White;
             btnFileProcessing.BackColor = Color.DarkGreen;
             btnEnd.ForeColor = Color.White;
+            LoadCinematic();
+        }
+
+        private void LoadCinematic()
+        {
+            string imageRoute = Application.StartupPath + "\\..\\Resources\\images\\Cinematics\\";
+            if (GlobalVariables.RefVariables.CanEnter)
+            {
+                imageRoute += "correct_ship.gif";
+            } else
+            {
+                imageRoute += "incorrect_ship.gif";
+            }
+            
+            pbCinematic.Image = Image.FromFile(imageRoute);
         }
     }
 }

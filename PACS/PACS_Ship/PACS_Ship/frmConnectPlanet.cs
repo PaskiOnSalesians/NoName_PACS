@@ -68,7 +68,7 @@ namespace PACS_Ship
 
         private void frmConnectPlanet_Activated(object sender, EventArgs e)
         {
-            
+
         }
 
         private void frmConnectPlanet_FormClosing(object sender, FormClosingEventArgs e)
@@ -305,8 +305,19 @@ namespace PACS_Ship
             {
                 btnNext.Enabled = true;
                 btnEncryptCodes.Enabled = true;
+                RefVariables.CanEnter = true;
+                Console.WriteLine(code);
             }
+            else if (code.Equals("AD"))
+            {
 
+                RefVariables.CanEnter = false;
+                TancarFilListener();
+                //frmEnd _frm = new frmEnd();
+                //_frm.Show();
+                //this.Hide();
+                //Console.WriteLine(code + "\n");
+            }
 
         }
 

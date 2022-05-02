@@ -36,5 +36,7 @@ namespace GlobalVariables
         public static string DeliveryCode { get; set; }
 
         #endregion
+
+        public static bool CanEnter { get; set; }
     }
 }

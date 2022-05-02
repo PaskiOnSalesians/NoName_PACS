@@ -217,7 +217,8 @@ namespace PACS_Ship
             tcpServer.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);
             tcpServer.ReceivePing();
             rtxtData.Text += tcpServer.GetClientMessages();
-           
+            btnEnd.Enabled = true;
+
         }
 
         private void btnDecode_Click(object sender, EventArgs e)
@@ -229,7 +230,6 @@ namespace PACS_Ship
             listenValidation = new Thread(ListenValidation);
             listenValidation.Start();
 
-            btnEnd.Enabled = true;
             btnDecode.Enabled = false;
         }
 

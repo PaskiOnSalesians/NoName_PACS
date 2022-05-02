@@ -50,3 +50,4 @@ C:\Users\Paski\Documents\ForkGit\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.cs
 C:\Users\Paski\Documents\ForkGit\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.csproj.CoreCompileInputs.cache
 C:\Users\Paski\Documents\ForkGit\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.dll
 C:\Users\Paski\Documents\ForkGit\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.csproj.AssemblyReference.cache

@@ -218,11 +218,10 @@ namespace PACS_Ship
                     tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.ShipMessagePort, this.encryptedCode);
                     rtxtData.Text += "\nSending...\nSended!\n";
                 }
-
-
-                // Start listening for a response
-                server = new Thread(ServerListen);
-                server.Start();
+                else
+                {
+                    rtxtData.Text += "\nUnable to ping spacheship\n";
+                }
 
                 btnSendKey.Enabled = false;
 

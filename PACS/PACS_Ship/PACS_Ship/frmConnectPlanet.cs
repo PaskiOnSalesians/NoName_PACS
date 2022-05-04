@@ -310,13 +310,12 @@ namespace PACS_Ship
             }
             else if (code.Equals("AD"))
             {
-
+                
                 RefVariables.CanEnter = false;
                 TancarFilListener();
-                //frmEnd _frm = new frmEnd();
-                //_frm.Show();
-                //this.Hide();
-                //Console.WriteLine(code + "\n");
+                
+
+                
             }
 
         }

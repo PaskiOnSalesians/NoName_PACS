@@ -230,20 +230,20 @@ namespace PACS_Planet
             return xifrats;
         }
 
-        private void InsertarCodificacio(int idInnerEncryption, Xifrat codi)
-        {
-
-            string consulta = @"INSERT INTO InnerEncryptionData (idInnerEncryption, Word, Numbers)
-                             values(" + idInnerEncryption + ", '" + codi.lletra + "', '" + codi.numero + "');";
-            this.db.Executar(consulta);
-        }
-
         private void InsertarCodificacions(int idInnerEncryption, List<Xifrat> xifrats)
         {
-            foreach (Xifrat codi in xifrats)
+            string consulta = @"INSERT INTO InnerEncryptionData (idInnerEncryption, Word, Numbers) VALUES";
+
+            for (int i = 0; i < xifrats.Count; i++)
             {
-                InsertarCodificacio(idInnerEncryption, codi);
+                consulta += "(" + idInnerEncryption + ", '" + xifrats[i].lletra + "', '" + xifrats[i].numero + "')";
+                if (i < xifrats.Count - 1)
+                {
+                    consulta += ",";
+                }
             }
+
+            this.db.Executar(consulta);
         }
 
         private int GetIdInnerEncryption()

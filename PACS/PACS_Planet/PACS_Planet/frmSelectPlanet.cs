@@ -18,11 +18,10 @@ namespace PACS_Planet
 {
     public partial class frmSelectPlanet : frmBase
     {
-        Dades _Dades = new Dades(); // Obtenir les funcions relacionades amb la base de dades
+        Dades _Dades = new Dades();
 
-        // Inicialitzacio de variables
         DataSet dts;
-        string imageRoute = Application.StartupPath + "\\..\\Resources\\images\\Planets\\"; // Ruta a les imatges
+        string imageRoute = Application.StartupPath + "\\..\\Resources\\images\\Planets\\"; 
 
         public frmSelectPlanet()
         {
@@ -31,7 +30,6 @@ namespace PACS_Planet
 
         #region Events
 
-        // Carrega inicial del formulari
         private void frmPlanetSelect_Load(object sender, EventArgs e)
         {
             _Dades.ConnectDB(); // Connectar a la base de dades
@@ -119,38 +117,27 @@ namespace PACS_Planet
             {
                 case 0:
                     frmSelectPlanet frmPlanet = new frmSelectPlanet();
-                    //this.Visible = false;
                     frmPlanet.Show();
                     break;
                 case 1:
                     frmSpaceshipConnection frmConnection = new frmSpaceshipConnection();
-                    //this.Visible = false;
                     frmConnection.Show();
                     break;
                 case 2:
                     frmEncryptCodes frmCodes = new frmEncryptCodes();
-                    //this.Visible = false;
                     frmCodes.Show();
                     break;
                 case 3:
                     frmFileProcessing frmFiles = new frmFileProcessing();
-                    //this.Visible = false;
                     frmFiles.Show();
                     break;
                 case 4:
                     frmEnd frmEnd = new frmEnd();
-                    //this.Visible = false;
                     frmEnd.Show();
                     break;
             }
 
             this.Hide();
-            //this.Close();
-        }
-
-        private void btnSelectPlanet_Click(object sender, EventArgs e)
-        {
-            //OpenForm(0);
         }
 
         private void btnSpaceshipConnection_Click_1(object sender, EventArgs e)
@@ -177,7 +164,7 @@ namespace PACS_Planet
 
         #region Metodes Principals
 
-        // Actualitzar IP
+
         private void updateIP()
         {
             string query, taula, currentIP;
@@ -188,9 +175,9 @@ namespace PACS_Planet
             {
                 using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
                 {
-                    socket.Connect("10.0.123.2", 1337); // Dona igual quina ip sigui
+                    socket.Connect("10.0.123.2", 1337);
                     IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
-                    currentIP = endPoint.Address.ToString(); // Obtenim la ip
+                    currentIP = endPoint.Address.ToString();
 
                     taula = "Planets";
                     query = "Update " + taula + " set IPPlanet = '" + currentIP + "' where PlanetPicture is not null";

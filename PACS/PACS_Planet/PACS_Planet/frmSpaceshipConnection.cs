@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using AccesDades;
 using TCP;
 using FormBase;
@@ -36,7 +35,6 @@ namespace PACS_Planet
 
         #region Carregador de Formularis
 
-        // Carregador de formularis
         private void OpenForm(int num)
         {
             switch (num)
@@ -69,11 +67,6 @@ namespace PACS_Planet
         private void btnSelectPlanet_Click(object sender, EventArgs e)
         {
             OpenForm(0);
-        }
-
-        private void btnSpaceshipConnection_Click(object sender, EventArgs e)
-        {
-            //OpenForm(1);
         }
 
         private void btnEncryptCodes_Click(object sender, EventArgs e)
@@ -167,7 +160,7 @@ namespace PACS_Planet
         private void LoadShipInfo(string ip)
         {
             int pos;
-            string cShip, delivery; // codeShip and Delivery
+            string cShip, delivery;
             dts = new DataSet();
 
             (cShip, delivery) = DefragmentCode();
@@ -249,7 +242,13 @@ namespace PACS_Planet
             else
             {
                 result = "AD";
+
                 GlobalVariables.RefVariables.CanEnter = false;
+                btnSpaceshipConnection.Enabled = false;
+                btnEncryptCodes.Enabled = false;
+                btnFileProcessing.Enabled = false;
+                btnEnd.Enabled = true;
+
             }
 
             validationMessage = "VR" + stage.ToString() + RefVariables.ShipName + result;

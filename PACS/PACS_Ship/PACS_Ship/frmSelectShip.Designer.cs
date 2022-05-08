@@ -103,7 +103,6 @@
             this.btnSelectShip.TabIndex = 8;
             this.btnSelectShip.Text = "Select Spaceship";
             this.btnSelectShip.UseVisualStyleBackColor = true;
-            this.btnSelectShip.Click += new System.EventHandler(this.btnSelectSpaceship_Click);
             // 
             // btnConnectPlanet
             // 

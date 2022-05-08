@@ -129,7 +129,6 @@ namespace PACS_Planet
             this.btnSpaceshipConnection.TabIndex = 3;
             this.btnSpaceshipConnection.Text = "Spaceship Connection";
             this.btnSpaceshipConnection.UseVisualStyleBackColor = true;
-            this.btnSpaceshipConnection.Click += new System.EventHandler(this.btnSpaceshipConnection_Click);
             // 
             // ButtonsContainer
             // 

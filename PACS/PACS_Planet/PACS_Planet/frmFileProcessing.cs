@@ -75,11 +75,6 @@ namespace PACS_Planet
             OpenForm(2);
         }
 
-        private void btnFileProcessing_Click(object sender, EventArgs e)
-        {
-            //OpenForm(3);
-        }
-
         private void btnEnd_Click(object sender, EventArgs e)
         {
             OpenForm(4);
@@ -119,14 +114,6 @@ namespace PACS_Planet
             btnEncryptCodes.ForeColor = Color.White;
 
             btnEnd.ForeColor = Color.White;
-        }
-
-        private string GetRandomLetters()
-        {
-            int LETTERS_NUMBER = 100_000;
-            string LETTERS_USED = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            string content = GetValorsAleatoris(LETTERS_NUMBER, LETTERS_USED);
-            return content;
         }
 
         private void CreatePacsFiles(object numberOfFiles)
@@ -183,19 +170,6 @@ namespace PACS_Planet
 
             sw.Close();
             fs.Close();
-        }
-
-        private string GetValorsAleatoris(int numCaracters, string valors)
-        {
-            string codi = "";
-            int indexValors;
-            for (int i = 0; i < numCaracters; i++)
-            {
-                indexValors = GetNumeroAleatori(valors.Length);
-                codi += valors[indexValors];
-            }
-
-            return codi;
         }
 
         private int GetNumeroAleatori(int valorMaxim)

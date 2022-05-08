@@ -66,11 +66,6 @@ namespace PACS_Ship
             pboxPlanet.Image = Image.FromFile(RefVariables.PlanetImage);
         }
 
-        private void frmConnectPlanet_Activated(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmConnectPlanet_FormClosing(object sender, FormClosingEventArgs e)
         {
             TancarFilListener();
@@ -130,11 +125,6 @@ namespace PACS_Ship
         private void btnSelectPlanet_Click(object sender, EventArgs e)
         {
             OpenForm(1);
-        }
-
-        private void btnConnectPlanet_Click(object sender, EventArgs e)
-        {
-            //OpenForm(2);
         }
 
         private void btnEncryptCodes_Click(object sender, EventArgs e)
@@ -304,14 +294,11 @@ namespace PACS_Ship
             {
                 
                 RefVariables.CanEnter = false;
+                btnConnectPlanet.Enabled = false;
+                btnEncryptCodes.Enabled = false;
+                btnFileProcessing.Enabled = false;
 
-                //frmEnd frme = new frmEnd();
-                //frme.Show();
-                //this.Hide();
-
-                MessageBox.Show("Failed!");
-
-                TancarFilListener();
+                btnEnd.Enabled = true;
             }
 
         }

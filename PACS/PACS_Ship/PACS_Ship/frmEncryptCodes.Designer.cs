@@ -236,7 +236,6 @@
             this.btnEncryptCodes.TabIndex = 4;
             this.btnEncryptCodes.Text = "Encrypt Codes";
             this.btnEncryptCodes.UseVisualStyleBackColor = true;
-            this.btnEncryptCodes.Click += new System.EventHandler(this.btnEncryptCodes_Click);
             // 
             // RightSeparatorButtons
             // 

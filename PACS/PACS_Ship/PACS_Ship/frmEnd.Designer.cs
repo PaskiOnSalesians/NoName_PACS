@@ -138,7 +138,6 @@
             this.btnSelectPlanet.TabIndex = 2;
             this.btnSelectPlanet.Text = "Select Planet";
             this.btnSelectPlanet.UseVisualStyleBackColor = true;
-            this.btnSelectPlanet.Click += new System.EventHandler(this.btnSelectPlanet_Click);
             // 
             // btnEnd
             // 
@@ -156,7 +155,6 @@
             this.btnEnd.TabIndex = 6;
             this.btnEnd.Text = "End";
             this.btnEnd.UseVisualStyleBackColor = true;
-            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
             // 
             // btnFileProcessing
             // 

@@ -8,7 +8,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using FormBase;
 using GlobalVariables;
 using AccesDades;
@@ -26,23 +25,12 @@ namespace PACS_Planet
         int idPlanet;
         string clauPlaneta = "KeyPlanet";
         string xmlPath = Application.StartupPath + "/../Resources/files/publicKey.xml";
-        
-        PacsTcpServer serverTCP = new PacsTcpServer();
+
         Thread server;
 
-        bool status = false;
-        string data = "";
-
         byte[] bytes = new byte[128];
-
         string code;
         string decodedText;
-
-        class Xifrat
-        {
-            public string lletra;
-            public string numero;
-        }
 
         public frmEncryptCodes()
         {
@@ -388,7 +376,6 @@ namespace PACS_Planet
                     estat = false;
                     rtxtData.Text += "------- VALIDATION KEY -------\nVK\n\n";
                     btnDecrypt.Enabled = true;
-
 
                 }
             }

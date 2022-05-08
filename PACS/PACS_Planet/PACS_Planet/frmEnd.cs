@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 using FormBase;
 
@@ -71,11 +72,6 @@ namespace PACS_Planet
             OpenForm(3);
         }
 
-        private void btnEnd_Click(object sender, EventArgs e)
-        {
-            //OpenForm(4);
-        }
-
         #endregion
 
         private void frmEnd_Load(object sender, EventArgs e)
@@ -93,7 +89,7 @@ namespace PACS_Planet
 
         private void LoadCinematic()
         {
-            string imageRoute = @"C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\Resources\cinematics\";
+            string imageRoute = Application.StartupPath + @"\..\Resources\cinematics\";
             if (GlobalVariables.RefVariables.CanEnter)
             {
                 imageRoute += "correct_ship.mp4";
@@ -103,9 +99,8 @@ namespace PACS_Planet
                 imageRoute += "incorrect_ship.mp4";
             }
 
-
             wmpVideo.uiMode = "none";
-            wmpVideo.URL = imageRoute;
+            wmpVideo.URL = Path.GetFullPath(imageRoute);
 
             wmpVideo.settings.autoStart = true;
             wmpVideo.settings.setMode("loop", true);

@@ -82,11 +82,6 @@ namespace PACS_Ship
             OpenForm(2);
         }
 
-        private void btnEncryptCodes_Click(object sender, EventArgs e)
-        {
-            //OpenForm(3);
-        }
-
         private void btnFileProcessing_Click(object sender, EventArgs e)
         {
             OpenForm(4);
@@ -153,7 +148,7 @@ namespace PACS_Ship
 
         private string GetValidationCode()
         {
-            string validationCode;
+            string validationCode = "";
             string consulta = "SELECT ValidationCode FROM InnerEncryption WHERE idPlanet = " + this.idPlanet;
             DataSet resultat = db.PortarPerConsulta(consulta, "InnerEncryption");
 
@@ -163,10 +158,6 @@ namespace PACS_Ship
             {
                 validationCode = resultat.Tables[0].Rows[consultaLong - 1]["ValidationCode"].ToString();
             }
-            else
-            {
-                validationCode = "";
-            }
 
 
             return validationCode;
@@ -174,7 +165,7 @@ namespace PACS_Ship
 
         private string GetPublicKey()
         {
-            string validationCode;
+            string validationCode = "";
             string consulta = "SELECT XmlKey FROM PlanetKeys WHERE idPlanet = " + this.idPlanet;
             DataSet resultat = db.PortarPerConsulta(consulta, "PlanetKeys");
 
@@ -183,10 +174,6 @@ namespace PACS_Ship
             if (consultaLong > 0)
             {
                 validationCode = resultat.Tables[0].Rows[consultaLong - 1]["XmlKey"].ToString();
-            }
-            else
-            {
-                validationCode = "";
             }
 
 

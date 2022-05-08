@@ -64,3 +64,4 @@ C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\FormBase\obj\Debug\
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\FormBase\obj\Debug\FormBase.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\FormBase\obj\Debug\FormBase.exe
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\FormBase\obj\Debug\FormBase.pdb
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\FormBase\obj\Debug\FormBase.csproj.AssemblyReference.cache

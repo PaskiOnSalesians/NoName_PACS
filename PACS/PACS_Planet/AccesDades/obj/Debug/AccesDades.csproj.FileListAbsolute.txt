@@ -88,3 +88,4 @@ C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\dll\AccesDades.pdb
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\AccesDades\obj\Debug\AccesDades.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\AccesDades\obj\Debug\AccesDades.dll
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\AccesDades\obj\Debug\AccesDades.pdb
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\AccesDades\obj\Debug\AccesDades.csproj.AssemblyReference.cache

@@ -190,7 +190,6 @@
             this.btnConnectPlanet.TabIndex = 9;
             this.btnConnectPlanet.Text = "Connect Planet";
             this.btnConnectPlanet.UseVisualStyleBackColor = true;
-            this.btnConnectPlanet.Click += new System.EventHandler(this.btnConnectPlanet_Click);
             // 
             // btnSelectPlanet
             // 
@@ -889,7 +888,6 @@
             this.Name = "frmConnectPlanet";
             this.Text = "frmConnectPlanet";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Activated += new System.EventHandler(this.frmConnectPlanet_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmConnectPlanet_FormClosing);
             this.Load += new System.EventHandler(this.frmConnectPlanet_Load);
             this.Controls.SetChildIndex(this.panel2, 0);

@@ -149,11 +149,6 @@ namespace PACS_Ship
             OpenForm(0);
         }
 
-        private void btnSelectPlanet_Click(object sender, EventArgs e)
-        {
-            //OpenForm(1);
-        }
-
         private void btnConnectPlanet_Click(object sender, EventArgs e)
         {
             OpenForm(2);

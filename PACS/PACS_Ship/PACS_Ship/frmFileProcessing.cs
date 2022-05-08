@@ -68,11 +68,6 @@ namespace PACS_Ship
             OpenForm(0);
         }
 
-        private void btnSelectPlanet_Click(object sender, EventArgs e)
-        {
-            //OpenForm(1);
-        }
-
         private void btnConnectPlanet_Click(object sender, EventArgs e)
         {
             OpenForm(2);
@@ -81,11 +76,6 @@ namespace PACS_Ship
         private void btnEncryptCodes_Click(object sender, EventArgs e)
         {
             OpenForm(3);
-        }
-
-        private void btnFileProcessing_Click(object sender, EventArgs e)
-        {
-            //OpenForm(4);
         }
 
         private void btnEnd_Click(object sender, EventArgs e)

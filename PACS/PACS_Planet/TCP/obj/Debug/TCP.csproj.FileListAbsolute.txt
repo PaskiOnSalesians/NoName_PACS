@@ -33,4 +33,3 @@ C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\dll\TCP.pdb
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\TCP\obj\Debug\TCP.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\TCP\obj\Debug\TCP.dll
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\TCP\obj\Debug\TCP.pdb
-C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\TCP\obj\Debug\TCP.csproj.AssemblyReference.cache

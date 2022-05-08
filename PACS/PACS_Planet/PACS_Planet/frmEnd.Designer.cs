@@ -97,7 +97,6 @@
             this.btnEnd.TabIndex = 6;
             this.btnEnd.Text = "End";
             this.btnEnd.UseVisualStyleBackColor = true;
-            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
             // 
             // btnFileProcessing
             // 

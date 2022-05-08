@@ -196,7 +196,6 @@
             this.btnFileProcessing.TabIndex = 5;
             this.btnFileProcessing.Text = "File Processing";
             this.btnFileProcessing.UseVisualStyleBackColor = true;
-            this.btnFileProcessing.Click += new System.EventHandler(this.btnFileProcessing_Click);
             // 
             // btnEncryptCodes
             // 

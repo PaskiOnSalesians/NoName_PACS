@@ -147,11 +147,6 @@ namespace PACS_Ship
             this.Hide();
         }
 
-        private void btnSelectSpaceship_Click(object sender, EventArgs e)
-        {
-            //OpenForm(0);
-        }
-
         private void btnSelectPlanet_Click(object sender, EventArgs e)
         {
             OpenForm(1);

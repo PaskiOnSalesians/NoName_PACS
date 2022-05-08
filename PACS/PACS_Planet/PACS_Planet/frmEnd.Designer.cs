@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEnd));
             this.ButtonsContainer = new System.Windows.Forms.Panel();
             this.Buttons = new System.Windows.Forms.TableLayoutPanel();
             this.btnEnd = new System.Windows.Forms.Button();
@@ -40,8 +41,10 @@
             this.BotSeparator = new System.Windows.Forms.Panel();
             this.LeftBar = new System.Windows.Forms.Panel();
             this.RightBar = new System.Windows.Forms.Panel();
+            this.wmpVideo = new AxWMPLib.AxWindowsMediaPlayer();
             this.ButtonsContainer.SuspendLayout();
             this.Buttons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wmpVideo)).BeginInit();
             this.SuspendLayout();
             // 
             // ButtonsContainer
@@ -82,7 +85,6 @@
             // 
             this.btnEnd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEnd.Enabled = false;
             this.btnEnd.FlatAppearance.BorderSize = 5;
             this.btnEnd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnEnd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -213,12 +215,23 @@
             this.RightBar.Size = new System.Drawing.Size(90, 458);
             this.RightBar.TabIndex = 42;
             // 
+            // wmpVideo
+            // 
+            this.wmpVideo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wmpVideo.Enabled = true;
+            this.wmpVideo.Location = new System.Drawing.Point(90, 100);
+            this.wmpVideo.Name = "wmpVideo";
+            this.wmpVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmpVideo.OcxState")));
+            this.wmpVideo.Size = new System.Drawing.Size(1186, 458);
+            this.wmpVideo.TabIndex = 43;
+            // 
             // frmEnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.wmpVideo);
             this.Controls.Add(this.RightBar);
             this.Controls.Add(this.LeftBar);
             this.Controls.Add(this.ButtonsContainer);
@@ -229,8 +242,10 @@
             this.Controls.SetChildIndex(this.ButtonsContainer, 0);
             this.Controls.SetChildIndex(this.LeftBar, 0);
             this.Controls.SetChildIndex(this.RightBar, 0);
+            this.Controls.SetChildIndex(this.wmpVideo, 0);
             this.ButtonsContainer.ResumeLayout(false);
             this.Buttons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.wmpVideo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,5 +263,6 @@
         private System.Windows.Forms.Button btnSelectPlanet;
         private System.Windows.Forms.Panel LeftBar;
         private System.Windows.Forms.Panel RightBar;
+        private AxWMPLib.AxWindowsMediaPlayer wmpVideo;
     }
 }

@@ -40,7 +40,6 @@ C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.dll
 C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.pdb
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\TCP.dll
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\TCP.pdb
-C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.dll
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\TCP\obj\Debug\TCP.pdb

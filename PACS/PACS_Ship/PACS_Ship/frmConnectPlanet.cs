@@ -84,13 +84,6 @@ namespace PACS_Ship
             btnConnect.Enabled = false;
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            frmEncryptCodes frmCodes = new frmEncryptCodes();
-            frmCodes.Show();
-            this.Hide();
-        }
-
         #endregion
 
         #region  Carregador de Formularis
@@ -303,7 +296,6 @@ namespace PACS_Ship
 
             if (code.Equals("VP"))
             {
-                btnNext.Enabled = true;
                 btnEncryptCodes.Enabled = true;
                 RefVariables.CanEnter = true;
                 Console.WriteLine(code);
@@ -312,10 +304,14 @@ namespace PACS_Ship
             {
                 
                 RefVariables.CanEnter = false;
-                TancarFilListener();
-                
 
-                
+                //frmEnd frme = new frmEnd();
+                //frme.Show();
+                //this.Hide();
+
+                MessageBox.Show("Failed!");
+
+                TancarFilListener();
             }
 
         }

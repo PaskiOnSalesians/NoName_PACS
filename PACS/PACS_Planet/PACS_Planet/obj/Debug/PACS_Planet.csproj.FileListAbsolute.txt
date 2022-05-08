@@ -134,3 +134,6 @@ E:\Proyectos\Desarrollo\Respositories\noname_pacs\PACS\PACS_Planet\PACS_Planet\o
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\PACS\PACS_Planet\PACS_Planet\obj\Debug\PACS_Planet.csproj.CopyComplete
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\PACS\PACS_Planet\PACS_Planet\obj\Debug\PACS_Planet.exe
 E:\Proyectos\Desarrollo\Respositories\noname_pacs\PACS\PACS_Planet\PACS_Planet\obj\Debug\PACS_Planet.pdb
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\PACS_Planet\obj\Debug\Interop.WMPLib.dll
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\PACS_Planet\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\PACS_Planet\obj\Debug\PACS_Planet.csproj.ResolveComReference.cache

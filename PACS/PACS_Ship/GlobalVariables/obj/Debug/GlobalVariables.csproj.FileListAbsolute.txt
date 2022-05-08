@@ -48,3 +48,9 @@ C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debu
 C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
 C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.dll
 C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.pdb
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\GlobalVariables.dll
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\GlobalVariables.pdb
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.dll
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.pdb
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\GlobalVariables\obj\Debug\GlobalVariables.csproj.AssemblyReference.cache

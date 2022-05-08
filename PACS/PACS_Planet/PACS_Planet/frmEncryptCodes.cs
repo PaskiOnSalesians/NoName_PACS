@@ -144,7 +144,7 @@ namespace PACS_Planet
                 InsertarCodificacions(idInnerEnc, codificacioLletraNum);
 
                 rtxtData.Text +=
-                    "****** Generatng Codes ******\n" +
+                    "****** Generating Codes ******\n" +
                     "Codes generated correctly!\n\n";
 
                 string codeGenerated = "------ Codes generated! ------\n";

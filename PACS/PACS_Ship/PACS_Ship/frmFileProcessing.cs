@@ -335,13 +335,13 @@ namespace PACS_Ship
                 netstream = client.GetStream();
                 FileStream Fs = new FileStream(resourcePath, FileMode.Open, FileAccess.Read);
                 int NoOfPackets = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(Fs.Length) / Convert.ToDouble(BufferSize)));
-                int TotalLength = (int)Fs.Length, CurrentPacketLength, counter = 0;
+                int TotalLength = (int)Fs.Length, CurrentPacketLength;
                 for (int i = 0; i < NoOfPackets; i++)
                 {
                     if (TotalLength > BufferSize)
                     {
                         CurrentPacketLength = BufferSize;
-                        TotalLength = TotalLength - CurrentPacketLength;
+                        TotalLength -= CurrentPacketLength;
                     }
                     else
                     CurrentPacketLength = TotalLength;

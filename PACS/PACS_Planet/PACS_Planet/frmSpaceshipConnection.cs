@@ -244,11 +244,12 @@ namespace PACS_Planet
             {
                 result = "VP";
                 btnEncryptCodes.Enabled = true;
-                btnNext.Enabled = true;
+                GlobalVariables.RefVariables.CanEnter = true;
             }
             else
             {
                 result = "AD";
+                GlobalVariables.RefVariables.CanEnter = false;
             }
 
             validationMessage = "VR" + stage.ToString() + RefVariables.ShipName + result;

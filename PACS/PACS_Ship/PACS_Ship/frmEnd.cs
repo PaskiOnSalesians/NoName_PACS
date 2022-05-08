@@ -105,16 +105,21 @@ namespace PACS_Ship
 
         private void LoadCinematic()
         {
-            string imageRoute = Application.StartupPath + "\\..\\Resources\\images\\Cinematics\\";
+            string videoPath = @"C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\Resources\cinematics\";
             if (GlobalVariables.RefVariables.CanEnter)
             {
-                imageRoute += "correct_ship.gif";
+                videoPath += "correct_ship.mp4";
             } else
             {
-                imageRoute += "incorrect_ship.gif";
+                videoPath += "incorrect_ship.mp4";
             }
+
             
-            pbCinematic.Image = Image.FromFile(imageRoute);
+            wmpVideo.uiMode = "none";
+            wmpVideo.URL = videoPath;
+
+            wmpVideo.settings.autoStart = true;
+            wmpVideo.settings.setMode("loop", true);
         }
     }
 }

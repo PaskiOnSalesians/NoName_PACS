@@ -30,7 +30,7 @@ C:\Users\Marc\Desktop\noname_pacs-PaskiBranch (2)\noname_pacs-PaskiBranch\noname
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch (2)\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Planet\TCP\obj\Debug\TCP.pdb
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\dll\TCP.dll
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\dll\TCP.pdb
-C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\TCP\obj\Debug\TCP.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\TCP\obj\Debug\TCP.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\TCP\obj\Debug\TCP.dll
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\TCP\obj\Debug\TCP.pdb
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\TCP\obj\Debug\TCP.csproj.AssemblyReference.cache

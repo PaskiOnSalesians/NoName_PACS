@@ -129,6 +129,7 @@
             // 
             this.btnSelectShip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectShip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSelectShip.Enabled = false;
             this.btnSelectShip.FlatAppearance.BorderSize = 5;
             this.btnSelectShip.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnSelectShip.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -147,6 +148,7 @@
             // 
             this.btnConnectPlanet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConnectPlanet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnConnectPlanet.Enabled = false;
             this.btnConnectPlanet.FlatAppearance.BorderSize = 5;
             this.btnConnectPlanet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnConnectPlanet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
@@ -165,6 +167,7 @@
             // 
             this.btnSelectPlanet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectPlanet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSelectPlanet.Enabled = false;
             this.btnSelectPlanet.FlatAppearance.BorderSize = 5;
             this.btnSelectPlanet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnSelectPlanet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));

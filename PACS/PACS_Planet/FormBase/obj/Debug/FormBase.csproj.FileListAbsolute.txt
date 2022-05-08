@@ -54,3 +54,13 @@ C:\Users\Marc\Desktop\noname_pacs-PaskiBranch (2)\noname_pacs-PaskiBranch\noname
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch (2)\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Planet\FormBase\obj\Debug\FormBase.csproj.CoreCompileInputs.cache
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch (2)\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Planet\FormBase\obj\Debug\FormBase.exe
 C:\Users\Marc\Desktop\noname_pacs-PaskiBranch (2)\noname_pacs-PaskiBranch\noname_pacs-PaskiBranch\RamaPaski\PACS_Planet\FormBase\obj\Debug\FormBase.pdb
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\dll\FormBase.exe.config
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\dll\FormBase.exe
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\dll\FormBase.pdb
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\FormBase\obj\Debug\FormBase.frmBase.resources
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\FormBase\obj\Debug\FormBase.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\FormBase\obj\Debug\FormBase.Container.resources
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\FormBase\obj\Debug\FormBase.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\FormBase\obj\Debug\FormBase.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\FormBase\obj\Debug\FormBase.exe
+C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\FormBase\obj\Debug\FormBase.pdb

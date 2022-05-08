@@ -110,8 +110,8 @@ namespace PACS_Ship
 
             btnGetPublicKey.Enabled = false;
 
-            server = new Thread(ServerListen);
-            server.Start();
+            initialListen = new Thread(ServerListen);
+            initialListen.Start();
 
             btnSelectShip.ForeColor = Color.White;
             btnSelectShip.BackColor = Color.DarkGreen;
@@ -208,6 +208,12 @@ namespace PACS_Ship
 
         private void btnSendKey_Click(object sender, EventArgs e)
         {
+            if (initialListen != null)
+            {
+                initialListen.Abort();
+            }
+            
+
             stage++;
 
             if (timeSend)
@@ -216,7 +222,7 @@ namespace PACS_Ship
                 if (tcpClient.MakePing(RefVariables.PlanetIp))
                 {
                     tcpClient.SendMessage(RefVariables.PlanetIp, RefVariables.ShipMessagePort, this.encryptedCode);
-                    rtxtData.Text += "\nSending...\nSended!\n";
+                    rtxtData.Text += "\nSending...\nSent!\n";
                 }
                 else
                 {
@@ -225,7 +231,8 @@ namespace PACS_Ship
 
                 btnSendKey.Enabled = false;
 
-                btnFileProcessing.Enabled = true;
+                codeListen = new Thread(ServerListen);
+                codeListen.Start();
             }
         }
 
@@ -241,11 +248,12 @@ namespace PACS_Ship
             }
         }
 
-        PacsTcpServer serverTCP = new PacsTcpServer();
-        Thread server;
+        Thread initialListen, codeListen;
 
         private void ServerListen()
         {
+            PacsTcpServer serverTCP = new PacsTcpServer();
+
             serverTCP.StartServer(RefVariables.ShipIp, RefVariables.ShipMessagePort);
             serverTCP.ReceivePing();
            
@@ -266,7 +274,16 @@ namespace PACS_Ship
 
         private void frmEncryptCodes_FormClosing(object sender, FormClosingEventArgs e)
         {
-            server.Abort();
+            if (initialListen != null)
+            {
+                initialListen.Abort();
+            }
+
+            if (codeListen != null)
+            {
+                codeListen.Abort();
+            }
+
         }
 
         private void ValidationResponse(string data)
@@ -276,10 +293,11 @@ namespace PACS_Ship
 
             if (valor.EndsWith("VP"))
             {
-                rtxtData.Text += "Correct, you can proceed\n";
+                rtxtData.Text += "\nCorrect, you can proceed!\n";
+                btnFileProcessing.Enabled = true;
             } else
             {
-                rtxtData.Text += "Incorrect\n";
+                rtxtData.Text += "\nIncorrect\n";
             }
         }
     }

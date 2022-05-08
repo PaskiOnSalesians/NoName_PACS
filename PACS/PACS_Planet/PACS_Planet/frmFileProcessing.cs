@@ -370,13 +370,13 @@ namespace PACS_Planet
                 netstream = client.GetStream();
                 FileStream Fs = new FileStream(resourcePath, FileMode.Open, FileAccess.Read);
                 int NoOfPackets = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(Fs.Length) / Convert.ToDouble(BufferSize)));
-                int TotalLength = (int)Fs.Length, CurrentPacketLength, counter = 0;
+                int TotalLength = (int)Fs.Length, CurrentPacketLength;
                 for (int i = 0; i < NoOfPackets; i++)
                 {
                     if (TotalLength > BufferSize)
                     {
                         CurrentPacketLength = BufferSize;
-                        TotalLength = TotalLength - CurrentPacketLength;
+                        TotalLength -= CurrentPacketLength;
                     }
                     else
                         CurrentPacketLength = TotalLength;
@@ -385,7 +385,7 @@ namespace PACS_Planet
                     netstream.Write(SendingBuffer, 0, (int)SendingBuffer.Length);
                    
                 }
-                rtxtData.Text += "File sended\n";
+                rtxtData.Text += "File sent\n";
 
 
                 Fs.Close();
@@ -449,8 +449,6 @@ namespace PACS_Planet
 
                     netstream.Close();
                     client.Close();
-
-
                 }
 
             }

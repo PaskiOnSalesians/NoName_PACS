@@ -77,7 +77,6 @@
             this.btnConnect = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnNext = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlBackChat = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -107,7 +106,6 @@
             this.panel14.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlBackChat.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -735,7 +733,6 @@
             // 
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Controls.Add(this.btnNext, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -745,25 +742,6 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(119, 220);
             this.tableLayoutPanel7.TabIndex = 1;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNext.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNext.Enabled = false;
-            this.btnNext.FlatAppearance.BorderSize = 2;
-            this.btnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(3, 91);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(113, 82);
-            this.btnNext.TabIndex = 6;
-            this.btnNext.Text = "Encrypt Codes";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // panel4
             // 
@@ -935,7 +913,6 @@
             this.panel14.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.pnlBackChat.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -1003,7 +980,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel pnlConn5;
         private System.Windows.Forms.Panel pnlConn4;

@@ -88,6 +88,27 @@ namespace PACS_Planet
             btnEncryptCodes.ForeColor = Color.White;
             btnFileProcessing.BackColor = Color.DarkGreen;
             btnFileProcessing.ForeColor = Color.White;
+            LoadCinematic();
+        }
+
+        private void LoadCinematic()
+        {
+            string imageRoute = @"C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\Resources\cinematics\";
+            if (GlobalVariables.RefVariables.CanEnter)
+            {
+                imageRoute += "correct_ship.mp4";
+            }
+            else
+            {
+                imageRoute += "incorrect_ship.mp4";
+            }
+
+
+            wmpVideo.uiMode = "none";
+            wmpVideo.URL = imageRoute;
+
+            wmpVideo.settings.autoStart = true;
+            wmpVideo.settings.setMode("loop", true);
         }
     }
 }

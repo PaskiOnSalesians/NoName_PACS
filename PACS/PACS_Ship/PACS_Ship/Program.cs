@@ -17,6 +17,7 @@ namespace PACS_Ship
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmSelectShip());
+            //Application.Run(new frmEnd());
         }
     }
 }

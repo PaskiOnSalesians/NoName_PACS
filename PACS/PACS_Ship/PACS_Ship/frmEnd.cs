@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
 using FormBase;
 
 namespace PACS_Ship
@@ -80,17 +79,23 @@ namespace PACS_Ship
 
         private void frmEnd_Load(object sender, EventArgs e)
         {
-            btnSelectShip.ForeColor = Color.White;
             btnSelectShip.BackColor = Color.DarkGreen;
-            btnSelectPlanet.ForeColor = Color.White;
             btnSelectPlanet.BackColor = Color.DarkGreen;
-            btnConnectPlanet.ForeColor = Color.White;
-            btnConnectPlanet.BackColor = Color.DarkGreen;
-            btnEncryptCodes.ForeColor = Color.White;
-            btnEncryptCodes.BackColor = Color.DarkGreen;
-            btnFileProcessing.ForeColor = Color.White;
-            btnFileProcessing.BackColor = Color.DarkGreen;
-            btnEnd.ForeColor = Color.White;
+
+            if (GlobalVariables.RefVariables.CanEnter)
+            {
+
+                btnConnectPlanet.BackColor = Color.DarkGreen;
+                btnEncryptCodes.BackColor = Color.DarkGreen;
+                btnFileProcessing.BackColor = Color.DarkGreen;
+            } 
+            else
+            {
+                btnConnectPlanet.BackColor = Color.Red;
+                btnEncryptCodes.BackColor = Color.Red;
+                btnFileProcessing.BackColor = Color.Red;
+            }
+           
             LoadCinematic();
         }
 

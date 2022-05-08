@@ -3,20 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Xml;
+using System.Data;
+using System.Data.OleDb;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Windows.Forms;
 
 namespace AccesDades
 {
-    using System.Data;
-    using System.Data.OleDb;
-    using System.Data.SqlClient;
-
-    using System.Configuration;
-    using System.Windows.Forms;
-
-    //using Microsoft.VisualBasic.CompilerServices;
-
     public class Dades
     {
         public SqlConnection con;
@@ -26,10 +21,10 @@ namespace AccesDades
         #region Connectar
         public void ConnectDB()
         {
-            conString = CadenaConnexio(); // Trae la cadena
-            con = new SqlConnection(conString); // Nos genera la conexión
-            con.Open(); // Obrim al connexió
-            //con.InitializeLifetimeService();
+            conString = CadenaConnexio(); 
+            con = new SqlConnection(conString); 
+            con.Open();
+            
         }
         #endregion
 

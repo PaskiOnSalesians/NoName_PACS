@@ -45,3 +45,8 @@ C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\dll\GlobalVariables
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.dll
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Planet\dll\GlobalVariables.dll
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Planet\dll\GlobalVariables.pdb
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.csproj.CoreCompileInputs.cache
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.dll
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Planet\GlobalVariables\obj\Debug\GlobalVariables.pdb

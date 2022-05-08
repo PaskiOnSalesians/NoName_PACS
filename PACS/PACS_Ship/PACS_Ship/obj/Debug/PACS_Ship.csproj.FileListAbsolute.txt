@@ -159,3 +159,6 @@ C:\Users\Paski\Documents\ForkGit\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\Interop.WMPLib.dll
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.csproj.ResolveComReference.cache
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\Interop.WMPLib.dll
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\PACS_Ship\obj\Debug\PACS_Ship.csproj.ResolveComReference.cache

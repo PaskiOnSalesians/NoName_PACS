@@ -76,14 +76,22 @@ namespace PACS_Planet
 
         private void frmEnd_Load(object sender, EventArgs e)
         {
+            
             btnSelectPlanet.BackColor = Color.DarkGreen;
-            btnSelectPlanet.ForeColor = Color.White;
-            btnSpaceshipConnection.BackColor = Color.DarkGreen;
-            btnSpaceshipConnection.ForeColor = Color.White;
-            btnEncryptCodes.BackColor = Color.DarkGreen;
-            btnEncryptCodes.ForeColor = Color.White;
-            btnFileProcessing.BackColor = Color.DarkGreen;
-            btnFileProcessing.ForeColor = Color.White;
+
+            if (GlobalVariables.RefVariables.CanEnter)
+            {
+
+                btnSpaceshipConnection.BackColor = Color.DarkGreen;
+                btnEncryptCodes.BackColor = Color.DarkGreen;
+                btnFileProcessing.BackColor = Color.DarkGreen;
+            }
+            else
+            {
+                btnSpaceshipConnection.BackColor = Color.Red;
+                btnEncryptCodes.BackColor = Color.Red;
+                btnFileProcessing.BackColor = Color.Red;
+            }
             LoadCinematic();
         }
 

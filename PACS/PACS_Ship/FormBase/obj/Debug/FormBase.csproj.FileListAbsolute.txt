@@ -75,7 +75,6 @@ C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\FormBase\obj\Debug\FormB
 C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\FormBase\obj\Debug\FormBase.csproj.CoreCompileInputs.cache
 C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\FormBase\obj\Debug\FormBase.exe
 C:\Users\Marc\Documents\Fork\noname_pacs\PACS\PACS_Ship\FormBase\obj\Debug\FormBase.pdb
-C:\Users\Marc\Documents\GitHub\noname_pacs\PACS\PACS_Ship\FormBase\obj\Debug\FormBase.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\FormBase.exe.config
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\FormBase.exe
 C:\Users\Admin\Documents\GitHub\noname_pacs\PACS\PACS_Ship\dll\FormBase.pdb

@@ -249,6 +249,10 @@ namespace PACS_Planet
                 btnFileProcessing.Enabled = false;
                 btnEnd.Enabled = true;
 
+                btnSpaceshipConnection.BackColor = Color.Red;
+                btnEncryptCodes.BackColor = Color.Red;
+                btnFileProcessing.BackColor = Color.Red;
+
             }
 
             validationMessage = "VR" + stage.ToString() + RefVariables.ShipName + result;

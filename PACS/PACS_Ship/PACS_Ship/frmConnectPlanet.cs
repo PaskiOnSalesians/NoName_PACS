@@ -298,6 +298,10 @@ namespace PACS_Ship
                 btnEncryptCodes.Enabled = false;
                 btnFileProcessing.Enabled = false;
 
+                btnConnectPlanet.BackColor = Color.Red;
+                btnEncryptCodes.BackColor = Color.Red;
+                btnFileProcessing.BackColor = Color.Red;
+
                 btnEnd.Enabled = true;
             }
 
